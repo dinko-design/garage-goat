@@ -10,16 +10,29 @@ const ERROR_IMG_SRC =
 function buildUnsplashSrcSet(src: string): string | undefined {
   if (!src.includes('images.unsplash.com')) return undefined;
 
-  const widths = [400, 800, 1200, 1600];
+  const widths = [400, 800, 1200];
   return widths
     .map(w => {
       // Replace existing &w= param or append one
-      const url = src.includes('&w=')
+      let url = src.includes('&w=')
         ? src.replace(/&w=\d+/, `&w=${w}`)
         : `${src}&w=${w}`;
+      // Serve WebP for smaller file sizes
+      if (!url.includes('&fm=')) url += '&fm=webp';
       return `${url} ${w}w`;
     })
     .join(', ');
+}
+
+/**
+ * Appends &fm=webp to Unsplash URLs for optimal delivery.
+ * Returns non-Unsplash URLs unchanged.
+ */
+function optimizeUnsplashSrc(src: string): string {
+  if (!src.includes('images.unsplash.com')) return src;
+  let url = src;
+  if (!url.includes('&fm=')) url += '&fm=webp';
+  return url;
 }
 
 interface OptimizedImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
@@ -70,7 +83,7 @@ export function OptimizedImage({
 
   return (
     <img
-      src={src}
+      src={optimizeUnsplashSrc(src)}
       alt={alt}
       width={width}
       height={height}

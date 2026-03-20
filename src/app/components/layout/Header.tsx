@@ -34,6 +34,7 @@ function MegaDropdown({
       <button
         className="flex items-center gap-1 px-3 py-2 rounded text-goat-ice hover:text-white hover:bg-white/10 transition-all text-sm tracking-wide uppercase"
         onClick={() => setOpen(!open)}
+        aria-expanded={open}
         style={{ fontFamily: 'var(--font-heading)', fontWeight: 600 }}
       >
         {icon}
@@ -337,10 +338,11 @@ export function Header() {
               <a
                 href={`tel:${companyInfo.phoneRaw}`}
                 className="bg-goat-red text-white p-2.5 rounded"
+                aria-label="Call (281) 948-5452"
               >
                 <Phone className="w-5 h-5" />
               </a>
-              <button onClick={toggleMenu} className="text-white p-2">
+              <button onClick={toggleMenu} className="text-white p-2" aria-label={isMenuOpen ? 'Close menu' : 'Open menu'} aria-expanded={isMenuOpen}>
                 {isMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
               </button>
             </div>
