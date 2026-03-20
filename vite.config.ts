@@ -1,57 +1,15 @@
 import { defineConfig } from 'vite'
 import path from 'path'
+import fs from 'fs'
 import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
 import prerender from '@prerenderer/rollup-plugin'
 import PuppeteerRenderer from '@prerenderer/renderer-puppeteer'
 
-// All routes to prerender at build time
-const ALL_ROUTES = [
-  '/',
-  '/services',
-  '/contact',
-  '/reviews',
-  '/about',
-  '/offers',
-  '/blog',
-  '/faq',
-  '/gallery',
-  '/financing',
-  '/warranty',
-  '/privacy',
-  '/terms',
-  '/sitemap',
-  '/garage-door-repair',
-  '/garage-door-spring-repair',
-  '/garage-door-opener-repair',
-  '/new-garage-doors',
-  '/emergency-garage-door-repair',
-  '/garage-door-repair-cypress-tx',
-  '/garage-door-repair-tomball-tx',
-  '/garage-door-repair-katy-tx',
-  '/garage-door-repair-spring-tx',
-  '/garage-door-repair-houston-tx',
-  '/75-off-garage-door-repair',
-  '/special-offers',
-  '/new-door-special',
-  '/pricing',
-  '/blog/garage-door-repair-cost-cypress-tx',
-  '/blog/signs-garage-door-spring-breaking',
-  '/blog/new-garage-door-cost-cypress-tx',
-  '/blog/garage-door-opener-not-working',
-  '/blog/torsion-vs-extension-springs-garage-door',
-  '/blog/how-long-garage-door-springs-last',
-  '/blog/garage-door-wont-close',
-  '/blog/best-garage-door-styles-texas-homes',
-  '/blog/garage-door-safety-checklist',
-  '/blog/garage-door-maintenance-checklist',
-  '/blog/repair-vs-replace-garage-door',
-  '/blog/why-garage-door-loud-how-to-fix',
-  '/blog/smart-garage-door-opener-worth-it',
-  '/blog/garage-door-insulation-texas',
-  '/blog/how-to-choose-garage-door-repair-company',
-  '/blog/hurricane-garage-door-prep-cypress-tx',
-]
+// Read routes from the generated JSON file (built by scripts/build-cms.mjs)
+const ALL_ROUTES: string[] = JSON.parse(
+  fs.readFileSync(path.resolve(__dirname, 'src/data/routes-generated.json'), 'utf-8')
+)
 
 export default defineConfig({
   plugins: [

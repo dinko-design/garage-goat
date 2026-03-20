@@ -1,9 +1,9 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Navigate, Link } from 'react-router';
+import { BrowserRouter, Routes, Route, Navigate, Link, useParams } from 'react-router';
 import { HelmetProvider } from 'react-helmet-async';
 import { Toaster } from 'sonner';
 import { Layout } from './components/layout/Layout';
-import { companyInfo } from '../data/cms';
+import { companyInfo, offers } from '../data/cms';
 import { Phone, Home as HomeIcon } from 'lucide-react';
 
 // Route-based code splitting — each page loads as a separate chunk.
@@ -62,6 +62,13 @@ function NotFound() {
   );
 }
 
+function DynamicOfferOrNotFound() {
+  const { slug } = useParams<{ slug: string }>();
+  const offer = offers.find(o => o.slug === slug);
+  if (offer) return <OfferDetail slug={slug!} />;
+  return <NotFound />;
+}
+
 export default function App() {
   return (
     <HelmetProvider>
@@ -103,14 +110,11 @@ export default function App() {
             <Route path="garage-door-repair-spring-tx" element={<ServiceAreaDetail slug="garage-door-repair-spring-tx" />} />
             <Route path="garage-door-repair-houston-tx" element={<ServiceAreaDetail slug="garage-door-repair-houston-tx" />} />
 
-            {/* ── Offer Pages (explicit, flat URLs) ── */}
-            <Route path="75-off-garage-door-repair" element={<OfferDetail slug="75-off-garage-door-repair" />} />
-            <Route path="special-offers" element={<OfferDetail slug="special-offers" />} />
-            <Route path="new-door-special" element={<OfferDetail slug="new-door-special" />} />
+            {/* ── Offer Pages (dynamic — supports new offers via CMS) ── */}
+            <Route path=":slug" element={<DynamicOfferOrNotFound />} />
 
             {/* ── 404 ── */}
             <Route path="404" element={<NotFound />} />
-            <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
       </BrowserRouter>

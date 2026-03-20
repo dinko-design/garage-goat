@@ -4,3 +4,7 @@ dist/
 *.local
 .env
 .env.*
+
+# Generated CMS data (rebuilt on every build from content/ files)
+src/data/cms-generated.ts
+src/data/routes-generated.json

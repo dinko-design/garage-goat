@@ -1,0 +1,348 @@
+backend:
+  name: git-gateway
+  branch: main
+
+site_url: https://www.garagegoatdoors.com
+display_url: https://www.garagegoatdoors.com
+
+slug:
+  encoding: ascii
+  clean_accents: true
+
+collections:
+  # ─── Blog Posts ───────────────────────────────────────────────
+  - name: blog
+    label: Blog Posts
+    folder: content/blog
+    create: true
+    delete: true
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+    fields:
+      - name: id
+        label: ID
+        widget: string
+        hint: "Short unique ID like 'cost-guide'. Do NOT change after creation."
+      - name: slug
+        label: Slug
+        widget: string
+        hint: "URL path like 'garage-door-repair-cost-cypress-tx'"
+      - name: title
+        label: Title
+        widget: string
+      - name: excerpt
+        label: Excerpt
+        widget: text
+        hint: "Short summary for blog listing and search results"
+      - name: featuredImage
+        label: Featured Image
+        widget: string
+        hint: "Full Unsplash URL"
+      - name: date
+        label: Date
+        widget: string
+        hint: "Format: 'January 15, 2026'"
+      - name: tags
+        label: Tags
+        widget: list
+      - name: author
+        label: Author
+        widget: string
+        default: "Cesar Garcia, Owner — Garage Goat Garage Doors"
+      - name: authorRole
+        label: Author Role
+        widget: string
+        default: "TDLR Licensed Garage Door Technician & Owner"
+      - name: relatedServiceIds
+        label: Related Service IDs
+        widget: list
+        hint: "IDs like: repair, spring-repair, opener-repair, installation, emergency"
+      - name: relatedBlogIds
+        label: Related Blog IDs
+        widget: list
+        required: false
+        hint: "IDs of related posts"
+      - name: body
+        label: Body
+        widget: markdown
+
+  # ─── Reviews ──────────────────────────────────────────────────
+  - name: reviews
+    label: Reviews
+    folder: content/reviews
+    create: true
+    delete: true
+    extension: md
+    format: frontmatter
+    slug: "{{id}}"
+    fields:
+      - name: id
+        label: ID
+        widget: string
+        hint: "Use r1, r2, r10 pattern"
+      - name: reviewerName
+        label: Reviewer Name
+        widget: string
+        hint: "Initials like 'D.A.' or 'Maria S.'"
+      - name: city
+        label: City
+        widget: string
+        default: "Cypress, TX"
+      - name: rating
+        label: Rating
+        widget: number
+        value_type: int
+        min: 1
+        max: 5
+        default: 5
+      - name: text
+        label: Review Text
+        widget: text
+      - name: serviceUsed
+        label: Service Used
+        widget: select
+        options:
+          - "Garage Door Repair"
+          - "Spring Repair"
+          - "Garage Door Opener Repair"
+          - "New Garage Door Installation"
+          - "Emergency Repair"
+          - "Maintenance & Tune-Up"
+      - name: date
+        label: Date
+        widget: datetime
+        format: "YYYY-MM-DD"
+        time_format: false
+
+  # ─── Offers ───────────────────────────────────────────────────
+  - name: offers
+    label: Offers
+    folder: content/offers
+    create: true
+    delete: true
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+    fields:
+      - name: id
+        label: ID
+        widget: string
+      - name: slug
+        label: Slug
+        widget: string
+      - name: title
+        label: Title
+        widget: string
+      - name: headline
+        label: Headline
+        widget: string
+      - name: discountAmount
+        label: Discount Amount
+        widget: string
+        hint: "Display text like '$75 OFF'"
+      - name: expiration
+        label: Expiration
+        widget: string
+      - name: disclaimer
+        label: Disclaimer
+        widget: text
+      - name: relatedServiceIds
+        label: Related Service IDs
+        widget: list
+
+  # ─── Services ─────────────────────────────────────────────────
+  - name: services
+    label: Services
+    folder: content/services
+    create: false
+    delete: false
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+    fields:
+      - name: id
+        label: ID
+        widget: string
+      - name: slug
+        label: Slug
+        widget: string
+      - name: name
+        label: Name
+        widget: string
+      - name: metaTitle
+        label: Meta Title
+        widget: string
+      - name: metaDescription
+        label: Meta Description
+        widget: text
+      - name: h1Title
+        label: H1 Title
+        widget: string
+      - name: introParagraph
+        label: Intro Paragraph
+        widget: text
+      - name: iconName
+        label: Icon
+        widget: select
+        options:
+          - Wrench
+          - Hammer
+          - Cog
+          - ShieldCheck
+          - Clock
+      - name: image
+        label: Image
+        widget: string
+      - name: ctaHeadline
+        label: CTA Headline
+        widget: string
+      - name: ctaButtonText
+        label: CTA Button Text
+        widget: string
+      - name: relatedServiceIds
+        label: Related Service IDs
+        widget: list
+      - name: relatedBlogIds
+        label: Related Blog IDs
+        widget: list
+      - name: relatedOfferIds
+        label: Related Offer IDs
+        widget: list
+      - name: faqs
+        label: FAQs
+        widget: list
+        fields:
+          - name: question
+            label: Question
+            widget: string
+          - name: answer
+            label: Answer
+            widget: text
+      - name: body
+        label: Body
+        widget: markdown
+
+  # ─── Service Areas ────────────────────────────────────────────
+  - name: service-areas
+    label: Service Areas
+    folder: content/service-areas
+    create: false
+    delete: false
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+    fields:
+      - name: id
+        label: ID
+        widget: string
+      - name: slug
+        label: Slug
+        widget: string
+      - name: cityName
+        label: City Name
+        widget: string
+      - name: metaTitle
+        label: Meta Title
+        widget: string
+      - name: metaDescription
+        label: Meta Description
+        widget: text
+      - name: h1Title
+        label: H1 Title
+        widget: string
+      - name: introParagraph
+        label: Intro Paragraph
+        widget: text
+      - name: mapEmbedUrl
+        label: Map Embed URL
+        widget: string
+        required: false
+      - name: relatedServiceIds
+        label: Related Service IDs
+        widget: list
+      - name: relatedBlogIds
+        label: Related Blog IDs
+        widget: list
+      - name: relatedOfferIds
+        label: Related Offer IDs
+        widget: list
+      - name: body
+        label: Body
+        widget: markdown
+
+  # ─── Settings ─────────────────────────────────────────────────
+  - name: settings
+    label: Settings
+    files:
+      - name: company-info
+        label: Company Information
+        file: content/company/info.md
+        fields:
+          - name: name
+            label: Company Name
+            widget: string
+          - name: shortName
+            label: Short Name
+            widget: string
+          - name: ownerName
+            label: Owner Name
+            widget: string
+          - name: phone
+            label: Phone
+            widget: string
+          - name: phoneRaw
+            label: Phone (Raw)
+            widget: string
+          - name: email
+            label: Email
+            widget: string
+          - name: website
+            label: Website
+            widget: string
+          - name: address
+            label: Address
+            widget: string
+          - name: city
+            label: City
+            widget: string
+          - name: state
+            label: State
+            widget: string
+          - name: zip
+            label: ZIP Code
+            widget: string
+          - name: tagline
+            label: Tagline
+            widget: string
+          - name: foundedYear
+            label: Founded Year
+            widget: number
+            value_type: int
+          - name: googleRating
+            label: Google Rating
+            widget: number
+            value_type: float
+            step: 0.1
+          - name: totalReviews
+            label: Total Reviews
+            widget: number
+            value_type: int
+          - name: licenseName
+            label: License Name
+            widget: string
+          - name: licenseNumber
+            label: License Number
+            widget: string
+          - name: warrantyLabor
+            label: Warranty — Labor
+            widget: string
+          - name: warrantyParts
+            label: Warranty — Parts
+            widget: string
+          - name: warrantySprings
+            label: Warranty — Springs
+            widget: string
+          - name: guarantees
+            label: Guarantees
+            widget: list
