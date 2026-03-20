@@ -82,25 +82,7 @@ export function BlogDetail() {
             <div className="lg:w-2/3">
               <div className="bg-white p-8 rounded-lg border border-goat-cream-dark">
                 <OptimizedImage src={post.featuredImage} alt={post.title} className="w-full h-64 object-cover rounded-lg mb-8" sizes="(max-width: 1024px) 100vw, 66vw" width={800} height={256} />
-                <div className="cms-content">
-                  <p>{post.excerpt}</p>
-                  <p>
-                    When it comes to garage door maintenance and repair, knowledge is power. Understanding the basics can help you
-                    make informed decisions, avoid scams, and keep your garage door running smoothly for years to come.
-                  </p>
-                  <h2 style={{ fontFamily: "var(--font-heading)", fontWeight: 700, color: '#1E2E3A' }}>Key Takeaways</h2>
-                  <ul className="space-y-2">
-                    <li>Regular maintenance can extend the life of your garage door by 5-10 years</li>
-                    <li>DIY spring replacement is extremely dangerous — always call a professional</li>
-                    <li>The average garage door repair in Cypress costs between $150-$450</li>
-                    <li>A new garage door offers up to 194% ROI — the highest of any home improvement</li>
-                  </ul>
-                  <p>
-                    If you have questions about your specific situation, don't hesitate to call us at{' '}
-                    <a href={`tel:${companyInfo.phoneRaw}`} className="text-goat-red hover:text-goat-red-dark">{companyInfo.phone}</a>.
-                    Our technicians are happy to give free advice over the phone.
-                  </p>
-                </div>
+                <div className="cms-content" dangerouslySetInnerHTML={{ __html: post.content }} />
               </div>
 
               {/* Author Bio */}
