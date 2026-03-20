@@ -5,6 +5,9 @@ backend:
 site_url: https://www.garagegoatdoors.com
 display_url: https://www.garagegoatdoors.com
 
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
 slug:
   encoding: ascii
   clean_accents: true
