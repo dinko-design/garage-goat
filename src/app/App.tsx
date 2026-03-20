@@ -1,0 +1,119 @@
+import React from 'react';
+import { BrowserRouter, Routes, Route, Navigate, Link } from 'react-router';
+import { HelmetProvider } from 'react-helmet-async';
+import { Toaster } from 'sonner';
+import { Layout } from './components/layout/Layout';
+import { companyInfo } from '../data/cms';
+import { Phone, Home as HomeIcon } from 'lucide-react';
+
+// Route-based code splitting — each page loads as a separate chunk.
+// With prerendering, HTML is already in the page so Suspense only affects
+// client-side navigation between pages.
+const Home = React.lazy(() => import('./pages/Home').then(m => ({ default: m.Home })));
+const ServicesHub = React.lazy(() => import('./pages/ServicesHub').then(m => ({ default: m.ServicesHub })));
+const ServiceDetail = React.lazy(() => import('./pages/ServiceDetail').then(m => ({ default: m.ServiceDetail })));
+const ServiceAreaDetail = React.lazy(() => import('./pages/ServiceAreaDetail').then(m => ({ default: m.ServiceAreaDetail })));
+const OfferDetail = React.lazy(() => import('./pages/OfferDetail').then(m => ({ default: m.OfferDetail })));
+const OffersHub = React.lazy(() => import('./pages/OffersHub').then(m => ({ default: m.OffersHub })));
+const Contact = React.lazy(() => import('./pages/Contact').then(m => ({ default: m.Contact })));
+const Reviews = React.lazy(() => import('./pages/Reviews').then(m => ({ default: m.Reviews })));
+const About = React.lazy(() => import('./pages/About').then(m => ({ default: m.About })));
+const Blog = React.lazy(() => import('./pages/Blog').then(m => ({ default: m.Blog })));
+const BlogDetail = React.lazy(() => import('./pages/BlogDetail').then(m => ({ default: m.BlogDetail })));
+const Sitemap = React.lazy(() => import('./pages/Sitemap').then(m => ({ default: m.Sitemap })));
+const DesignSystem = React.lazy(() => import('./pages/DesignSystem').then(m => ({ default: m.DesignSystem })));
+const FAQ = React.lazy(() => import('./pages/FAQ').then(m => ({ default: m.FAQ })));
+const Gallery = React.lazy(() => import('./pages/Gallery').then(m => ({ default: m.Gallery })));
+const Financing = React.lazy(() => import('./pages/Financing').then(m => ({ default: m.Financing })));
+const Warranty = React.lazy(() => import('./pages/Warranty').then(m => ({ default: m.Warranty })));
+const Privacy = React.lazy(() => import('./pages/Privacy').then(m => ({ default: m.Privacy })));
+const Terms = React.lazy(() => import('./pages/Terms').then(m => ({ default: m.Terms })));
+const Pricing = React.lazy(() => import('./pages/Pricing').then(m => ({ default: m.Pricing })));
+
+function NotFound() {
+  return (
+    <div className="py-32 text-center bg-goat-cream noise-overlay-light min-h-[60vh] flex flex-col items-center justify-center relative">
+      <div className="relative z-10">
+        <div className="text-8xl text-goat-red mb-4" style={{ fontFamily: "var(--font-heading)", fontWeight: 700 }}>404</div>
+        <h1 className="text-2xl text-goat-navy-dark mb-4" style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase' }}>
+          Page Not Found
+        </h1>
+        <p className="text-goat-navy/60 mb-8 max-w-md mx-auto">
+          Looks like this page went off track — kind of like a garage door that needs our help.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link
+            to="/"
+            className="bg-goat-navy-dark hover:bg-goat-navy text-white px-6 py-3 rounded transition-colors flex items-center justify-center gap-2"
+            style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase' }}
+          >
+            <HomeIcon className="w-4 h-4" /> Go Home
+          </Link>
+          <a
+            href={`tel:${companyInfo.phoneRaw}`}
+            className="bg-goat-teal hover:bg-goat-teal-dark text-goat-navy-deep px-6 py-3 rounded transition-colors flex items-center justify-center gap-2 shadow-lg shadow-goat-teal/30"
+            style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase' }}
+          >
+            <Phone className="w-4 h-4" /> Call Us
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function App() {
+  return (
+    <HelmetProvider>
+      <BrowserRouter>
+        <Toaster position="top-center" richColors />
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+
+            {/* ── Static Pages ── */}
+            <Route path="services" element={<ServicesHub />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="reviews" element={<Reviews />} />
+            <Route path="about" element={<About />} />
+            <Route path="offers" element={<OffersHub />} />
+            <Route path="blog" element={<Blog />} />
+            <Route path="blog/:blogSlug" element={<BlogDetail />} />
+            <Route path="faq" element={<FAQ />} />
+            <Route path="gallery" element={<Gallery />} />
+            <Route path="pricing" element={<Pricing />} />
+            <Route path="financing" element={<Financing />} />
+            <Route path="warranty" element={<Warranty />} />
+            <Route path="privacy" element={<Privacy />} />
+            <Route path="terms" element={<Terms />} />
+            <Route path="sitemap" element={<Sitemap />} />
+            <Route path="design-system" element={<DesignSystem />} />
+
+            {/* ── Service Pages (explicit, flat URLs for SEO) ── */}
+            <Route path="garage-door-repair" element={<ServiceDetail slug="garage-door-repair" />} />
+            <Route path="garage-door-spring-repair" element={<ServiceDetail slug="garage-door-spring-repair" />} />
+            <Route path="garage-door-opener-repair" element={<ServiceDetail slug="garage-door-opener-repair" />} />
+            <Route path="new-garage-doors" element={<ServiceDetail slug="new-garage-doors" />} />
+            <Route path="emergency-garage-door-repair" element={<ServiceDetail slug="emergency-garage-door-repair" />} />
+
+            {/* ── Service Area Pages (explicit, flat URLs for local SEO) ── */}
+            <Route path="garage-door-repair-cypress-tx" element={<ServiceAreaDetail slug="garage-door-repair-cypress-tx" />} />
+            <Route path="garage-door-repair-tomball-tx" element={<ServiceAreaDetail slug="garage-door-repair-tomball-tx" />} />
+            <Route path="garage-door-repair-katy-tx" element={<ServiceAreaDetail slug="garage-door-repair-katy-tx" />} />
+            <Route path="garage-door-repair-spring-tx" element={<ServiceAreaDetail slug="garage-door-repair-spring-tx" />} />
+            <Route path="garage-door-repair-houston-tx" element={<ServiceAreaDetail slug="garage-door-repair-houston-tx" />} />
+
+            {/* ── Offer Pages (explicit, flat URLs) ── */}
+            <Route path="75-off-garage-door-repair" element={<OfferDetail slug="75-off-garage-door-repair" />} />
+            <Route path="special-offers" element={<OfferDetail slug="special-offers" />} />
+            <Route path="new-door-special" element={<OfferDetail slug="new-door-special" />} />
+
+            {/* ── 404 ── */}
+            <Route path="404" element={<NotFound />} />
+            <Route path="*" element={<NotFound />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </HelmetProvider>
+  );
+}

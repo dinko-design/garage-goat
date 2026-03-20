@@ -1,0 +1,670 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: clamp(16px, calc(14px + 0.35vw), 21px);
+  --background: #FBF8F3;
+  --foreground: #1E2E3A;
+  --card: #ffffff;
+  --card-foreground: #1E2E3A;
+  --popover: #ffffff;
+  --popover-foreground: #1E2E3A;
+  --primary: #D22D2F;
+  --primary-foreground: #ffffff;
+  --secondary: #E3EDF5;
+  --secondary-foreground: #1E2E3A;
+  --muted: #F0EBE3;
+  --muted-foreground: #5A6B7D;
+  --accent: #C5D8E8;
+  --accent-foreground: #1E2E3A;
+  --destructive: #D22D2F;
+  --destructive-foreground: #ffffff;
+  --border: rgba(45, 74, 111, 0.12);
+  --input: transparent;
+  --input-background: #F0EBE3;
+  --switch-background: #B8D0E4;
+  --font-weight-medium: 600;
+  --font-weight-normal: 400;
+  --ring: #2D4A6F;
+  --chart-1: #D22D2F;
+  --chart-2: #2D4A6F;
+  --chart-3: #B8D0E4;
+  --chart-4: #D4A76A;
+  --chart-5: #3D6B99;
+  --radius: 0.5rem;
+  --sidebar: #0F1A2E;
+  --sidebar-foreground: #E3EDF5;
+  --sidebar-primary: #D22D2F;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #1E2E3A;
+  --sidebar-accent-foreground: #E3EDF5;
+  --sidebar-border: #243B5C;
+  --sidebar-ring: #3D6B99;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Garage Goat Brand Colors */
+  --color-goat-navy-deep: #0F1A2E;
+  --color-goat-navy-dark: #1E2E3A;
+  --color-goat-navy: #2D4A6F;
+  --color-goat-navy-light: #3D6B99;
+  --color-goat-navy-muted: #5A8AB8;
+  --color-goat-red: #D22D2F;
+  --color-goat-red-dark: #A82325;
+  --color-goat-red-light: #E84848;
+  --color-goat-red-glow: #FF4444;
+  --color-goat-silver: #A9AEB1;
+  --color-goat-silver-light: #C4C8CA;
+  --color-goat-silver-dark: #8A8F92;
+  --color-goat-ice: #B8D0E4;
+  --color-goat-ice-light: #D4E4F0;
+  --color-goat-ice-pale: #E3EDF5;
+  --color-goat-ice-bright: #F0F5FA;
+  --color-goat-cream: #FBF8F3;
+  --color-goat-cream-dark: #F0EBE3;
+  --color-goat-cream-warm: #EDE5D8;
+  --color-goat-gold: #D4A76A;
+  --color-goat-gold-dark: #B8905A;
+
+  /* Teal accent — from the logo, used for primary action buttons */
+  --color-goat-teal: #78C9C3;
+  --color-goat-teal-dark: #5FB3AD;
+  --color-goat-teal-light: #9AD8D3;
+  --color-goat-teal-deep: #4A9E98;
+
+  /* Font families */
+  --font-heading: 'Outfit', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  /* Fluid container padding — breathes with viewport width */
+  .container {
+    padding-inline: clamp(1.25rem, 0.5rem + 3vw, 5rem);
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  html {
+    font-size: var(--font-size);
+    scroll-behavior: smooth;
+  }
+
+  h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.875rem, 1.25rem + 2.5vw, 3.75rem);
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 1rem + 2vw, 3rem);
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+  }
+
+  h3 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.25rem, 1rem + 0.75vw, 1.75rem);
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  h4 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.1rem, 0.95rem + 0.4vw, 1.4rem);
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  label {
+    font-size: clamp(0.95rem, 0.9rem + 0.15vw, 1.1rem);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  button {
+    font-size: clamp(0.95rem, 0.9rem + 0.15vw, 1.1rem);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  input {
+    font-size: clamp(0.95rem, 0.9rem + 0.15vw, 1.1rem);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+  }
+
+  /* Noise / Grit Texture Overlay */
+  .noise-overlay {
+    position: relative;
+  }
+
+  .noise-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.035;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23a)' opacity='.5'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 300px 300px;
+  }
+
+  .noise-overlay-strong::after {
+    opacity: 0.06;
+  }
+
+  .noise-overlay-light::after {
+    opacity: 0.02;
+  }
+
+  /* Americana star decoration */
+  .star-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .star-divider::before,
+  .star-divider::after {
+    content: '';
+    flex: 1;
+    max-width: 120px;
+    height: 2px;
+    background: currentColor;
+    opacity: 0.3;
+  }
+
+  /* Red banner ribbon style (like the logo) */
+  .ribbon-banner {
+    position: relative;
+    display: inline-block;
+    padding: 8px 28px;
+    background: #D22D2F;
+    color: white;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .ribbon-banner::before,
+  .ribbon-banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    border-style: solid;
+    height: 100%;
+  }
+
+  .ribbon-banner::before {
+    left: -12px;
+    border-width: 0 12px 0 0;
+    border-color: transparent #D22D2F transparent transparent;
+  }
+
+  .ribbon-banner::after {
+    right: -12px;
+    border-width: 0 0 0 12px;
+    border-color: transparent transparent transparent #D22D2F;
+  }
+
+  /* Gritty card hover effect */
+  .grit-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .grit-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -12px rgba(15, 26, 46, 0.2);
+  }
+
+  /* ============================================ */
+  /* Text Accent Utilities                         */
+  /* ============================================ */
+
+  /* Subtle red accent — the one the client likes */
+  .text-accent-red {
+    color: var(--color-goat-red);
+  }
+
+  /* Red underline accent decoration */
+  .accent-underline {
+    position: relative;
+    display: inline;
+  }
+  .accent-underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--color-goat-red);
+  }
+
+  /* Gradient divider line (red stripe) */
+  .gradient-divider {
+    height: 3px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #2D4A6F, #D22D2F, #D4A76A);
+  }
+
+  /* Diagonal stripe pattern (inspired by truck wrap) */
+  .diagonal-stripes {
+    background-image: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 16px,
+      rgba(210, 45, 47, 0.08) 16px,
+      rgba(210, 45, 47, 0.08) 18px
+    );
+  }
+
+  .diagonal-stripes-bold {
+    background-image: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 20px,
+      rgba(210, 45, 47, 0.15) 20px,
+      rgba(210, 45, 47, 0.15) 24px
+    );
+  }
+
+  /* Shield badge shape (inspired by logo) */
+  .shield-badge {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem 1.5rem;
+    background: linear-gradient(180deg, #1E2E3A 0%, #0F1A2E 100%);
+    color: white;
+    clip-path: polygon(50% 0%, 100% 10%, 100% 75%, 50% 100%, 0% 75%, 0% 10%);
+  }
+
+  /* ============================================ */
+  /* Logo-Inspired Visual Cues                     */
+  /* ============================================ */
+
+  /* Sunburst / Ray Pattern — from the teal rays behind the garage door in the logo */
+  .sunburst {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .sunburst::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    transform: translate(-50%, -50%);
+    background: conic-gradient(
+      from 0deg,
+      transparent 0deg,
+      rgba(120, 201, 195, 0.06) 5deg,
+      transparent 10deg,
+      transparent 15deg,
+      rgba(120, 201, 195, 0.06) 20deg,
+      transparent 25deg,
+      transparent 30deg,
+      rgba(120, 201, 195, 0.06) 35deg,
+      transparent 40deg,
+      transparent 45deg,
+      rgba(120, 201, 195, 0.06) 50deg,
+      transparent 55deg,
+      transparent 60deg,
+      rgba(120, 201, 195, 0.06) 65deg,
+      transparent 70deg,
+      transparent 75deg,
+      rgba(120, 201, 195, 0.06) 80deg,
+      transparent 85deg,
+      transparent 90deg,
+      rgba(120, 201, 195, 0.06) 95deg,
+      transparent 100deg,
+      transparent 105deg,
+      rgba(120, 201, 195, 0.06) 110deg,
+      transparent 115deg,
+      transparent 120deg,
+      rgba(120, 201, 195, 0.06) 125deg,
+      transparent 130deg,
+      transparent 135deg,
+      rgba(120, 201, 195, 0.06) 140deg,
+      transparent 145deg,
+      transparent 150deg,
+      rgba(120, 201, 195, 0.06) 155deg,
+      transparent 160deg,
+      transparent 165deg,
+      rgba(120, 201, 195, 0.06) 170deg,
+      transparent 175deg,
+      transparent 180deg,
+      rgba(120, 201, 195, 0.06) 185deg,
+      transparent 190deg,
+      transparent 195deg,
+      rgba(120, 201, 195, 0.06) 200deg,
+      transparent 205deg,
+      transparent 210deg,
+      rgba(120, 201, 195, 0.06) 215deg,
+      transparent 220deg,
+      transparent 225deg,
+      rgba(120, 201, 195, 0.06) 230deg,
+      transparent 235deg,
+      transparent 240deg,
+      rgba(120, 201, 195, 0.06) 245deg,
+      transparent 250deg,
+      transparent 255deg,
+      rgba(120, 201, 195, 0.06) 260deg,
+      transparent 265deg,
+      transparent 270deg,
+      rgba(120, 201, 195, 0.06) 275deg,
+      transparent 280deg,
+      transparent 285deg,
+      rgba(120, 201, 195, 0.06) 290deg,
+      transparent 295deg,
+      transparent 300deg,
+      rgba(120, 201, 195, 0.06) 305deg,
+      transparent 310deg,
+      transparent 315deg,
+      rgba(120, 201, 195, 0.06) 320deg,
+      transparent 325deg,
+      transparent 330deg,
+      rgba(120, 201, 195, 0.06) 335deg,
+      transparent 340deg,
+      transparent 345deg,
+      rgba(120, 201, 195, 0.06) 350deg,
+      transparent 355deg,
+      transparent 360deg
+    );
+  }
+
+  /* Brighter sunburst variant (for dark backgrounds like CTA sections) */
+  .sunburst-bright::before {
+    background: conic-gradient(
+      from 0deg,
+      transparent 0deg,
+      rgba(120, 201, 195, 0.12) 5deg,
+      transparent 10deg,
+      transparent 15deg,
+      rgba(120, 201, 195, 0.12) 20deg,
+      transparent 25deg,
+      transparent 30deg,
+      rgba(120, 201, 195, 0.12) 35deg,
+      transparent 40deg,
+      transparent 45deg,
+      rgba(120, 201, 195, 0.12) 50deg,
+      transparent 55deg,
+      transparent 60deg,
+      rgba(120, 201, 195, 0.12) 65deg,
+      transparent 70deg,
+      transparent 75deg,
+      rgba(120, 201, 195, 0.12) 80deg,
+      transparent 85deg,
+      transparent 90deg,
+      rgba(120, 201, 195, 0.12) 95deg,
+      transparent 100deg,
+      transparent 105deg,
+      rgba(120, 201, 195, 0.12) 110deg,
+      transparent 115deg,
+      transparent 120deg,
+      rgba(120, 201, 195, 0.12) 125deg,
+      transparent 130deg,
+      transparent 135deg,
+      rgba(120, 201, 195, 0.12) 140deg,
+      transparent 145deg,
+      transparent 150deg,
+      rgba(120, 201, 195, 0.12) 155deg,
+      transparent 160deg,
+      transparent 165deg,
+      rgba(120, 201, 195, 0.12) 170deg,
+      transparent 175deg,
+      transparent 180deg,
+      rgba(120, 201, 195, 0.12) 185deg,
+      transparent 190deg,
+      transparent 195deg,
+      rgba(120, 201, 195, 0.12) 200deg,
+      transparent 205deg,
+      transparent 210deg,
+      rgba(120, 201, 195, 0.12) 215deg,
+      transparent 220deg,
+      transparent 225deg,
+      rgba(120, 201, 195, 0.12) 230deg,
+      transparent 235deg,
+      transparent 240deg,
+      rgba(120, 201, 195, 0.12) 245deg,
+      transparent 250deg,
+      transparent 255deg,
+      rgba(120, 201, 195, 0.12) 260deg,
+      transparent 265deg,
+      transparent 270deg,
+      rgba(120, 201, 195, 0.12) 275deg,
+      transparent 280deg,
+      transparent 285deg,
+      rgba(120, 201, 195, 0.12) 290deg,
+      transparent 295deg,
+      transparent 300deg,
+      rgba(120, 201, 195, 0.12) 305deg,
+      transparent 310deg,
+      transparent 315deg,
+      rgba(120, 201, 195, 0.12) 320deg,
+      transparent 325deg,
+      transparent 330deg,
+      rgba(120, 201, 195, 0.12) 335deg,
+      transparent 340deg,
+      transparent 345deg,
+      rgba(120, 201, 195, 0.12) 350deg,
+      transparent 355deg,
+      transparent 360deg
+    );
+  }
+
+  /* Garage Door Panel Divider — horizontal lines echoing the garage door in the logo */
+  .garage-door-divider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 0;
+  }
+  .garage-door-divider span {
+    display: block;
+    height: 3px;
+    border-radius: 1px;
+    background: currentColor;
+    opacity: 0.15;
+  }
+  .garage-door-divider span:nth-child(1) { width: 60px; }
+  .garage-door-divider span:nth-child(2) { width: 80px; }
+  .garage-door-divider span:nth-child(3) { width: 60px; }
+
+  /* Speed arcs — inspired by the curved accent lines in the logo shield corners */
+  .speed-arcs::before,
+  .speed-arcs::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    opacity: 0.08;
+  }
+  .speed-arcs::before {
+    bottom: 12px;
+    left: 12px;
+    clip-path: polygon(0% 50%, 0% 100%, 50% 100%);
+  }
+  .speed-arcs::after {
+    bottom: 12px;
+    right: 12px;
+    clip-path: polygon(50% 100%, 100% 100%, 100% 50%);
+  }
+
+  /* Dropdown animation */
+  @keyframes fadeSlideDown {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Rich content styling for CMS HTML rendered via dangerouslySetInnerHTML */
+  .cms-content h2 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-goat-navy-dark);
+    font-size: clamp(1.25rem, 1rem + 0.75vw, 1.75rem);
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--color-goat-red);
+  }
+
+  .cms-content h3 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-goat-navy-dark);
+    font-size: clamp(1.1rem, 0.95rem + 0.4vw, 1.4rem);
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+  }
+
+  .cms-content h3::before {
+    content: '★';
+    color: var(--color-goat-red);
+    margin-right: 0.5rem;
+    font-size: 0.75em;
+  }
+
+  .cms-content p {
+    color: var(--color-goat-navy);
+    opacity: 0.8;
+    margin-bottom: 1.25rem;
+    line-height: 1.8;
+    font-size: 1rem;
+  }
+
+  .cms-content ul,
+  .cms-content ol {
+    list-style: none;
+    padding: 0;
+    margin: 1.25rem 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .cms-content ul,
+    .cms-content ol {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .cms-content li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.625rem;
+    color: var(--color-goat-navy);
+    opacity: 0.85;
+    padding: 0.625rem 0.875rem;
+    background: var(--color-goat-cream);
+    border: 1px solid var(--color-goat-cream-dark);
+    border-radius: 0.5rem;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+  }
+
+  .cms-content li::before {
+    content: '';
+    width: 7px;
+    height: 7px;
+    margin-top: 0.5rem;
+    flex-shrink: 0;
+    background: var(--color-goat-red);
+    border-radius: 50%;
+  }
+
+  .cms-content strong {
+    color: var(--color-goat-navy-dark);
+    font-weight: 700;
+  }
+
+  .cms-content a {
+    color: var(--color-goat-red);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .cms-content a:hover {
+    color: var(--color-goat-red-dark);
+  }
+
+  .cms-content blockquote {
+    border-left: 4px solid var(--color-goat-red);
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    background: var(--color-goat-cream);
+    border-radius: 0 0.5rem 0.5rem 0;
+    font-style: italic;
+    color: var(--color-goat-navy-dark);
+  }
+}

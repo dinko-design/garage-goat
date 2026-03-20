@@ -1,0 +1,31 @@
+# Garage Goat Garage Doors — robots.txt
+# https://www.garagegoatdoors.com
+
+User-agent: *
+Allow: /
+Disallow: /404
+Disallow: /design-system
+
+Sitemap: https://www.garagegoatdoors.com/sitemap.xml
+
+# AI Crawlers — welcome
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
