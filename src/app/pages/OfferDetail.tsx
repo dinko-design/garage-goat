@@ -8,6 +8,7 @@ import { buildOfferSchema } from '../../data/structured-data';
 import { OptimizedImage } from '../components/OptimizedImage';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { RelatedServices } from '../components/RelatedContent';
+import { TrustStrip } from '../components/TrustBadges';
 
 export function OfferDetail({ slug: propSlug }: { slug?: string }) {
   const { slug: paramSlug } = useParams<{ slug: string }>();
@@ -186,6 +187,9 @@ export function OfferDetail({ slug: propSlug }: { slug?: string }) {
           )}
         </div>
       </div>
+
+      {/* Trust Strip */}
+      <TrustStrip />
     </>
   );
 }

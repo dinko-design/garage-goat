@@ -8,6 +8,7 @@ import { HeroLeadForm } from '../components/HeroLeadForm';
 import { SEO } from '../components/SEO';
 import { OptimizedImage } from '../components/OptimizedImage';
 import { buildServiceSchema, buildFAQPageSchema } from '../../data/structured-data';
+import { TrustStrip } from '../components/TrustBadges';
 
 export function ServiceDetail({ slug: propSlug }: { slug?: string }) {
   const { slug: paramSlug } = useParams<{ slug: string }>();
@@ -92,6 +93,9 @@ export function ServiceDetail({ slug: propSlug }: { slug?: string }) {
           </div>
         </div>
       </div>
+
+      {/* Trust Strip */}
+      <TrustStrip />
 
       {/* Content + Sidebar */}
       <div className="py-16 bg-goat-cream relative overflow-hidden noise-overlay-light">

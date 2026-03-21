@@ -8,6 +8,7 @@ import { OptimizedImage } from '../components/OptimizedImage';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { HeroLeadForm } from '../components/HeroLeadForm';
 import { RelatedBlogs, RelatedOffers } from '../components/RelatedContent';
+import { TrustStrip } from '../components/TrustBadges';
 
 export function ServiceAreaDetail({ slug: propSlug }: { slug?: string }) {
   const { slug: paramSlug } = useParams<{ slug: string }>();
@@ -79,6 +80,9 @@ export function ServiceAreaDetail({ slug: propSlug }: { slug?: string }) {
           </div>
         </div>
       </div>
+
+      {/* Trust Strip */}
+      <TrustStrip />
 
       <div className="py-16 bg-goat-cream relative overflow-hidden noise-overlay-light">
         <div className="absolute inset-0 texture-concrete opacity-[0.5] pointer-events-none" />
