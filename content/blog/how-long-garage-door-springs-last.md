@@ -3,7 +3,7 @@ id: spring-lifespan
 slug: how-long-garage-door-springs-last
 title: How Long Do Garage Door Springs Last?
 excerpt: "Standard springs last 7-10 years. High-cycle springs can last 15-20 years. Here's what determines your spring's lifespan."
-featuredImage: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080"
+featuredImage: "/images/real/cable-drum-closeup.jpg"
 date: "January 28, 2026"
 tags:
   - springs

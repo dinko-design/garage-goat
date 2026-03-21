@@ -7,7 +7,7 @@ metaDescription: "Broken garage door spring? Don't attempt DIY! Call Garage Goat
 h1Title: Garage Door Spring Repair
 introParagraph: "The springs are the heavy lifters of your garage door system. When one breaks, your door won't open. We safely replace torsion and extension springs fast."
 iconName: Cog
-image: "https://images.unsplash.com/photo-1489348557694-c552c1eee72d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnYXJhZ2UlMjB3b3Jrc2hvcCUyMHRvb2xzJTIwaW5kdXN0cmlhbHxlbnwxfHx8fDE3NzA5Njg4NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+image: "/images/real/new-spring-installed.jpg"
 ctaHeadline: "Broken Spring? We're On Our Way."
 ctaButtonText: Fix My Springs
 relatedServiceIds:

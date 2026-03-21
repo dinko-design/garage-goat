@@ -3,7 +3,7 @@ id: smart-openers
 slug: smart-garage-door-opener-worth-it
 title: "Smart Garage Door Openers: Are They Worth It?"
 excerpt: "Wi-Fi openers let you control your garage from anywhere. Here's whether the upgrade makes sense for your home."
-featuredImage: "https://images.unsplash.com/photo-1558002038-1055907df827?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080"
+featuredImage: "/images/real/chamberlain-wall-mount.jpg"
 date: "November 1, 2025"
 tags:
   - opener

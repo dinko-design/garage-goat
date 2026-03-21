@@ -7,7 +7,7 @@ metaDescription: "Fast, reliable garage door repair in Cypress, TX. We fix sprin
 h1Title: Garage Door Repair Services
 introParagraph: "Is your garage door stuck, noisy, or off track? Garage Goat provides professional garage door repair services to get your door back in action quickly and safely."
 iconName: Wrench
-image: "https://images.unsplash.com/photo-1651248271817-f8a32264f5c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnYXJhZ2UlMjBkb29yJTIwcmVwYWlyJTIwdGVjaG5pY2lhbiUyMHdvcmtpbmd8ZW58MXx8fHwxNzcwOTY4ODUxfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+image: "/images/real/cesar-working-drill.jpg"
 ctaHeadline: Need Same-Day Repair?
 ctaButtonText: Book Repair Now
 relatedServiceIds:

@@ -3,7 +3,7 @@ id: door-styles
 slug: best-garage-door-styles-texas-homes
 title: Best Garage Door Styles for Texas Homes in 2026
 excerpt: "From classic raised panel to modern flush designs, here are the garage door styles trending in Cypress and NW Houston."
-featuredImage: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080"
+featuredImage: "/images/stock/exterior-double-carriage.jpg"
 date: "January 5, 2026"
 tags:
   - installation

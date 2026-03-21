@@ -3,7 +3,7 @@ id: new-door-cost
 slug: new-garage-door-cost-cypress-tx
 title: "How Much Does a New Garage Door Cost in Cypress, TX?"
 excerpt: "Planning a garage door replacement? Here's what to expect for pricing on new garage doors in the Cypress and NW Houston area."
-featuredImage: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080"
+featuredImage: "/images/stock/exterior-grey-carriage.jpg"
 date: "March 5, 2026"
 tags:
   - cost

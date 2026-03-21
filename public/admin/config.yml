@@ -41,7 +41,7 @@ collections:
       - name: featuredImage
         label: Featured Image
         widget: string
-        hint: "Full Unsplash URL"
+        hint: "Image path (e.g. /images/stock/photo.jpg)"
       - name: date
         label: Date
         widget: string

@@ -11,8 +11,8 @@ import { OptimizedImage } from '../components/OptimizedImage';
 import { buildLocalBusinessSchema } from '../../data/structured-data';
 import { TrustBadges } from '../components/TrustBadges';
 
-// Truck image (placeholder — to be replaced with real wrapped truck photo)
-const truckImage = "https://images.unsplash.com/photo-1770739537169-6e9239896c95?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3aGl0ZSUyMHdvcmslMjB0cnVjayUyMHBhcmtlZCUyMHJlc2lkZW50aWFsJTIwbmVpZ2hib3Job29kfGVufDF8fHx8MTc3MDk3MDAyMXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral";
+// Cesar's Garage Goat truck on the job
+const truckImage = "/images/real/truck-branded-rear.jpg";
 
 export function Home() {
   const featuredOffer = offers[0];
@@ -36,7 +36,7 @@ export function Home() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <OptimizedImage
-            src="https://images.unsplash.com/photo-1576765915042-d4746f8b7727?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiZWF1dGlmdWwlMjByZXNpZGVudGlhbCUyMGdhcmFnZSUyMGRvb3IlMjBjdXJiJTIwYXBwZWFsfGVufDF8fHx8MTc3MDk2ODg1M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+            src="/images/stock/exterior-craftsman-dark.jpg"
             alt="Beautiful garage door on American home"
             className="w-full h-full object-cover opacity-25"
             loading="eager"

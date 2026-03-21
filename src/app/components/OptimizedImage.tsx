@@ -3,38 +3,6 @@ import React, { useState } from 'react';
 const ERROR_IMG_SRC =
   'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODgiIGhlaWdodD0iODgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjMDAwIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBvcGFjaXR5PSIuMyIgZmlsbD0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIzLjciPjxyZWN0IHg9IjE2IiB5PSIxNiIgd2lkdGg9IjU2IiBoZWlnaHQ9IjU2IiByeD0iNiIvPjxwYXRoIGQ9Im0xNiA1OCAxNi0xOCAzMiAzMiIvPjxjaXJjbGUgY3g9IjUzIiBjeT0iMzUiIHI9IjciLz48L3N2Zz4KCg==';
 
-/**
- * Generates srcSet for Unsplash images by appending width params.
- * Returns undefined for non-Unsplash (local/data) URLs.
- */
-function buildUnsplashSrcSet(src: string): string | undefined {
-  if (!src.includes('images.unsplash.com')) return undefined;
-
-  const widths = [400, 800, 1200];
-  return widths
-    .map(w => {
-      // Replace existing &w= param or append one
-      let url = src.includes('&w=')
-        ? src.replace(/&w=\d+/, `&w=${w}`)
-        : `${src}&w=${w}`;
-      // Serve WebP for smaller file sizes
-      if (!url.includes('&fm=')) url += '&fm=webp';
-      return `${url} ${w}w`;
-    })
-    .join(', ');
-}
-
-/**
- * Appends &fm=webp to Unsplash URLs for optimal delivery.
- * Returns non-Unsplash URLs unchanged.
- */
-function optimizeUnsplashSrc(src: string): string {
-  if (!src.includes('images.unsplash.com')) return src;
-  let url = src;
-  if (!url.includes('&fm=')) url += '&fm=webp';
-  return url;
-}
-
 interface OptimizedImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   /** Image source URL */
   src: string;
@@ -79,19 +47,15 @@ export function OptimizedImage({
     );
   }
 
-  const srcSet = buildUnsplashSrcSet(src);
-
   return (
     <img
-      src={optimizeUnsplashSrc(src)}
+      src={src}
       alt={alt}
       width={width}
       height={height}
       loading={loading}
       decoding="async"
       fetchPriority={fetchPriority}
-      srcSet={srcSet}
-      sizes={srcSet ? sizes : undefined}
       className={className}
       style={style}
       onError={() => setDidError(true)}

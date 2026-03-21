@@ -3,7 +3,7 @@ id: choose-company
 slug: how-to-choose-garage-door-repair-company
 title: How to Choose a Garage Door Repair Company (Without Getting Scammed)
 excerpt: "The garage door industry has a bait-and-switch problem. Here's how to protect yourself and find an honest company."
-featuredImage: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080"
+featuredImage: "/images/stock/exterior-craftsman-dusk.jpg"
 date: "October 5, 2025"
 tags:
   - advice

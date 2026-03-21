@@ -3,7 +3,7 @@ id: noisy-door
 slug: why-garage-door-loud-how-to-fix
 title: Why Your Garage Door Is So Loud (and How to Fix It)
 excerpt: "Grinding, squeaking, or banging? Here's what's causing the noise and whether it needs professional attention."
-featuredImage: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080"
+featuredImage: "/images/stock/interior-spacious.jpg"
 date: "November 15, 2025"
 tags:
   - troubleshooting

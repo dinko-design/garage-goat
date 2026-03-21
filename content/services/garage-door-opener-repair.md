@@ -7,7 +7,7 @@ metaDescription: "Opener not working? We repair and install LiftMaster, Genie, C
 h1Title: "Garage Door Opener Repair & Installation"
 introParagraph: "A reliable opener is key to a convenient garage. We repair motors, sensors, remotes, and keypads for all major brands — and install new smart openers."
 iconName: Cog
-image: "https://images.unsplash.com/photo-1759355787121-eaef014a501d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBnYXJhZ2UlMjBkb29yJTIwaG91c2UlMjBleHRlcmlvcnxlbnwxfHx8fDE3NzAxNTc1NzB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+image: "/images/real/chamberlain-opener-truck.jpg"
 ctaHeadline: Upgrade Your Opener Today
 ctaButtonText: Get Opener Quote
 relatedServiceIds:

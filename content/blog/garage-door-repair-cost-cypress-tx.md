@@ -3,7 +3,7 @@ id: cost-guide
 slug: garage-door-repair-cost-cypress-tx
 title: "How Much Does Garage Door Repair Cost in Cypress, TX?"
 excerpt: Understanding the costs associated with common garage door repairs can help you budget effectively and avoid overpaying.
-featuredImage: "https://images.unsplash.com/photo-1759355787121-eaef014a501d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBnYXJhZ2UlMjBkb29yJTIwaG91c2UlMjBleHRlcmlvcnxlbnwxfHx8fDE3NzAxNTc1NzB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+featuredImage: "/images/stock/exterior-modern-dark.jpg"
 date: "January 15, 2026"
 tags:
   - cost

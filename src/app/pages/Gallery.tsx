@@ -10,45 +10,59 @@ import { OptimizedImage } from '../components/OptimizedImage';
 const galleryItems = [
   {
     id: 1,
-    title: 'Carriage House Installation',
+    title: 'Custom Cedar Door Installation',
     category: 'New Doors',
     location: 'Cypress, TX',
-    src: 'https://images.unsplash.com/photo-1576765915042-d4746f8b7727?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXJyaWFnZSUyMGhvdXNlJTIwZ2FyYWdlJTIwZG9vciUyMHN0eWxlfGVufDF8fHx8MTc3MjQ3Mzk0NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    src: '/images/real/custom-cedar-door.jpg',
   },
   {
     id: 2,
-    title: 'Modern Flush Panel Door',
-    category: 'New Doors',
-    location: 'The Woodlands, TX',
-    src: 'https://images.unsplash.com/photo-1597428167112-580e68b035f9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnYXJhZ2UlMjBkb29yJTIwYmVmb3JlJTIwYWZ0ZXIlMjByZW5vdmF0aW9ufGVufDF8fHx8MTc3MjQ3Mzk0Mnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    title: 'Chamberlain Opener Install',
+    category: 'Repairs',
+    location: 'Cypress, TX',
+    src: '/images/real/chamberlain-opener-truck.jpg',
   },
   {
     id: 3,
-    title: 'Spring Replacement',
+    title: 'Torsion Spring Replacement',
     category: 'Repairs',
     location: 'Tomball, TX',
-    src: 'https://images.unsplash.com/photo-1635108198165-1773945e506e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnYXJhZ2UlMjBkb29yJTIwb3BlbmVyJTIwaW5zdGFsbGF0aW9uJTIwdGVjaG5pY2lhbnxlbnwxfHx8fDE3NzI0NzM5NDN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    src: '/images/real/new-spring-installed.jpg',
   },
   {
     id: 4,
-    title: 'Full Curb Appeal Transformation',
-    category: 'New Doors',
-    location: 'Cypress, TX',
-    src: 'https://images.unsplash.com/photo-1761418022097-621b807bea0f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiZWF1dGlmdWwlMjBob21lJTIwZXh0ZXJpb3IlMjBjdXJiJTIwYXBwZWFsfGVufDF8fHx8MTc3MjQ3Mzk0M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    title: 'Smart Opener Upgrade',
+    category: 'Repairs',
+    location: 'Spring, TX',
+    src: '/images/real/chamberlain-opener-lit.jpg',
   },
   {
     id: 5,
-    title: 'Two-Car Garage Upgrade',
-    category: 'New Doors',
-    location: 'Spring, TX',
-    src: 'https://images.unsplash.com/photo-1758680475983-9bd68d8c3cc2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdWJ1cmJhbiUyMGhvdXNlJTIwdHdvJTIwY2FyJTIwZ2FyYWdlfGVufDF8fHx8MTc3MjQ3Mzk0OHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    title: 'Roller Replacement — Old vs New',
+    category: 'Repairs',
+    location: 'Cypress, TX',
+    src: '/images/real/rollers-old-vs-new.jpg',
   },
   {
     id: 6,
-    title: 'Driveway & Garage Refresh',
+    title: 'Two-Car Garage Upgrade',
     category: 'New Doors',
-    location: 'NW Houston, TX',
-    src: 'https://images.unsplash.com/photo-1614615642198-7052add7f5d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxob21lJTIwaW1wcm92ZW1lbnQlMjBnYXJhZ2UlMjBleHRlcmlvciUyMGRyaXZld2F5fGVufDF8fHx8MTc3MjQ3Mzk0OHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    location: 'Spring, TX',
+    src: '/images/stock/exterior-three-bay.jpg',
+  },
+  {
+    id: 7,
+    title: 'Modern Flush Panel Door',
+    category: 'New Doors',
+    location: 'The Woodlands, TX',
+    src: '/images/stock/exterior-two-white-blue.jpg',
+  },
+  {
+    id: 8,
+    title: 'Curb Appeal Transformation',
+    category: 'New Doors',
+    location: 'Cypress, TX',
+    src: '/images/stock/exterior-modern-dusk.jpg',
   },
 ];
 
@@ -147,7 +161,7 @@ export function Gallery() {
           {/* Note about real photos */}
           <div className="mt-12 text-center">
             <p className="text-goat-navy/40 text-sm italic">
-              Photos shown are representative of our work. Real project photos coming soon!
+              Mix of real project photos and representative images. More coming soon!
             </p>
           </div>
 

@@ -7,7 +7,7 @@ metaDescription: "Boost your curb appeal with a new garage door. Highest ROI hom
 h1Title: New Garage Door Installation
 introParagraph: "Ready for a new look? A new garage door offers the highest ROI of any home improvement project — up to 194% return on investment (source: Remodeling Magazine's 2024 Cost vs. Value Report)."
 iconName: Hammer
-image: "https://images.unsplash.com/photo-1576765915042-d4746f8b7727?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiZWF1dGlmdWwlMjByZXNpZGVudGlhbCUyMGdhcmFnZSUyMGRvb3IlMjBjdXJiJTIwYXBwZWFsfGVufDF8fHx8MTc3MDk2ODg1M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+image: "/images/stock/exterior-craftsman-dark.jpg"
 ctaHeadline: "Transform Your Home's Curb Appeal"
 ctaButtonText: Get a Quote
 relatedServiceIds:

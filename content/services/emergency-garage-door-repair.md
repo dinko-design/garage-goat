@@ -7,7 +7,7 @@ metaDescription: Stuck in your garage? Broken spring at midnight? Call Garage Go
 h1Title: "24/7 Emergency Garage Door Repair"
 introParagraph: "Garage doors don't break on a schedule. That's why we offer 24/7 emergency service — nights, weekends, and holidays. We'll get you back on track."
 iconName: Clock
-image: "https://images.unsplash.com/photo-1764328165995-0624c280a6d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjB3b3JrZXIlMjBwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdCUyMGJsdWV8ZW58MXx8fHwxNzcwOTY4ODU3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+image: "/images/real/damaged-door-before.jpg"
 ctaHeadline: "Don't Wait — Call Now"
 ctaButtonText: Call for Emergency Service
 relatedServiceIds:

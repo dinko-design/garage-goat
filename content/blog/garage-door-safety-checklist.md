@@ -3,7 +3,7 @@ id: safety-checklist
 slug: garage-door-safety-checklist
 title: "Is Your Garage Door Safe? A Homeowner's Safety Checklist"
 excerpt: "Your garage door is the heaviest moving object in your home. Use this checklist to make sure it's safe."
-featuredImage: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080"
+featuredImage: "/images/stock/interior-clean-white.jpg"
 date: "December 20, 2025"
 tags:
   - safety

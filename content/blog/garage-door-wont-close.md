@@ -3,7 +3,7 @@ id: wont-close
 slug: garage-door-wont-close
 title: "Garage Door Won't Close? Here's Why (and What to Do)"
 excerpt: "A garage door that won't close is a security risk. Here are the most common causes and whether you need a pro."
-featuredImage: "https://images.unsplash.com/photo-1558036117-15d82a90b9b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080"
+featuredImage: "/images/stock/door-partially-open.jpg"
 date: "January 15, 2026"
 tags:
   - troubleshooting

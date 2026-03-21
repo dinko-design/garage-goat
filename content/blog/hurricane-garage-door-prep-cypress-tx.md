@@ -3,7 +3,7 @@ id: hurricane-prep
 slug: hurricane-garage-door-prep-cypress-tx
 title: "Hurricane Season & Your Garage Door: Prep Guide for Cypress Homeowners"
 excerpt: "Your garage door is your home's most vulnerable entry point during a hurricane. Here's how to protect it."
-featuredImage: "https://images.unsplash.com/photo-1509803874385-db7c23652552?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080"
+featuredImage: "/images/stock/exterior-brown-winter.jpg"
 date: "September 20, 2025"
 tags:
   - safety

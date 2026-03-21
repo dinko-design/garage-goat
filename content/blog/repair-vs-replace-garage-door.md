@@ -3,7 +3,7 @@ id: repair-vs-replace
 slug: repair-vs-replace-garage-door
 title: When to Repair vs Replace Your Garage Door
 excerpt: "Is it time for a new door, or will a repair get you a few more years? Here's how to decide."
-featuredImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080"
+featuredImage: "/images/stock/exterior-single-carriage.jpg"
 date: "November 28, 2025"
 tags:
   - repair

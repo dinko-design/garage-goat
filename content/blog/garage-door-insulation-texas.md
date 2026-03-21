@@ -3,7 +3,7 @@ id: insulation
 slug: garage-door-insulation-texas
 title: "Garage Door Insulation: Does It Matter in Texas?"
 excerpt: "With summer heat topping 100°F, an insulated garage door can make a real difference. Here's what to know."
-featuredImage: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080"
+featuredImage: "/images/stock/door-back-panel.jpg"
 date: "October 20, 2025"
 tags:
   - installation

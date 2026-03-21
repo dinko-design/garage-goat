@@ -3,7 +3,7 @@ id: maintenance-checklist
 slug: garage-door-maintenance-checklist
 title: "Garage Door Maintenance: The 15-Minute Seasonal Tune-Up"
 excerpt: "A quick seasonal maintenance routine can prevent expensive repairs. Here's what to do every 3-6 months."
-featuredImage: "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080"
+featuredImage: "/images/real/spring-on-floor.jpg"
 date: "December 10, 2025"
 tags:
   - maintenance
