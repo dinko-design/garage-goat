@@ -46,7 +46,7 @@ export function Reviews() {
             Customer <span className="text-goat-red">Reviews</span>
           </h1>
           <p className="text-xl text-goat-ice/70 mb-8 max-w-2xl mx-auto">
-            We let our work speak for itself. Here's what the people of Cypress, Tomball & Katy have to say.
+            We let our work speak for itself. Here's what the people of Cypress, Tomball & The Woodlands have to say.
           </p>
 
           {/* Rating Badge */}

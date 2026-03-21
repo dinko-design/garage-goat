@@ -54,7 +54,7 @@ const priceFactors = [
 ];
 
 const trustSignals = [
-  { text: 'Free estimates, no obligation', icon: DollarSign },
+  { text: 'Upfront quotes, no obligation', icon: DollarSign },
   { text: 'Upfront pricing before work begins', icon: FileText },
   { text: 'Same price 24/7 — nights, weekends, holidays', icon: Clock },
   { text: 'No service call fee when you proceed with repair', icon: CheckCircle2 },
@@ -74,7 +74,7 @@ export function Pricing() {
     <span className="contents">
       <SEO
         title="Garage Door Repair Cost & Pricing | Garage Goat — Cypress, TX"
-        description="See transparent garage door repair pricing from Garage Goat in Cypress, TX. Spring replacement $200–$400, opener repair $150–$350, and more. Free estimates, no hidden fees."
+        description="See transparent garage door repair pricing from Garage Goat in Cypress, TX. Spring replacement $200–$400, opener repair $150–$350, and more. Upfront quotes, no hidden fees."
         path="/pricing"
         jsonLd={buildLocalBusinessSchema()}
       />
@@ -173,7 +173,7 @@ export function Pricing() {
 
             <p className="text-goat-navy/50 text-xs mt-4 text-center max-w-3xl mx-auto">
               Prices based on Garage Goat's local Cypress-area pricing as of 2026. Final cost depends
-              on door type, parts needed, and complexity. Free estimate provided before any work begins.
+              on door type, parts needed, and complexity. Upfront quote provided before any work begins.
             </p>
           </div>
 
@@ -270,7 +270,7 @@ export function Pricing() {
                   textTransform: 'uppercase',
                 }}
               >
-                Get Your Free Estimate
+                Get Your Quote
               </h2>
               <p className="text-white/80 mt-2 mb-6 max-w-lg mx-auto">
                 Call now or book online. We will provide an upfront quote before any work begins — no

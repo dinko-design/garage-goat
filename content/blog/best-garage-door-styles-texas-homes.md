@@ -9,7 +9,7 @@ tags:
   - installation
   - styles
   - curb-appeal
-author: "Cesar Garcia, Owner — Garage Goat Garage Doors"
+author: "Cesar Salazar, Owner — Garage Goat Garage Doors"
 authorRole: "TDLR Licensed Garage Door Technician & Owner"
 relatedServiceIds:
   - installation
@@ -45,4 +45,4 @@ Regardless of the style you choose, we strongly recommend insulated steel constr
 
 ### Need Help Choosing?
 
-Garage Goat offers free in-home consultations where we bring samples and help you choose the perfect door for your home and budget. Call **(281) 948-5452** to schedule yours.
+Garage Goat offers in-home consultations where we bring samples and help you choose the perfect door for your home and budget. Call **(281) 948-5452** to schedule yours.

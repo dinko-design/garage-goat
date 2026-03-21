@@ -102,7 +102,7 @@ export function Financing() {
             </h2>
             <div className="grid sm:grid-cols-3 gap-8">
               {[
-                { step: '1', title: 'Get Your Free Estimate', desc: 'Call us or book online. Our tech will provide a free, no-obligation quote for your project.' },
+                { step: '1', title: 'Get Your Quote', desc: 'Call us or book online. Our tech will provide an upfront, no-obligation quote for your project.' },
                 { step: '2', title: 'Choose Your Plan', desc: 'Select the financing option that fits your budget. Quick application with instant approval available.' },
                 { step: '3', title: 'We Get to Work', desc: 'Once approved, we schedule your service right away. Enjoy your new or repaired garage door today!' },
               ].map(s => (
@@ -237,7 +237,7 @@ export function Financing() {
                 Ready to Get Started?
               </h2>
               <p className="text-goat-ice/70 mt-2 mb-6 max-w-lg mx-auto">
-                Call us today for a free estimate and ask about our financing options. No obligation, no pressure.
+                Call us today for an upfront quote and ask about our financing options. No obligation, no pressure.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <a

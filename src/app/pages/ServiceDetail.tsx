@@ -56,10 +56,10 @@ export function ServiceDetail({ slug: propSlug }: { slug?: string }) {
             {/* Left — Copy */}
             <div className="flex-1 min-w-0">
               <h1
-                className="text-4xl lg:text-5xl xl:text-6xl mb-6"
+                className="text-4xl lg:text-5xl xl:text-6xl mb-6 text-white"
                 style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase', lineHeight: 1.05 }}
               >
-                <span className="text-goat-red">{service.h1Title}</span>
+                {service.h1Title}
               </h1>
               <p className="text-lg lg:text-xl text-goat-ice/80 mb-8 max-w-xl leading-relaxed">{service.introParagraph}</p>
               <div className="flex flex-wrap gap-3">

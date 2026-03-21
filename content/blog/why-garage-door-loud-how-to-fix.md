@@ -9,7 +9,7 @@ tags:
   - troubleshooting
   - repair
   - noise
-author: "Cesar Garcia, Owner — Garage Goat Garage Doors"
+author: "Cesar Salazar, Owner — Garage Goat Garage Doors"
 authorRole: "TDLR Licensed Garage Door Technician & Owner"
 relatedServiceIds:
   - repair
@@ -49,4 +49,4 @@ The opener is bolted to a metal bracket attached to your ceiling or wall. If thi
 
 You can handle lubrication, tightening hardware, and basic cleaning yourself. But spring adjustment, roller replacement, gear repair, and opener installation should be handled by a professional. These involve components under tension or electrical connections that require proper tools and training.
 
-Ready for a quieter garage? Call Garage Goat at **(281) 948-5452**. We serve Cypress, Tomball, Katy, and the entire NW Houston area with same-day availability.
+Ready for a quieter garage? Call Garage Goat at **(281) 948-5452**. We serve Cypress, Tomball, The Woodlands, and the entire NW Houston area with same-day availability.

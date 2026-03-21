@@ -17,7 +17,9 @@ TDLR Licensed (#GDC-7742). 4.9-star Google rating with 287+ reviews.
 ## Service Areas
 - Cypress, TX (headquarters)
 - Tomball, TX
-- Katy, TX
+- The Woodlands, TX
+- Magnolia, TX
+- Hockley, TX
 - Spring, TX
 - Northwest Houston, TX
 

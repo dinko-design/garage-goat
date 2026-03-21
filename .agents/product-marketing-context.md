@@ -4,13 +4,13 @@
 
 ## Product Overview
 **One-liner:** Garage Goat is a locally owned garage door repair and installation company in Cypress, TX, known for fast response times, honest pricing, and owner-operator service.
-**What it does:** Provides same-day garage door repair, spring replacement, opener installation, new garage door sales, and 24/7 emergency service across Northwest Houston. Owner Cesar Garcia personally handles service calls — this is not a dispatch company.
+**What it does:** Provides same-day garage door repair, spring replacement, opener installation, new garage door sales, and 24/7 emergency service across Northwest Houston. Owner Cesar Salazar personally handles service calls — this is not a dispatch company.
 **Product category:** Garage door repair & installation (local home service)
 **Product type:** Local service business (owner-operator)
 **Business model:** Service-based revenue — repair jobs ($75–$800), new installations ($1,200–$5,000+). No subscription or retainer model. Revenue driven by inbound calls, Google search, Nextdoor, and word-of-mouth.
 
 ## Target Audience
-**Target customers:** Homeowners in Cypress, Tomball, Katy, Spring, and NW Houston, TX. Primarily single-family homes in suburban communities and master-planned neighborhoods (Bridgeland, Towne Lake, Cinco Ranch, etc.).
+**Target customers:** Homeowners in Cypress, Tomball, The Woodlands, Spring, Magnolia, Hockley, and NW Houston, TX. Primarily single-family homes in suburban communities and master-planned neighborhoods (Bridgeland, Towne Lake, Creekside Park, etc.).
 **Decision-makers:** Homeowner (usually the person whose garage door just broke). Often urgent — the door is stuck open or won't close, so speed matters.
 **Primary use case:** "My garage door is broken and I need someone to fix it today."
 **Jobs to be done:**
@@ -42,7 +42,7 @@
 
 ## Differentiation
 **Key differentiators:**
-- Owner-operator model: Cesar Garcia personally does the work — you're not getting a random technician
+- Owner-operator model: Cesar Salazar personally does the work — you're not getting a random technician
 - Speed: 20-60 minute response times (competitors average 2-4 hours or next-day)
 - Honesty: Cesar will tell you when you DON'T need work (multiple reviews confirm this)
 - No after-hours fees: Same price 24/7, nights, weekends, holidays
@@ -57,7 +57,7 @@
 |-----------|----------|
 | "How do I know you won't overcharge me?" | Free estimate before any work begins. We show you the problem, explain your options, and give you an upfront price. If you say no, you pay nothing. |
 | "Are you licensed and insured?" | Yes — TDLR Licensed (#GDC-7742), fully insured with general liability and workers' comp. |
-| "Can you really come today?" | In most cases, yes. We offer same-day service across Cypress, Tomball, Katy, and NW Houston. Emergency calls typically answered within 60 minutes. |
+| "Can you really come today?" | In most cases, yes. We offer same-day service across Cypress, Tomball, The Woodlands, and NW Houston. Emergency calls typically answered within 60 minutes. |
 | "Is it just one guy? Can he handle my job?" | Cesar has personally completed 10,000+ jobs since 2010. He carries parts for all standard door sizes on the truck. For large-scale installations, he brings additional crew. |
 
 **Anti-persona:** Property management companies looking for rock-bottom bulk pricing. Homeowners wanting DIY parts only (no installation). People looking for a large corporate company with a national warranty network.

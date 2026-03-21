@@ -56,10 +56,10 @@ export function ServiceAreaDetail({ slug: propSlug }: { slug?: string }) {
                 </span>
               </div>
               <h1
-                className="text-4xl lg:text-5xl xl:text-6xl mb-6"
+                className="text-4xl lg:text-5xl xl:text-6xl mb-6 text-white"
                 style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase', lineHeight: 1.05 }}
               >
-                <span className="text-goat-red">{area.h1Title}</span>
+                {area.h1Title}
               </h1>
               <p className="text-lg lg:text-xl text-goat-ice/80 mb-8 max-w-xl lg:mx-0 mx-auto">{area.introParagraph}</p>
               <a

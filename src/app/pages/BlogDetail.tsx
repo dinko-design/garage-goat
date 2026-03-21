@@ -91,11 +91,11 @@ export function BlogDetail() {
               {/* Author Bio */}
               <div className="mt-10 bg-white p-6 rounded-lg border border-goat-cream-dark flex items-start gap-4">
                 <div className="w-12 h-12 bg-goat-red rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-white text-lg" style={{ fontFamily: 'var(--font-heading)', fontWeight: 700 }}>CG</span>
+                  <span className="text-white text-lg" style={{ fontFamily: 'var(--font-heading)', fontWeight: 700 }}>CS</span>
                 </div>
                 <div>
                   <div className="text-goat-navy-dark" style={{ fontFamily: 'var(--font-heading)', fontWeight: 700 }}>
-                    Cesar Garcia
+                    Cesar Salazar
                   </div>
                   <div className="text-goat-navy/60 text-sm">{post.authorRole}</div>
                   <p className="text-goat-navy/70 text-sm mt-2">

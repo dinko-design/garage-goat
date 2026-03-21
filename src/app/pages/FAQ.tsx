@@ -19,23 +19,23 @@ interface FAQCategory {
 }
 
 const generalFAQs: FAQItem[] = [
-  { question: 'What areas do you serve?', answer: 'We proudly serve Cypress, Tomball, Katy, Spring, and Northwest Houston. Our headquarters are in Cypress, TX, and we can typically reach anywhere in our service area within 60 minutes.' },
+  { question: 'What areas do you serve?', answer: 'We proudly serve Cypress, Tomball, The Woodlands, Spring, Magnolia, Hockley, and Northwest Houston. Our headquarters are in Cypress, TX, and we can typically reach anywhere in our service area within 60 minutes.' },
   { question: 'Are you licensed and insured?', answer: `Yes! We are fully licensed by the Texas Department of Licensing and Regulation (${companyInfo.licenseName} ${companyInfo.licenseNumber}) and carry comprehensive general liability and workers' compensation insurance.` },
-  { question: 'Do you offer free estimates?', answer: 'Absolutely. We provide free, no-obligation estimates for all services. Our technician will diagnose the issue, explain your options, and give you an upfront price before any work begins.' },
+  { question: 'Do you provide estimates?', answer: 'We provide upfront quotes for all services. Our technician will diagnose the issue, explain your options, and give you an honest price before any work begins.' },
   { question: 'What brands do you work with?', answer: 'We service all major brands including LiftMaster, Chamberlain, Genie, Craftsman, Clopay, Amarr, Wayne Dalton, and more. If you have a garage door, we can fix it.' },
   { question: 'Do you offer warranties?', answer: `Yes. We provide a ${companyInfo.warranty.labor} warranty on labor, ${companyInfo.warranty.parts} warranty on parts, and a ${companyInfo.warranty.springs} warranty on springs. See our Warranty page for full details.` },
   { question: 'How do I know if I need a repair or a full replacement?', answer: 'As a rule of thumb, if your door is less than 15 years old and the issue is mechanical (springs, cables, opener), a repair is usually the best value. If the door itself is severely damaged, rusted through, or outdated, a replacement may be more cost-effective. We\'ll give you honest advice either way.' },
 ];
 
 const pricingFAQs: FAQItem[] = [
-  { question: 'How much does a typical repair cost?', answer: 'Most common repairs range from $150 to $450 depending on the issue. Spring replacements typically run $200–$400, opener repairs $150–$350, and off-track corrections $125–$250. We always provide a free estimate first.' },
+  { question: 'How much does a typical repair cost?', answer: 'Most common repairs range from $150 to $450 depending on the issue. Spring replacements typically run $200–$400, opener repairs $150–$350, and off-track corrections $125–$250. We always provide an upfront quote first.' },
   { question: 'Do you charge for after-hours or emergency calls?', answer: 'No. We don\'t believe in gouging people when they\'re in a bind. Our pricing is the same 24/7 — nights, weekends, and holidays included.' },
   { question: 'Do you offer financing?', answer: 'Yes! We offer flexible financing options for larger projects like new door installations. Visit our Financing page for details or ask your technician about available plans.' },
   { question: 'Is there a service call fee?', answer: 'We do not charge a service call fee when you proceed with the recommended repair. If you choose not to have the work done, there is a small diagnostic fee.' },
 ];
 
 const schedulingFAQs: FAQItem[] = [
-  { question: 'How quickly can you get to my house?', answer: 'For emergencies in our primary service area (Cypress, Tomball, Katy), we typically arrive within 60 minutes. For standard appointments, we offer same-day and next-day availability in most cases.' },
+  { question: 'How quickly can you get to my house?', answer: 'For emergencies in our primary service area (Cypress, Tomball, The Woodlands), we typically arrive within 60 minutes. For standard appointments, we offer same-day and next-day availability in most cases.' },
   { question: 'Do I need to be home during the repair?', answer: 'We prefer that an adult (18+) be present during the repair to authorize any work and review the final result. If that\'s not possible, we can make arrangements on a case-by-case basis.' },
   { question: 'How long does a typical repair take?', answer: 'Most repairs are completed in 1–2 hours. A new door installation typically takes 3–5 hours. We\'ll give you a time estimate when we provide your quote.' },
 ];

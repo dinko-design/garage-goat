@@ -9,7 +9,7 @@ tags:
   - cost
   - installation
   - cypress
-author: "Cesar Garcia, Owner — Garage Goat Garage Doors"
+author: "Cesar Salazar, Owner — Garage Goat Garage Doors"
 authorRole: "TDLR Licensed Garage Door Technician & Owner"
 relatedServiceIds:
   - installation
@@ -43,6 +43,6 @@ Beyond style, several factors influence the total cost of your new garage door:
 
 A garage door installation involves high-tension springs, precise track alignment, and electrical connections. Improper installation can void your manufacturer warranty, create safety hazards, and lead to premature wear. Our TDLR-licensed technicians handle everything from measurement to final safety testing, and every installation comes with our labor warranty.
 
-### Get a Free Estimate
+### Get Your Quote
 
-Ready to explore your options? Garage Goat offers free in-home consultations throughout Cypress, Tomball, Katy, and NW Houston. We'll bring samples, take measurements, and give you a written estimate with no pressure and no obligation. Call us at **(281) 948-5452** to schedule yours today.
+Ready to explore your options? Garage Goat offers in-home consultations throughout Cypress, Tomball, The Woodlands, and NW Houston. We'll bring samples, take measurements, and give you a written quote with no pressure and no obligation. Call us at **(281) 948-5452** to schedule yours today.

@@ -159,7 +159,7 @@ export function Header() {
             {/* Full location — md+ */}
             <span className="hidden md:flex items-center gap-1.5 text-sm whitespace-nowrap">
               <MapPin className="w-3.5 h-3.5 flex-shrink-0" />
-              Serving Cypress, Tomball, Katy & NW Houston
+              Serving Cypress, Tomball, The Woodlands & NW Houston
             </span>
             {/* Short location — always visible below md */}
             <span className="flex md:hidden items-center gap-1 text-xs whitespace-nowrap">
@@ -296,13 +296,13 @@ export function Header() {
               <NavLink to="/gallery" className={navLinkClasses}>Gallery</NavLink>
               <NavLink to="/reviews" className={navLinkClasses}>Reviews</NavLink>
 
-              {/* Primary CTA — Free Estimate */}
+              {/* Primary CTA — Get a Quote */}
               <Link
                 to="/contact"
                 className="ml-2 bg-goat-teal hover:bg-goat-teal-dark text-goat-navy-deep px-4 py-2.5 rounded transition-all flex items-center gap-2 shadow-lg shadow-goat-teal/30 text-sm tracking-wide uppercase whitespace-nowrap"
                 style={{ fontFamily: 'var(--font-heading)', fontWeight: 700 }}
               >
-                Free Estimate
+                Get a Quote
               </Link>
 
               {/* Secondary CTA — Offers */}
@@ -366,7 +366,7 @@ export function Header() {
                 className="ml-2 bg-goat-teal hover:bg-goat-teal-dark text-goat-navy-deep px-4 py-2.5 rounded transition-all flex items-center gap-2 shadow-lg shadow-goat-teal/30 text-sm tracking-wide uppercase whitespace-nowrap"
                 style={{ fontFamily: 'var(--font-heading)', fontWeight: 700 }}
               >
-                Free Estimate
+                Get a Quote
               </Link>
 
               {/* Secondary CTA — Offers */}
@@ -401,7 +401,7 @@ export function Header() {
             {/* Service area info strip */}
             <div className="flex items-center gap-2 px-6 py-2.5 bg-goat-navy-deep/50 text-goat-ice/60 text-xs border-b border-white/5">
               <MapPin className="w-3 h-3 flex-shrink-0" />
-              Serving Cypress, Tomball, Katy & NW Houston
+              Serving Cypress, Tomball, The Woodlands & NW Houston
             </div>
 
             {/* Services — expandable */}
@@ -529,7 +529,7 @@ export function Header() {
                 className="flex items-center justify-center gap-2 bg-goat-teal text-goat-navy-deep py-3.5 rounded transition-all text-sm uppercase tracking-wide shadow-lg shadow-goat-teal/30"
                 style={{ fontFamily: "var(--font-heading)", fontWeight: 700 }}
               >
-                Get Free Estimate
+                Get a Quote
               </Link>
               <a
                 href={`tel:${companyInfo.phoneRaw}`}

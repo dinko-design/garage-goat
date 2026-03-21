@@ -75,13 +75,13 @@ export function About() {
               </h2>
               <div className="space-y-4 text-goat-navy/70 leading-relaxed">
                 <p>
-                  Founded in {companyInfo.foundedYear} by Cesar, Garage Goat started with a single truck, a toolbox, and a simple mission: provide high-quality garage door repairs without the high-pressure sales tactics that plague this industry.
+                  Founded in {companyInfo.foundedYear} by Cesar, Garage Goat started with a single truck, a toolbox, and a handshake. Not the cheapest option — the one you can count on. Cesar's philosophy has always been simple: fix it right the first time, use quality parts, and stand behind the work after the check clears.
                 </p>
                 <p>
-                  We noticed homeowners were being overcharged for simple fixes — a $100 spring replacement turned into a $600 bill. A $50 sensor alignment became a $300 "diagnostic." We said enough.
+                  He saw homeowners getting ripped off — a $100 spring job turned into a $600 bill, a $50 sensor alignment became a $300 "diagnostic." He said enough. A handshake means more than any paper, and that's how he runs this business.
                 </p>
                 <p>
-                  Over {new Date().getFullYear() - companyInfo.foundedYear} years later, we've grown into a full-service team, but our core values haven't changed one bit. We treat every home like it's our own. We quote fair, work fast, and stand behind everything we do.
+                  Over {new Date().getFullYear() - companyInfo.foundedYear} years later, Cesar still works with builders where the garage door matters. At walkthrough, he's there face-to-face making sure homeowners know how their system works. The crew has grown, but the values haven't changed: quality parts, done the right way, satisfaction guaranteed.
                 </p>
               </div>
             </div>
@@ -366,7 +366,7 @@ export function About() {
             Ready to Work With Us?
           </h2>
           <p className="text-goat-navy/60 max-w-xl mx-auto mb-8">
-            Call us today for a free estimate or schedule your service online. We look forward to earning your trust.
+            Call us today for an upfront quote or schedule your service online. We look forward to earning your trust.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a

@@ -167,7 +167,7 @@ export function HeroLeadForm({ preselectedService, offer, className = '' }: Hero
           className="w-full mt-3 bg-goat-teal hover:bg-goat-teal-dark disabled:opacity-40 disabled:cursor-not-allowed text-goat-navy-deep py-3 rounded-lg transition-all flex items-center justify-center gap-2 text-sm shadow-lg shadow-goat-teal/20"
           style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.03em' }}
         >
-          {step === 2 ? 'Get Free Estimate' : 'Next'}
+          {step === 2 ? 'Get Your Quote' : 'Next'}
           <ChevronRight className="w-4 h-4" />
         </button>
 

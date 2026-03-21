@@ -9,7 +9,7 @@ tags:
   - cost
   - repair
   - cypress
-author: "Cesar Garcia, Owner — Garage Goat Garage Doors"
+author: "Cesar Salazar, Owner — Garage Goat Garage Doors"
 authorRole: "TDLR Licensed Garage Door Technician & Owner"
 relatedServiceIds:
   - repair
@@ -45,7 +45,7 @@ One important note: **we never charge emergency or after-hours fees**. Whether i
 
 The garage door industry has a reputation problem — some companies quote low on the phone, then inflate the price once they're at your house. Here's how to protect yourself: always get a written estimate before work begins, ask if the estimate includes parts and labor, and don't let anyone pressure you into a decision on the spot.
 
-At Garage Goat, we provide free estimates with no obligation. Our technician diagnoses the issue, explains your options, and gives you an upfront price. If you say no, you pay nothing. That's our guarantee.
+At Garage Goat, we provide upfront quotes with no obligation. Our technician diagnoses the issue, explains your options, and gives you an honest price. If you say no, you pay nothing. That's our guarantee.
 
 ### When Repair vs. Replacement Makes Sense
 

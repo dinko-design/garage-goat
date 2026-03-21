@@ -21,14 +21,14 @@ relatedOfferIds:
   - tune-up
 faqs:
   - question: How much does garage door repair cost?
-    answer: "Costs vary depending on the issue. Most common repairs range from $150-$450 based on our local Cypress-area pricing. We offer free estimates so you know exactly what to expect — no hidden fees, ever."
+    answer: "Costs vary depending on the issue. Most common repairs range from $150-$450 based on our local Cypress-area pricing. We provide upfront quotes so you know exactly what to expect — no hidden fees, ever."
   - question: Do you offer emergency services?
     answer: "Absolutely. We have 24/7 emergency repair services available. Call us anytime — day, night, weekends, or holidays."
   - question: How fast can you get here?
-    answer: "In most cases, we can arrive within 60-90 minutes for emergency calls in our primary service area (Cypress, Tomball, Katy)."
+    answer: "In most cases, we can arrive within 60-90 minutes for emergency calls in our primary service area (Cypress, Tomball, The Woodlands)."
 ---
 
-When your garage door malfunctions, it's more than just an inconvenience — it's a security risk. At Garage Goat, we specialize in diagnosing and fixing all types of garage door issues efficiently across Cypress, Tomball, Katy, and Northwest Houston.
+When your garage door malfunctions, it's more than just an inconvenience — it's a security risk. At Garage Goat, we specialize in diagnosing and fixing all types of garage door issues efficiently across Cypress, Tomball, The Woodlands, and Northwest Houston.
 
 ### Common Issues We Fix
 
@@ -51,4 +51,4 @@ Because we stock our trucks with the most common parts (springs, cables, rollers
 
 We've built our reputation on honest work and fair prices. While other companies upsell unnecessary replacements, we fix what's broken and leave the rest alone. Our technicians are background-checked, drug-tested, and trained to treat your home with respect.
 
-Every repair is backed by our **1-year labor warranty** and **3-year parts warranty**, so you can trust that the fix will last. Whether it's a squeaky roller or a door that won't open at all, Garage Goat has you covered — 24 hours a day, 7 days a week.
+Every repair is backed by our **3-year labor warranty** and **1-year parts warranty**, so you can trust that the fix will last. Whether it's a squeaky roller or a door that won't open at all, Garage Goat has you covered — 24 hours a day, 7 days a week.

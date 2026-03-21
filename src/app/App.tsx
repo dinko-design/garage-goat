@@ -106,9 +106,11 @@ export default function App() {
             {/* ── Service Area Pages (explicit, flat URLs for local SEO) ── */}
             <Route path="garage-door-repair-cypress-tx" element={<ServiceAreaDetail slug="garage-door-repair-cypress-tx" />} />
             <Route path="garage-door-repair-tomball-tx" element={<ServiceAreaDetail slug="garage-door-repair-tomball-tx" />} />
-            <Route path="garage-door-repair-katy-tx" element={<ServiceAreaDetail slug="garage-door-repair-katy-tx" />} />
             <Route path="garage-door-repair-spring-tx" element={<ServiceAreaDetail slug="garage-door-repair-spring-tx" />} />
             <Route path="garage-door-repair-houston-tx" element={<ServiceAreaDetail slug="garage-door-repair-houston-tx" />} />
+            <Route path="garage-door-repair-the-woodlands-tx" element={<ServiceAreaDetail slug="garage-door-repair-the-woodlands-tx" />} />
+            <Route path="garage-door-repair-magnolia-tx" element={<ServiceAreaDetail slug="garage-door-repair-magnolia-tx" />} />
+            <Route path="garage-door-repair-hockley-tx" element={<ServiceAreaDetail slug="garage-door-repair-hockley-tx" />} />
 
             {/* ── Offer Pages (dynamic — supports new offers via CMS) ── */}
             <Route path=":slug" element={<DynamicOfferOrNotFound />} />

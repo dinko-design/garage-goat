@@ -9,7 +9,7 @@ tags:
   - installation
   - insulation
   - energy
-author: "Cesar Garcia, Owner — Garage Goat Garage Doors"
+author: "Cesar Salazar, Owner — Garage Goat Garage Doors"
 authorRole: "TDLR Licensed Garage Door Technician & Owner"
 relatedServiceIds:
   - installation

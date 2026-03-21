@@ -9,7 +9,7 @@ tags:
   - advice
   - trust
   - industry
-author: "Cesar Garcia, Owner — Garage Goat Garage Doors"
+author: "Cesar Salazar, Owner — Garage Goat Garage Doors"
 authorRole: "TDLR Licensed Garage Door Technician & Owner"
 relatedServiceIds:
   - repair
@@ -41,7 +41,7 @@ A reputable company will diagnose the problem, explain your options, and give yo
 
 ### 4. Beware the "$29 Service Call"
 
-This is the garage door industry's most common scam. A company advertises a $29 (or even $19) service call, then shows up and quotes inflated prices — sometimes 3–4x the going rate. They're counting on the urgency of your situation to pressure you into paying. A legitimate company offers **free estimates** with no obligation.
+This is the garage door industry's most common scam. A company advertises a $29 (or even $19) service call, then shows up and quotes inflated prices — sometimes 3–4x the going rate. They're counting on the urgency of your situation to pressure you into paying. A legitimate company offers **upfront quotes** with no obligation.
 
 ### 5. Ask About Warranties
 
@@ -57,4 +57,4 @@ Ask for proof of general liability insurance and workers' compensation coverage.
 
 ### The Garage Goat Approach
 
-We built Garage Goat on the opposite of everything described above. We're owner-operated (I'm often the one at your door), TDLR licensed (#GDC-7742), fully insured, and we offer free estimates with no hidden fees. Our 287+ five-star reviews are from real Cypress-area homeowners. Call **(281) 948-5452** to experience the difference.
+We built Garage Goat on the opposite of everything described above. We're owner-operated (I'm often the one at your door), TDLR licensed (#GDC-7742), fully insured, and we offer honest quotes with no hidden fees. Our 287+ five-star reviews are from real Cypress-area homeowners. Call **(281) 948-5452** to experience the difference.

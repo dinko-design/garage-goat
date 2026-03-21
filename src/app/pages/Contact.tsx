@@ -107,7 +107,7 @@ export function Contact() {
                     <div>
                       <div className="text-goat-navy-dark mb-1" style={{ fontFamily: "var(--font-heading)", fontWeight: 700 }}>Service Area</div>
                       <p className="text-goat-navy/60 text-sm">
-                        Cypress, Tomball, Katy, Spring & NW Houston
+                        Cypress, Tomball, The Woodlands, Spring & NW Houston
                       </p>
                     </div>
                   </div>
@@ -263,7 +263,7 @@ export function Contact() {
               {[
                 {
                   question: 'How quickly can you get here?',
-                  answer: 'For emergencies, we typically arrive within 60 minutes in Cypress, Tomball & Katy. Standard appointments available same-day or next-day.',
+                  answer: 'For emergencies, we typically arrive within 60 minutes in Cypress, Tomball & The Woodlands. Standard appointments available same-day or next-day.',
                 },
                 {
                   question: 'Do you charge for estimates?',
@@ -271,7 +271,7 @@ export function Contact() {
                 },
                 {
                   question: 'What areas do you serve?',
-                  answer: 'We serve Cypress, Tomball, Katy, Spring, and Northwest Houston, TX.',
+                  answer: 'We serve Cypress, Tomball, The Woodlands, Spring, Magnolia, Hockley, and Northwest Houston, TX.',
                 },
               ].map((faq, idx) => (
                 <div key={idx} className="bg-white p-6 rounded-lg border border-goat-cream-dark">

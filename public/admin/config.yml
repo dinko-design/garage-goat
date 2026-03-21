@@ -52,7 +52,7 @@ collections:
       - name: author
         label: Author
         widget: string
-        default: "Cesar Garcia, Owner — Garage Goat Garage Doors"
+        default: "Cesar Salazar, Owner — Garage Goat Garage Doors"
       - name: authorRole
         label: Author Role
         widget: string

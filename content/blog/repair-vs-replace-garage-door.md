@@ -9,7 +9,7 @@ tags:
   - repair
   - installation
   - advice
-author: "Cesar Garcia, Owner — Garage Goat Garage Doors"
+author: "Cesar Salazar, Owner — Garage Goat Garage Doors"
 authorRole: "TDLR Licensed Garage Door Technician & Owner"
 relatedServiceIds:
   - repair
@@ -53,4 +53,4 @@ Here's a quick comparison to put things in perspective:
 
 At Garage Goat, we'll never push you toward a replacement when a repair will do the job. Our technicians are trained to give honest assessments — and if repair is the right call, that's what we recommend. We've turned away replacement sales to do a $200 repair because it was the right thing for the homeowner. That's how we've earned 287+ five-star reviews.
 
-Not sure which way to go? Call **(281) 948-5452** for a free in-home assessment. We'll inspect your door, show you what we find, and give you honest options — no pressure, no obligation.
+Not sure which way to go? Call **(281) 948-5452** for an in-home assessment. We'll inspect your door, show you what we find, and give you honest options — no pressure, no obligation.

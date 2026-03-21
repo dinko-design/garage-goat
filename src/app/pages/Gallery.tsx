@@ -19,7 +19,7 @@ const galleryItems = [
     id: 2,
     title: 'Modern Flush Panel Door',
     category: 'New Doors',
-    location: 'Katy, TX',
+    location: 'The Woodlands, TX',
     src: 'https://images.unsplash.com/photo-1597428167112-580e68b035f9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnYXJhZ2UlMjBkb29yJTIwYmVmb3JlJTIwYWZ0ZXIlMjByZW5vdmF0aW9ufGVufDF8fHx8MTc3MjQ3Mzk0Mnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
   },
   {
@@ -64,7 +64,7 @@ export function Gallery() {
     <span className="contents">
       <SEO
         title="Project Gallery | Garage Goat Garage Doors — Cypress, TX"
-        description="Browse our gallery of completed garage door installations and repairs in Cypress, Tomball, Katy, and NW Houston. See the Garage Goat difference."
+        description="Browse our gallery of completed garage door installations and repairs in Cypress, Tomball, The Woodlands, and NW Houston. See the Garage Goat difference."
         path="/gallery"
       />
 
@@ -157,14 +157,14 @@ export function Gallery() {
               <h3 style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, textTransform: 'uppercase' }}>
                 Want Results Like These?
               </h3>
-              <p className="text-white/80 mt-2 mb-6">Get a free estimate for your garage door project.</p>
+              <p className="text-white/80 mt-2 mb-6">Get a quote for your garage door project.</p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <a
                   href={`tel:${companyInfo.phoneRaw}`}
                   className="bg-white text-goat-red hover:bg-goat-cream px-6 py-3 rounded transition-colors flex items-center justify-center gap-2"
                   style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, textTransform: 'uppercase' }}
                 >
-                  <Phone className="w-4 h-4" /> Call for Free Estimate
+                  <Phone className="w-4 h-4" /> Call for a Quote
                 </a>
                 <Link
                   to="/contact"

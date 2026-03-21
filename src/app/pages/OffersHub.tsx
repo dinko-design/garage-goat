@@ -12,7 +12,7 @@ export function OffersHub() {
     <>
       <SEO
         title="Special Offers & Coupons | Garage Goat — Cypress, TX"
-        description="Save on garage door repair and installation with Garage Goat special offers and coupons. Serving Cypress, Tomball & Katy, TX."
+        description="Save on garage door repair and installation with Garage Goat special offers and coupons. Serving Cypress, Tomball & The Woodlands, TX."
         path="/offers"
       />
 

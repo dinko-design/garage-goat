@@ -38,7 +38,7 @@ export function Sitemap() {
       links: [
         { label: 'Home', to: '/', description: 'Welcome to Garage Goat Garage Doors' },
         { label: 'About Us', to: '/about', description: 'Our story, team, and values' },
-        { label: 'Contact', to: '/contact', description: 'Request service or get a free estimate' },
+        { label: 'Contact', to: '/contact', description: 'Request service or get a quote' },
         { label: 'Customer Reviews', to: '/reviews', description: `${companyInfo.googleRating}/5 rating from ${companyInfo.totalReviews}+ Google reviews` },
         { label: 'Gallery', to: '/gallery', description: 'Browse our completed projects and installations' },
       ],

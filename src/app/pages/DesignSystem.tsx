@@ -281,7 +281,7 @@ style={{ fontFamily: "var(--font-body)" }}`}</CodeBlock>
                   className="bg-goat-teal hover:bg-goat-teal-dark text-goat-navy-deep px-6 py-3 rounded transition-all flex items-center gap-2 shadow-lg shadow-goat-teal/30"
                   style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.03em' }}
                 >
-                  Get Free Estimate <ArrowRight className="w-4 h-4" />
+                  Get a Quote <ArrowRight className="w-4 h-4" />
                 </button>
                 <button
                   className="bg-goat-teal hover:bg-goat-teal-dark text-goat-navy-deep px-5 py-2.5 rounded transition-all flex items-center gap-2 shadow-lg shadow-goat-teal/30 text-sm"

@@ -1,7 +1,7 @@
 ---
 name: Garage Goat Garage Doors
 shortName: Garage Goat
-ownerName: Cesar Garcia
+ownerName: Cesar Salazar
 phone: (281) 948-5452
 phoneRaw: "2819485452"
 email: "info@garagegoatdoors.com"
@@ -16,11 +16,11 @@ googleRating: 4.9
 totalReviews: 287
 licenseName: TDLR Licensed
 licenseNumber: "#GDC-7742"
-warrantyLabor: "1 Year"
-warrantyParts: "3 Year"
+warrantyLabor: "3 Year"
+warrantyParts: "1 Year"
 warrantySprings: Lifetime
 guarantees:
-  - Free Estimates
+  - Upfront Quotes
   - Locally Owned
   - Fully Insured
   - Customer Satisfaction Guarantee

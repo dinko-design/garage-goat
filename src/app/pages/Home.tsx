@@ -9,6 +9,7 @@ import { GarageDoorDivider, ShieldStarWatermark } from '../components/StarAccent
 import { SEO } from '../components/SEO';
 import { OptimizedImage } from '../components/OptimizedImage';
 import { buildLocalBusinessSchema } from '../../data/structured-data';
+import { TrustBadges } from '../components/TrustBadges';
 
 // Truck image (placeholder — to be replaced with real wrapped truck photo)
 const truckImage = "https://images.unsplash.com/photo-1770739537169-6e9239896c95?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3aGl0ZSUyMHdvcmslMjB0cnVjayUyMHBhcmtlZCUyMHJlc2lkZW50aWFsJTIwbmVpZ2hib3Job29kfGVufDF8fHx8MTc3MDk3MDAyMXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral";
@@ -21,7 +22,7 @@ export function Home() {
     <div className="flex flex-col">
       <SEO
         title="Garage Goat Garage Doors | #1 Garage Door Repair in Cypress, TX"
-        description="Top-rated garage door repair, spring replacement & new door installation in Cypress, Tomball, Katy & NW Houston, TX. Same-day service, honest pricing. Call (281) 948-5452."
+        description="Top-rated garage door repair, spring replacement & new door installation in Cypress, Tomball, The Woodlands & NW Houston, TX. Same-day service, honest pricing. Call (281) 948-5452."
         path="/"
         jsonLd={buildLocalBusinessSchema()}
       />
@@ -70,7 +71,7 @@ export function Home() {
             </h1>
 
             <p className="text-xl text-goat-ice/80 mb-8 max-w-xl leading-relaxed">
-              Top-rated garage door service in Cypress, Tomball & Katy, TX.
+              Top-rated garage door service in Cypress, Tomball & The Woodlands, TX.
               Springs, openers, new doors — we fix it all. Fast.
             </p>
 
@@ -89,7 +90,7 @@ export function Home() {
                 className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white border border-white/20 px-8 py-4 rounded transition-all flex items-center justify-center gap-2"
                 style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase', fontSize: '1.1rem', letterSpacing: '0.03em' }}
               >
-                Get Free Estimate
+                Schedule Now
               </Link>
             </div>
 
@@ -141,6 +142,11 @@ export function Home() {
           </div>
         </div>
       )}
+
+      {/* ============================================ */}
+      {/* TRUST BADGES — Social Proof */}
+      {/* ============================================ */}
+      <TrustBadges />
 
       {/* Silver divider */}
       <div className="section-divider" />
@@ -302,7 +308,7 @@ export function Home() {
       <section className="py-8 bg-white border-b border-goat-cream-dark">
         <div className="container mx-auto">
           <p className="text-goat-navy/80 text-center max-w-3xl mx-auto leading-relaxed">
-            <strong>Garage Goat Garage Doors</strong> is a locally owned garage door repair and installation company headquartered in <strong>Cypress, Texas</strong>, serving the Northwest Houston metro area since 2010. We specialize in same-day garage door repair, spring replacement, opener installation, and new garage door sales across Cypress, Tomball, Katy, Spring, and NW Houston. TDLR Licensed ({companyInfo.licenseNumber}) with a {companyInfo.googleRating}-star Google rating from {companyInfo.totalReviews}+ verified reviews.
+            <strong>Garage Goat Garage Doors</strong> is a locally owned garage door repair and installation company headquartered in <strong>Cypress, Texas</strong>, serving the Northwest Houston metro area since 2010. We specialize in same-day garage door repair, spring replacement, opener installation, and new garage door sales across Cypress, Tomball, The Woodlands, Spring, and NW Houston. TDLR Licensed ({companyInfo.licenseNumber}) with a {companyInfo.googleRating}-star Google rating from {companyInfo.totalReviews}+ verified reviews.
           </p>
         </div>
       </section>
@@ -431,7 +437,7 @@ export function Home() {
                 Look for the <span className="text-goat-red">Goat Truck</span> in Your Neighborhood
               </h2>
               <p className="text-goat-navy/70 mb-6 leading-relaxed">
-                Our fully stocked, branded service trucks are a familiar sight across Cypress, Tomball, and Katy. We carry the most common parts on every truck so we can fix your door on the first visit — no waiting for parts, no second trip charges.
+                Our fully stocked, branded service trucks are a familiar sight across Cypress, Tomball, and The Woodlands. We carry the most common parts on every truck so we can fix your door on the first visit — no waiting for parts, no second trip charges.
               </p>
               <div className="flex flex-wrap gap-3">
                 {['Fully Stocked', 'GPS Dispatched', 'Branded & Insured', 'First-Visit Fix Rate: 95%'].map((item, i) => (
@@ -564,7 +570,7 @@ export function Home() {
             <span className="text-goat-red">Fixed Today?</span>
           </h2>
           <p className="text-xl mb-10 max-w-2xl mx-auto text-goat-ice/70">
-            Don't wait. Call the G.O.A.T. now for same-day service and a free estimate. Your garage door can't wait — and neither should you.
+            Call the G.O.A.T. now for same-day service. Your garage door can't wait — and neither should you.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a

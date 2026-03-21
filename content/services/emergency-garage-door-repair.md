@@ -22,10 +22,10 @@ faqs:
   - question: Is there an extra charge for emergency calls?
     answer: "No. We don't believe in gouging people when they're in a bind. Our pricing is the same 24/7."
   - question: How fast can you get to my house?
-    answer: "In Cypress, Tomball, and Katy — typically within 60 minutes. Other areas may take slightly longer."
+    answer: "In Cypress, Tomball, and The Woodlands — typically within 60 minutes. Other areas may take slightly longer."
 ---
 
-Whether it's 2 AM on a Tuesday or noon on Christmas Day, our emergency technicians are on standby to help you with critical garage door failures in Cypress, Tomball, Katy, and NW Houston. Your safety can't wait — and neither should you.
+Whether it's 2 AM on a Tuesday or noon on Christmas Day, our emergency technicians are on standby to help you with critical garage door failures in Cypress, Tomball, The Woodlands, and NW Houston. Your safety can't wait — and neither should you.
 
 ### Emergency Situations We Handle
 

@@ -143,7 +143,7 @@ export function buildBlogPostingSchema(post: BlogPost) {
     url: `${BASE_URL}/blog/${post.slug}`,
     author: {
       '@type': 'Person',
-      name: 'Cesar Garcia',
+      name: 'Cesar Salazar',
       jobTitle: post.authorRole,
       worksFor: {
         '@type': 'LocalBusiness',
