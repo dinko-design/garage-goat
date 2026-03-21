@@ -6,6 +6,8 @@ import { toast } from 'sonner';
 import { SEO } from '../components/SEO';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { ShieldStarWatermark } from '../components/StarAccent';
+import { TrustStrip, TrustSidebar } from '../components/TrustBadges';
+import { GoogleMapEmbed } from '../components/GoogleMapEmbed';
 
 export function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -30,7 +32,7 @@ export function Contact() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30 pointer-events-none" />
         <ShieldStarWatermark className="absolute bottom-10 right-10 w-48 h-48 text-goat-teal/[0.04] hidden xl:block z-[1]" />
         <div className="container mx-auto relative z-10 text-center">
-          <Breadcrumbs variant="dark" items={[{ label: 'Contact' }]} />
+          <Breadcrumbs variant="dark" center items={[{ label: 'Contact' }]} />
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="h-px w-12 bg-goat-red" />
             <span className="text-goat-red">★</span>
@@ -56,6 +58,8 @@ export function Contact() {
           </a>
         </div>
       </div>
+
+      <TrustStrip />
 
       <div className="py-16 bg-goat-cream relative overflow-hidden noise-overlay-light">
         <div className="absolute inset-0 texture-concrete opacity-[0.5] pointer-events-none" />
@@ -140,6 +144,20 @@ export function Contact() {
                   </div>
                 </div>
               </div>
+
+              <GoogleMapEmbed height={220} className="mt-6" />
+
+              {/* Branded truck photo */}
+              <div className="mt-6 rounded-lg overflow-hidden border border-goat-cream-dark">
+                <img
+                  src="/images/brand/cesar-workshop.jpg"
+                  alt="Cesar Salazar, owner of Garage Goat in Cypress, TX"
+                  className="w-full h-52 object-cover object-top"
+                  loading="lazy"
+                />
+              </div>
+
+              <TrustSidebar />
             </div>
 
             {/* Form */}

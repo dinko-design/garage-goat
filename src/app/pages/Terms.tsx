@@ -18,7 +18,7 @@ export function Terms() {
         <div className="absolute inset-0 texture-concrete-heavy opacity-[0.35] mix-blend-screen pointer-events-none" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30 pointer-events-none" />
         <div className="container mx-auto relative z-10">
-          <Breadcrumbs variant="dark" items={[{ label: 'Terms of Service' }]} />
+          <Breadcrumbs variant="dark" center items={[{ label: 'Terms of Service' }]} />
           <StarDivider size="sm" className="text-goat-ice/30 mb-4" />
           <h1 className="text-center" style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, textTransform: 'uppercase', lineHeight: 1.1 }}>
             Terms of <span className="text-accent-red">Service</span>

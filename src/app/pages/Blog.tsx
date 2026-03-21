@@ -6,6 +6,7 @@ import { RelatedOffers } from '../components/RelatedContent';
 import { SEO } from '../components/SEO';
 import { OptimizedImage } from '../components/OptimizedImage';
 import { Breadcrumbs } from '../components/Breadcrumbs';
+import { TrustStrip } from '../components/TrustBadges';
 
 export function Blog() {
   return (
@@ -21,7 +22,7 @@ export function Blog() {
         <div className="absolute inset-0 texture-concrete-heavy opacity-[0.35] mix-blend-screen pointer-events-none" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30 pointer-events-none" />
         <div className="container mx-auto text-center relative z-10">
-          <Breadcrumbs variant="dark" items={[{ label: 'Blog' }]} />
+          <Breadcrumbs variant="dark" center items={[{ label: 'Blog' }]} />
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="h-px w-12 bg-goat-red" />
             <span className="text-goat-red">★</span>
@@ -38,6 +39,8 @@ export function Blog() {
           </p>
         </div>
       </div>
+
+      <TrustStrip />
 
       {/* Blog Grid */}
       <div className="bg-goat-cream py-16 lg:py-24 relative overflow-hidden noise-overlay-light">

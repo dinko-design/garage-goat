@@ -29,6 +29,7 @@ const Warranty = React.lazy(() => import('./pages/Warranty').then(m => ({ defaul
 const Privacy = React.lazy(() => import('./pages/Privacy').then(m => ({ default: m.Privacy })));
 const Terms = React.lazy(() => import('./pages/Terms').then(m => ({ default: m.Terms })));
 const Pricing = React.lazy(() => import('./pages/Pricing').then(m => ({ default: m.Pricing })));
+const ServiceAreasHub = React.lazy(() => import('./pages/ServiceAreasHub').then(m => ({ default: m.ServiceAreasHub })));
 
 function NotFound() {
   return (
@@ -89,6 +90,7 @@ export default function App() {
             <Route path="faq" element={<FAQ />} />
             <Route path="gallery" element={<Gallery />} />
             <Route path="pricing" element={<Pricing />} />
+            <Route path="areas" element={<ServiceAreasHub />} />
             <Route path="financing" element={<Financing />} />
             <Route path="warranty" element={<Warranty />} />
             <Route path="privacy" element={<Privacy />} />

@@ -126,6 +126,7 @@ function processReviews() {
     text: data.text ?? '',
     serviceUsed: data.serviceUsed ?? '',
     date: data.date ?? '',
+    platform: data.platform ?? 'google',
   }));
 
   // Sort by date descending
@@ -190,6 +191,7 @@ function buildRoutes(services, serviceAreas, offers, blogPosts) {
     '/terms',
     '/sitemap',
     '/pricing',
+    '/areas',
   ];
 
   const dynamicRoutes = [

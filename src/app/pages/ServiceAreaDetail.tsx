@@ -8,7 +8,7 @@ import { OptimizedImage } from '../components/OptimizedImage';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { HeroLeadForm } from '../components/HeroLeadForm';
 import { RelatedBlogs, RelatedOffers } from '../components/RelatedContent';
-import { TrustStrip } from '../components/TrustBadges';
+import { TrustStrip, PlatformBadge } from '../components/TrustBadges';
 
 export function ServiceAreaDetail({ slug: propSlug }: { slug?: string }) {
   const { slug: paramSlug } = useParams<{ slug: string }>();
@@ -43,7 +43,7 @@ export function ServiceAreaDetail({ slug: propSlug }: { slug?: string }) {
           <Breadcrumbs
             variant="dark"
             items={[
-              { label: 'Service Areas' },
+              { label: 'Service Areas', href: '/areas' },
               { label: area.cityName }
             ]}
           />
@@ -149,6 +149,16 @@ export function ServiceAreaDetail({ slug: propSlug }: { slug?: string }) {
               ))}
             </div>
 
+            {/* Branded Image */}
+            <div className="mb-12 rounded-xl overflow-hidden shadow-lg shadow-goat-navy-deep/10">
+              <img
+                src="/images/brand/truck-wrap.png"
+                alt="Garage Goat branded service trucks serving the area"
+                className="w-full h-auto"
+                loading="lazy"
+              />
+            </div>
+
             {/* Related Blog Posts — contextual for the area */}
             {relatedBlogs.length > 0 && (
               <div className="mb-12">
@@ -181,7 +191,10 @@ export function ServiceAreaDetail({ slug: propSlug }: { slug?: string }) {
                         ))}
                       </div>
                       <p className="text-goat-navy/80 italic mb-3">"{review.text}"</p>
-                      <div className="text-sm text-goat-navy/50">— {review.reviewerName}, {review.serviceUsed}</div>
+                      <div className="flex items-center justify-between">
+                        <div className="text-sm text-goat-navy/50">— {review.reviewerName}, {review.serviceUsed}</div>
+                        <PlatformBadge platform={review.platform} />
+                      </div>
                     </div>
                   ))}
                 </div>

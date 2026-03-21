@@ -9,10 +9,10 @@ import { GarageDoorDivider, ShieldStarWatermark } from '../components/StarAccent
 import { SEO } from '../components/SEO';
 import { OptimizedImage } from '../components/OptimizedImage';
 import { buildLocalBusinessSchema } from '../../data/structured-data';
-import { TrustBadges } from '../components/TrustBadges';
+import { TrustBadges, PlatformBadge } from '../components/TrustBadges';
 
 // Cesar's Garage Goat truck on the job
-const truckImage = "/images/real/truck-branded-rear.jpg";
+const truckImage = "/images/brand/truck-wrap.png";
 
 export function Home() {
   const featuredOffer = offers[0];
@@ -526,7 +526,8 @@ export function Home() {
                 <div className="flex justify-between items-end border-t border-goat-cream-dark pt-4">
                   <div>
                     <div className="text-goat-navy-dark" style={{ fontWeight: 700 }}>{review.reviewerName}</div>
-                    <div className="text-xs text-goat-navy/50">{review.city}</div>
+                    <div className="text-xs text-goat-navy/50 mb-1">{review.city}</div>
+                    <PlatformBadge platform={review.platform} />
                   </div>
                   <div className="text-xs bg-goat-red/10 text-goat-red px-3 py-1 rounded" style={{ fontFamily: "var(--font-heading)", fontWeight: 600 }}>
                     {review.serviceUsed}

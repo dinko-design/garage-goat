@@ -116,7 +116,7 @@ export function Sitemap() {
         <div className="absolute inset-0 texture-concrete-heavy opacity-[0.35] mix-blend-screen pointer-events-none" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30 pointer-events-none" />
         <div className="container mx-auto relative z-10 text-center">
-          <Breadcrumbs variant="dark" items={[{ label: 'Sitemap' }]} />
+          <Breadcrumbs variant="dark" center items={[{ label: 'Sitemap' }]} />
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="h-px w-12 bg-goat-red" />
             <span className="text-goat-red">★</span>

@@ -10,6 +10,7 @@ import { SEO } from '../components/SEO';
 import { OptimizedImage } from '../components/OptimizedImage';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { StarDivider, GarageDoorDivider, ShieldStarWatermark } from '../components/StarAccent';
+import { TrustStrip, PlatformBadge } from '../components/TrustBadges';
 
 export function About() {
   return (
@@ -26,7 +27,7 @@ export function About() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30 pointer-events-none" />
         <ShieldStarWatermark className="absolute top-10 right-10 w-56 h-56 text-goat-teal/[0.04] hidden xl:block z-[1]" />
         <div className="container mx-auto relative z-10 text-center">
-          <Breadcrumbs variant="dark" items={[{ label: 'About Us' }]} />
+          <Breadcrumbs variant="dark" center items={[{ label: 'About Us' }]} />
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="h-px w-12 bg-goat-red" />
             <span className="text-goat-red">★</span>
@@ -43,6 +44,8 @@ export function About() {
           </p>
         </div>
       </div>
+
+      <TrustStrip />
 
       {/* Our Story */}
       <section className="py-20 bg-goat-cream relative overflow-hidden noise-overlay-light">
@@ -106,6 +109,19 @@ export function About() {
             >
               The Garage Goat <span className="text-goat-red">Promise</span>
             </h2>
+          </div>
+
+          {/* Action Photo Strip */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl mx-auto mb-10">
+            <div className="rounded-lg overflow-hidden aspect-[4/3]">
+              <img src="/images/brand/cesar-workshop.jpg" alt="Cesar Salazar in the Garage Goat workshop" className="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div className="rounded-lg overflow-hidden aspect-[4/3]">
+              <img src="/images/brand/cesar-garage.jpg" alt="Cesar Salazar, owner of Garage Goat" className="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div className="rounded-lg overflow-hidden aspect-[4/3]">
+              <img src="/images/brand/cesar-full.jpg" alt="Cesar Salazar by the Garage Goat service truck" className="w-full h-full object-cover" loading="lazy" />
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
@@ -336,7 +352,8 @@ export function About() {
                 </p>
                 <div className="border-t border-goat-cream-dark pt-3">
                   <div className="text-goat-navy-dark text-sm" style={{ fontWeight: 700 }}>{review.reviewerName}</div>
-                  <div className="text-xs text-goat-navy/50">{review.city}</div>
+                  <div className="text-xs text-goat-navy/50 mb-1">{review.city}</div>
+                  <PlatformBadge platform={review.platform} />
                 </div>
               </div>
             ))}

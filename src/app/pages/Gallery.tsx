@@ -6,6 +6,7 @@ import { SEO } from '../components/SEO';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { StarDivider } from '../components/StarAccent';
 import { OptimizedImage } from '../components/OptimizedImage';
+import { TrustStrip } from '../components/TrustBadges';
 
 const galleryItems = [
   {
@@ -87,7 +88,7 @@ export function Gallery() {
         <div className="absolute inset-0 texture-concrete-heavy opacity-[0.35] mix-blend-screen pointer-events-none" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30 pointer-events-none" />
         <div className="container mx-auto relative z-10 text-center">
-          <Breadcrumbs variant="dark" items={[{ label: 'Gallery' }]} />
+          <Breadcrumbs variant="dark" center items={[{ label: 'Gallery' }]} />
           <StarDivider size="sm" className="text-goat-ice/30 mb-4" />
           <h1 style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, textTransform: 'uppercase', lineHeight: 1.1 }}>
             Our <span className="text-accent-red">Work</span>
@@ -97,6 +98,8 @@ export function Gallery() {
           </p>
         </div>
       </div>
+
+      <TrustStrip />
 
       {/* Filters */}
       <div className="bg-white border-b border-goat-cream-dark py-4">

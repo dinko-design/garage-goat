@@ -288,6 +288,15 @@ export function Header() {
                     {area.cityName}
                   </DropdownLink>
                 ))}
+                <div className="px-5 pt-3">
+                  <Link
+                    to="/areas"
+                    className="text-goat-red hover:text-goat-red-dark text-sm flex items-center gap-1 transition-colors"
+                    style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, textTransform: 'uppercase', fontSize: '0.75rem', letterSpacing: '0.05em' }}
+                  >
+                    View All Areas <ChevronRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
               </MegaDropdown>
 
               {/* Direct Links */}
@@ -345,6 +354,9 @@ export function Header() {
                     {area.cityName}
                   </DropdownLink>
                 ))}
+                <div className="border-t border-goat-cream-dark mt-2 pt-2">
+                  <DropdownLink to="/areas" icon={<ChevronRight className="w-3.5 h-3.5 text-goat-red" />}>All Service Areas</DropdownLink>
+                </div>
               </MegaDropdown>
 
               <MegaDropdown label="More">
@@ -466,6 +478,14 @@ export function Header() {
                       {area.cityName}
                     </Link>
                   ))}
+                  <Link
+                    to="/areas"
+                    onClick={toggleMenu}
+                    className="px-8 py-2 text-goat-red text-xs uppercase tracking-wider flex items-center gap-1"
+                    style={{ fontFamily: 'var(--font-heading)', fontWeight: 700 }}
+                  >
+                    View All Areas <ChevronRight className="w-3 h-3" />
+                  </Link>
                 </div>
               )}
             </div>

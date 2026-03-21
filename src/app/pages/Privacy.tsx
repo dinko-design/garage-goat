@@ -16,7 +16,7 @@ export function Privacy() {
 
       <div className="bg-goat-navy-deep text-white py-12 lg:py-16 relative overflow-hidden noise-overlay">
         <div className="container mx-auto relative z-10">
-          <Breadcrumbs variant="dark" items={[{ label: 'Privacy Policy' }]} />
+          <Breadcrumbs variant="dark" center items={[{ label: 'Privacy Policy' }]} />
           <StarDivider size="sm" className="text-goat-ice/30 mb-4" />
           <h1 className="text-center" style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, textTransform: 'uppercase', lineHeight: 1.1 }}>
             Privacy <span className="text-accent-red">Policy</span>

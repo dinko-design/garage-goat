@@ -6,6 +6,7 @@ import logoImg from "figma:asset/ba1e44b3fc96187901f7ffaa888d6f0ec809bc70.png";
 import { SEO } from '../components/SEO';
 import { OptimizedImage } from '../components/OptimizedImage';
 import { Breadcrumbs } from '../components/Breadcrumbs';
+import { TrustStrip } from '../components/TrustBadges';
 
 export function OffersHub() {
   return (
@@ -23,7 +24,7 @@ export function OffersHub() {
         <div className="absolute top-20 left-20 text-goat-red/5 text-[200px] leading-none hidden xl:block" style={{ fontFamily: "var(--font-heading)" }}>★</div>
         <div className="absolute bottom-20 right-20 text-goat-red/5 text-[150px] leading-none hidden xl:block" style={{ fontFamily: "var(--font-heading)" }}>★</div>
         <div className="container mx-auto text-center relative z-10">
-          <Breadcrumbs variant="dark" items={[{ label: 'Special Offers' }]} />
+          <Breadcrumbs variant="dark" center items={[{ label: 'Special Offers' }]} />
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="h-px w-12 bg-goat-red" />
             <span className="text-goat-red">★</span>
@@ -46,6 +47,8 @@ export function OffersHub() {
           </div>
         </div>
       </div>
+
+      <TrustStrip />
 
       {/* Offers Grid */}
       <div className="bg-goat-cream py-16 lg:py-24 relative overflow-hidden noise-overlay-light">

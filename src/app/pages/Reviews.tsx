@@ -5,6 +5,7 @@ import { Star, Phone, ArrowRight, Quote, Wrench, MapPin } from 'lucide-react';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { SEO } from '../components/SEO';
 import { buildReviewsSchema } from '../../data/structured-data';
+import { TrustStrip, PlatformBadge, PlatformLogosRow } from '../components/TrustBadges';
 
 function getServiceSlugFromReview(serviceUsed: string): string | null {
   const lower = serviceUsed.toLowerCase();
@@ -33,7 +34,7 @@ export function Reviews() {
         <div className="absolute inset-0 texture-concrete-heavy opacity-[0.35] mix-blend-screen pointer-events-none" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30 pointer-events-none" />
         <div className="container mx-auto relative z-10 text-center">
-          <Breadcrumbs variant="dark" items={[{ label: 'Reviews' }]} />
+          <Breadcrumbs variant="dark" center items={[{ label: 'Reviews' }]} />
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="h-px w-12 bg-goat-red" />
             <span className="text-goat-red">★</span>
@@ -59,8 +60,15 @@ export function Reviews() {
             </div>
             <div className="text-goat-ice/50 text-sm">Based on {companyInfo.totalReviews}+ Google Reviews</div>
           </div>
+
+          {/* Platform logos row */}
+          <div className="mt-8">
+            <PlatformLogosRow />
+          </div>
         </div>
       </div>
+
+      <TrustStrip />
 
       {/* Reviews Grid */}
       <div className="bg-goat-cream py-16 lg:py-24 relative overflow-hidden noise-overlay-light">
@@ -89,7 +97,8 @@ export function Reviews() {
                 <div className="flex justify-between items-end border-t border-goat-cream-dark pt-4">
                   <div>
                     <div className="text-goat-navy-dark" style={{ fontWeight: 700 }}>{review.reviewerName}</div>
-                    <div className="text-xs text-goat-navy/50">{review.city}</div>
+                    <div className="text-xs text-goat-navy/50 mb-1">{review.city}</div>
+                    <PlatformBadge platform={review.platform} />
                   </div>
                   <div className="text-right">
                     <div className="text-xs text-goat-navy/40 mb-1">{review.date}</div>

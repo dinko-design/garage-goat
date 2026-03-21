@@ -7,6 +7,7 @@ import { RelatedServices, RelatedBlogs, RelatedOffers, RelatedAreas } from '../c
 import { HeroLeadForm } from '../components/HeroLeadForm';
 import { SEO } from '../components/SEO';
 import { OptimizedImage } from '../components/OptimizedImage';
+import { GoogleMapEmbed } from '../components/GoogleMapEmbed';
 import { buildServiceSchema, buildFAQPageSchema } from '../../data/structured-data';
 import { TrustStrip } from '../components/TrustBadges';
 
@@ -224,6 +225,19 @@ export function ServiceDetail({ slug: propSlug }: { slug?: string }) {
                     ))}
                   </ul>
                 </div>
+
+                {/* Branded Image */}
+                <div className="rounded-lg overflow-hidden border border-goat-cream-dark">
+                  <img
+                    src="/images/brand/cesar-workshop.jpg"
+                    alt="Cesar Salazar, owner of Garage Goat in Cypress, TX"
+                    className="w-full h-52 object-cover object-top"
+                    loading="lazy"
+                  />
+                </div>
+
+                {/* Google Map */}
+                <GoogleMapEmbed height={200} variant="sidebar" />
 
                 {/* Service Areas (contextual) */}
                 {relatedAreas.length > 0 && (

@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { services, serviceAreas, companyInfo } from '../../../data/cms';
-import { Phone, Mail, MapPin, Facebook, Instagram, ShieldCheck, Award, HelpCircle, DollarSign, Image } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Instagram, ShieldCheck, Award, HelpCircle, DollarSign, Image, Star, Users, FileText, BookOpen } from 'lucide-react';
 import { BrandStar } from '../BrandStar';
 import { RatingStars } from '../RatingStar';
+import { GoogleMapEmbed } from '../GoogleMapEmbed';
 import logoImg from "figma:asset/ba1e44b3fc96187901f7ffaa888d6f0ec809bc70.png";
 
 const FB_URL = 'https://www.facebook.com/profile.php?id=61555203315954';
@@ -11,7 +12,6 @@ const IG_URL = 'https://www.instagram.com/garagegoat01';
 const TIKTOK_URL = 'https://www.tiktok.com/@garagegoat281';
 const NEXTDOOR_URL = 'https://nextdoor.com/pages/garage-goat-cypress-tx';
 const GOOGLE_MAPS_URL = 'https://maps.google.com/?q=Garage+Goat+Garage+Doors,+12507+Stoney+Mill+St,+Cypress,+TX+77429';
-const MAP_EMBED_URL = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3457.8!2d-95.69!3d29.97!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDU4JzEyLjAiTiA5NcKwNDEnMjQuMCJX!5e0!3m2!1sen!2sus!4v1';
 
 function GoogleIcon({ className = 'w-4 h-4' }: { className?: string }) {
   return (
@@ -83,131 +83,40 @@ export function Footer() {
       </div>
 
       {/* Main Footer */}
-      <div className="bg-goat-navy-deep text-goat-ice/80 pt-16 pb-8 relative overflow-hidden noise-overlay">
+      <div className="bg-goat-navy-deep text-goat-ice/80 pt-16 pb-16 relative overflow-hidden noise-overlay">
         <div className="absolute inset-0 texture-concrete-heavy opacity-[0.35] mix-blend-screen pointer-events-none" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30 pointer-events-none" />
         <div className="container mx-auto relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-
-            {/* Brand Column */}
+          {/* Brand + Contact + Map Row */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12 pb-12 border-b border-goat-navy">
+            {/* Brand */}
             <div>
-              <img src={logoImg} alt="Garage Goat" className="h-28 w-auto mb-5" width={112} height={112} />
-              <p className="text-sm leading-relaxed mb-5 text-goat-ice/60">
+              <img src={logoImg} alt="Garage Goat" className="h-24 w-auto mb-4" width={96} height={96} />
+              <p className="text-sm leading-relaxed mb-4 text-goat-ice/60">
                 {companyInfo.tagline}. Trusted garage door repair and installation in {companyInfo.city}, {companyInfo.state} and surrounding areas since {companyInfo.foundedYear}.
               </p>
-              <div className="flex items-center gap-2 mb-5">
-                <RatingStars rating={5} size={18} />
+              <div className="flex items-center gap-2 mb-4">
+                <RatingStars rating={5} size={16} />
                 <span className="text-sm text-goat-ice/60">{companyInfo.googleRating}/5 ({companyInfo.totalReviews} reviews)</span>
               </div>
-              {/* Social Icons — larger and more prominent */}
-              <div className="flex gap-2.5">
+              <div className="flex gap-2">
                 {socialLinks.map(({ href, label, Icon }) => (
                   <a
                     key={label}
                     href={href}
-                    className="w-10 h-10 bg-goat-navy-dark/80 border border-goat-navy rounded-lg flex items-center justify-center text-goat-ice/60 hover:bg-goat-red hover:text-white hover:border-goat-red transition-all"
+                    className="w-9 h-9 bg-goat-navy-dark/80 border border-goat-navy rounded-lg flex items-center justify-center text-goat-ice/60 hover:bg-goat-red hover:text-white hover:border-goat-red transition-all"
                     aria-label={label}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Icon className="w-5 h-5" />
+                    <Icon className="w-4 h-4" />
                   </a>
                 ))}
               </div>
             </div>
-
-            {/* Services Column */}
+            {/* Contact info */}
             <div>
-              <h3 className="text-white mb-4 text-sm tracking-widest" style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase' }}>
-                Our Services
-              </h3>
-              <ul className="space-y-2.5 text-sm">
-                {services.map(service => (
-                  <li key={service.id}>
-                    <Link to={`/${service.slug}`} className="hover:text-goat-red transition-colors flex items-center gap-2">
-                      <BrandStar size={12} />
-                      {service.name}
-                    </Link>
-                  </li>
-                ))}
-                <li>
-                  <Link to="/services" className="text-goat-red hover:text-goat-red-light transition-colors" style={{ fontFamily: "var(--font-heading)", fontWeight: 600 }}>
-                    View All Services →
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/offers" className="hover:text-goat-red transition-colors flex items-center gap-2 text-goat-gold-dark">
-                    <BrandStar size={12} />
-                    Special Offers
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/blog" className="hover:text-goat-red transition-colors flex items-center gap-2">
-                    <BrandStar size={12} />
-                    Blog
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Service Areas Column */}
-            <div>
-              <h3 className="text-white mb-4 text-sm tracking-widest" style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase' }}>
-                Service Areas
-              </h3>
-              <ul className="space-y-2.5 text-sm">
-                {serviceAreas.map(area => (
-                  <li key={area.id}>
-                    <Link to={`/${area.slug}`} className="hover:text-goat-red transition-colors flex items-center gap-2">
-                      <MapPin className="w-3 h-3 text-goat-red flex-shrink-0" />
-                      {area.cityName}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-
-              <h3 className="text-white mt-6 mb-3 text-sm tracking-widest" style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase' }}>
-                Resources
-              </h3>
-              <ul className="space-y-2.5 text-sm">
-                <li>
-                  <Link to="/faq" className="hover:text-goat-red transition-colors flex items-center gap-2">
-                    <HelpCircle className="w-3 h-3 text-goat-teal flex-shrink-0" /> FAQ
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/gallery" className="hover:text-goat-red transition-colors flex items-center gap-2">
-                    <Image className="w-3 h-3 text-goat-teal flex-shrink-0" /> Gallery
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/financing" className="hover:text-goat-red transition-colors flex items-center gap-2">
-                    <DollarSign className="w-3 h-3 text-goat-teal flex-shrink-0" /> Financing
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/warranty" className="hover:text-goat-red transition-colors flex items-center gap-2">
-                    <ShieldCheck className="w-3 h-3 text-goat-teal flex-shrink-0" /> Warranty
-                  </Link>
-                </li>
-              </ul>
-
-              <div className="mt-6 flex flex-wrap gap-2">
-                <div className="flex items-center gap-1 text-xs bg-goat-navy-dark px-2 py-1 rounded text-goat-ice/50">
-                  <ShieldCheck className="w-3 h-3" /> Licensed
-                </div>
-                <div className="flex items-center gap-1 text-xs bg-goat-navy-dark px-2 py-1 rounded text-goat-ice/50">
-                  <Award className="w-3 h-3" /> Insured
-                </div>
-              </div>
-            </div>
-
-            {/* Contact Column */}
-            <div>
-              <h3 className="text-white mb-4 text-sm tracking-widest" style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase' }}>
-                Contact Us
-              </h3>
-              <ul className="space-y-5 text-sm">
+              <ul className="space-y-4 text-sm">
                 <li className="flex items-start gap-3">
                   <div className="w-8 h-8 bg-goat-red rounded flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Phone className="w-4 h-4 text-white" />
@@ -239,26 +148,138 @@ export function Footer() {
                   </div>
                 </li>
               </ul>
+            </div>
+            {/* Map — full height on desktop, below contact on tablet/mobile */}
+            <div className="sm:col-span-2 lg:col-span-1">
+              <GoogleMapEmbed height={250} className="!border-goat-navy opacity-80 hover:opacity-100 transition-opacity h-full [&_iframe]:h-full" />
+            </div>
+          </div>
 
-              {/* Map Embed */}
-              <div className="mt-6 rounded-lg overflow-hidden border border-goat-navy">
-                <iframe
-                  src={MAP_EMBED_URL}
-                  width="100%"
-                  height="150"
-                  style={{ border: 0 }}
-                  allowFullScreen={false}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Garage Goat location"
-                  className="opacity-80 hover:opacity-100 transition-opacity"
-                />
+          {/* Link Columns */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-12">
+            {/* Services Column */}
+            <div>
+              <h3 className="text-white mb-4 text-sm tracking-widest" style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase' }}>
+                Services
+              </h3>
+              <ul className="space-y-2.5 text-sm">
+                {services.map(service => (
+                  <li key={service.id}>
+                    <Link to={`/${service.slug}`} className="hover:text-goat-red transition-colors flex items-center gap-2">
+                      <BrandStar size={10} />
+                      {service.name}
+                    </Link>
+                  </li>
+                ))}
+                <li className="pt-1">
+                  <Link to="/services" className="text-goat-red hover:text-goat-red-light transition-colors text-xs" style={{ fontFamily: "var(--font-heading)", fontWeight: 600 }}>
+                    View All →
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Service Areas Column */}
+            <div>
+              <h3 className="text-white mb-4 text-sm tracking-widest" style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase' }}>
+                Areas
+              </h3>
+              <ul className="space-y-2.5 text-sm">
+                {serviceAreas.map(area => (
+                  <li key={area.id}>
+                    <Link to={`/${area.slug}`} className="hover:text-goat-red transition-colors flex items-center gap-2">
+                      <MapPin className="w-3 h-3 text-goat-red flex-shrink-0" />
+                      {area.cityName}
+                    </Link>
+                  </li>
+                ))}
+                <li className="pt-1">
+                  <Link to="/areas" className="text-goat-red hover:text-goat-red-light transition-colors text-xs" style={{ fontFamily: "var(--font-heading)", fontWeight: 600 }}>
+                    View All →
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Company Column */}
+            <div>
+              <h3 className="text-white mb-4 text-sm tracking-widest" style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase' }}>
+                Company
+              </h3>
+              <ul className="space-y-2.5 text-sm">
+                <li>
+                  <Link to="/about" className="hover:text-goat-red transition-colors flex items-center gap-2">
+                    <Users className="w-3 h-3 text-goat-teal flex-shrink-0" /> About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/reviews" className="hover:text-goat-red transition-colors flex items-center gap-2">
+                    <Star className="w-3 h-3 text-goat-teal flex-shrink-0" /> Reviews
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/pricing" className="hover:text-goat-red transition-colors flex items-center gap-2">
+                    <DollarSign className="w-3 h-3 text-goat-teal flex-shrink-0" /> Pricing
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/gallery" className="hover:text-goat-red transition-colors flex items-center gap-2">
+                    <Image className="w-3 h-3 text-goat-teal flex-shrink-0" /> Gallery
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/contact" className="hover:text-goat-red transition-colors flex items-center gap-2">
+                    <Mail className="w-3 h-3 text-goat-teal flex-shrink-0" /> Contact
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Resources Column */}
+            <div>
+              <h3 className="text-white mb-4 text-sm tracking-widest" style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase' }}>
+                Resources
+              </h3>
+              <ul className="space-y-2.5 text-sm">
+                <li>
+                  <Link to="/faq" className="hover:text-goat-red transition-colors flex items-center gap-2">
+                    <HelpCircle className="w-3 h-3 text-goat-teal flex-shrink-0" /> FAQ
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/blog" className="hover:text-goat-red transition-colors flex items-center gap-2">
+                    <BookOpen className="w-3 h-3 text-goat-teal flex-shrink-0" /> Blog
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/offers" className="hover:text-goat-red transition-colors flex items-center gap-2 text-goat-gold-dark">
+                    <BrandStar size={12} /> Special Offers
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/financing" className="hover:text-goat-red transition-colors flex items-center gap-2">
+                    <DollarSign className="w-3 h-3 text-goat-teal flex-shrink-0" /> Financing
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/warranty" className="hover:text-goat-red transition-colors flex items-center gap-2">
+                    <ShieldCheck className="w-3 h-3 text-goat-teal flex-shrink-0" /> Warranty
+                  </Link>
+                </li>
+              </ul>
+              <div className="mt-5 flex flex-wrap gap-2">
+                <div className="flex items-center gap-1 text-xs bg-goat-navy-dark px-2 py-1 rounded text-goat-ice/50">
+                  <ShieldCheck className="w-3 h-3" /> Licensed
+                </div>
+                <div className="flex items-center gap-1 text-xs bg-goat-navy-dark px-2 py-1 rounded text-goat-ice/50">
+                  <Award className="w-3 h-3" /> Insured
+                </div>
               </div>
             </div>
           </div>
 
           {/* Bottom bar */}
-          <div className="border-t border-goat-navy pt-6 mt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-goat-ice/40">
+          <div className="border-t border-goat-navy pt-8 mt-12 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-goat-ice/40">
             <div className="flex items-center gap-2">
               <span>&copy; {new Date().getFullYear()} {companyInfo.name}.</span>
               <span className="hidden sm:inline">All rights reserved.</span>
@@ -271,6 +292,25 @@ export function Footer() {
               <Link to="/sitemap" className="hover:text-goat-ice transition-colors">Sitemap</Link>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Dinko Design Credit — pb-14 clears the sticky offer bar */}
+      <div className="bg-goat-navy-deep border-t border-goat-navy pb-14">
+        <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-center gap-2.5">
+          <span className="text-goat-ice/30 text-xs">Website by</span>
+          <a
+            href="https://dinkodesign.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 group"
+          >
+            <div className="w-7 h-7 rounded-full overflow-hidden flex-shrink-0 shadow-sm shadow-[#7C4DFF]/30">
+              <img src="/images/dinko-design-logo.png" alt="DinkoDesign" className="w-full h-full object-cover" />
+            </div>
+            <span className="text-goat-ice/30 text-xs tracking-wide uppercase group-hover:text-white transition-colors">DinkoDesign.com</span>
+          </a>
+          <span className="text-goat-ice/20 text-xs hidden sm:inline">· Sarasota, FL Digital Marketing Agency</span>
         </div>
       </div>
     </footer>

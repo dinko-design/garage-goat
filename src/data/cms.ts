@@ -54,6 +54,7 @@ export interface Review {
   text: string;
   serviceUsed: string;
   date: string;
+  platform: 'google' | 'facebook' | 'nextdoor';
 }
 
 export interface Offer {
