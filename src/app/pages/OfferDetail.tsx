@@ -29,7 +29,9 @@ export function OfferDetail({ slug: propSlug }: { slug?: string }) {
         jsonLd={buildOfferSchema(offer)}
       />
 
-      <div className="bg-goat-navy-deep py-16 lg:py-24 min-h-[60vh] flex items-center justify-center relative noise-overlay-strong">
+      <div className="bg-goat-navy-deep py-16 lg:py-24 min-h-[60vh] flex items-center justify-center relative overflow-hidden noise-overlay-strong">
+        <div className="absolute inset-0 texture-concrete-heavy opacity-[0.35] mix-blend-screen pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30 pointer-events-none" />
         {/* Decorative Stars */}
         <div className="absolute top-20 left-20 text-goat-red/5 text-[200px] leading-none hidden xl:block" style={{ fontFamily: "var(--font-heading)" }}>★</div>
         <div className="absolute bottom-20 right-20 text-goat-red/5 text-[150px] leading-none hidden xl:block" style={{ fontFamily: "var(--font-heading)" }}>★</div>

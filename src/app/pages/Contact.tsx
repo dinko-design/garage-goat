@@ -26,6 +26,8 @@ export function Contact() {
 
       {/* Hero */}
       <div className="bg-goat-navy-deep text-white py-16 lg:py-20 relative overflow-hidden noise-overlay">
+        <div className="absolute inset-0 texture-concrete-heavy opacity-[0.35] mix-blend-screen pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30 pointer-events-none" />
         <ShieldStarWatermark className="absolute bottom-10 right-10 w-48 h-48 text-goat-teal/[0.04] hidden xl:block z-[1]" />
         <div className="container mx-auto relative z-10 text-center">
           <Breadcrumbs variant="dark" items={[{ label: 'Contact' }]} />
@@ -53,10 +55,11 @@ export function Contact() {
             {companyInfo.phone}
           </a>
         </div>
-        <div className="h-1.5 bg-goat-red absolute bottom-0 left-0 right-0" />
       </div>
 
-      <div className="py-16 bg-goat-cream relative noise-overlay-light">
+      <div className="py-16 bg-goat-cream relative overflow-hidden noise-overlay-light">
+        <div className="absolute inset-0 texture-concrete opacity-[0.5] pointer-events-none" />
+        <div className="absolute inset-0 texture-twill opacity-[0.04] pointer-events-none" />
         <div className="container mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
 

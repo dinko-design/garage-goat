@@ -196,7 +196,7 @@
     inset: 0;
     z-index: 1;
     pointer-events: none;
-    opacity: 0.035;
+    opacity: 0.08;
     mix-blend-mode: multiply;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23a)' opacity='.5'/%3E%3C/svg%3E");
     background-repeat: repeat;
@@ -204,11 +204,29 @@
   }
 
   .noise-overlay-strong::after {
-    opacity: 0.06;
+    opacity: 0.14;
   }
 
   .noise-overlay-light::after {
-    opacity: 0.02;
+    opacity: 0.05;
+  }
+
+  /* Real texture overlays — repeating image backgrounds */
+  .texture-otis-redding {
+    background-image: url('/textures/otis-redding.png');
+    background-repeat: repeat;
+  }
+  .texture-concrete {
+    background-image: url('/textures/concrete-wall.png');
+    background-repeat: repeat;
+  }
+  .texture-concrete-heavy {
+    background-image: url('/textures/concrete-wall-2.png');
+    background-repeat: repeat;
+  }
+  .texture-twill {
+    background-image: url('/textures/black-twill.png');
+    background-repeat: repeat;
   }
 
   /* Americana star decoration */
@@ -305,14 +323,20 @@
     background: linear-gradient(90deg, #2D4A6F, #D22D2F, #D4A76A);
   }
 
-  /* Diagonal stripe pattern (inspired by truck wrap) */
+  /* Silver section divider — thin metallic line between sections */
+  .section-divider {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(169, 174, 177, 0.4), rgba(196, 200, 202, 0.6), rgba(169, 174, 177, 0.4), transparent);
+  }
+
+  /* Diagonal stripe pattern (inspired by truck wrap) — silver */
   .diagonal-stripes {
     background-image: repeating-linear-gradient(
       -45deg,
       transparent,
       transparent 16px,
-      rgba(210, 45, 47, 0.08) 16px,
-      rgba(210, 45, 47, 0.08) 18px
+      rgba(169, 174, 177, 0.06) 16px,
+      rgba(169, 174, 177, 0.06) 18px
     );
   }
 
@@ -321,8 +345,8 @@
       -45deg,
       transparent,
       transparent 20px,
-      rgba(210, 45, 47, 0.15) 20px,
-      rgba(210, 45, 47, 0.15) 24px
+      rgba(169, 174, 177, 0.10) 20px,
+      rgba(169, 174, 177, 0.10) 24px
     );
   }
 
@@ -562,6 +586,15 @@
     to { opacity: 1; transform: translateY(0); }
   }
 
+  /* Offer bar slide up */
+  @keyframes slideUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+  }
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+
   /* Rich content styling for CMS HTML rendered via dangerouslySetInnerHTML */
   .cms-content h2 {
     font-family: var(--font-heading);
@@ -620,27 +653,27 @@
   }
 
   .cms-content li {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.625rem;
     color: var(--color-goat-navy);
     opacity: 0.85;
-    padding: 0.625rem 0.875rem;
+    padding: 0.75rem 1rem 0.75rem 2.25rem;
     background: var(--color-goat-cream);
     border: 1px solid var(--color-goat-cream-dark);
     border-radius: 0.5rem;
     font-size: 0.9375rem;
-    line-height: 1.5;
+    line-height: 1.6;
+    position: relative;
   }
 
   .cms-content li::before {
     content: '';
-    width: 7px;
-    height: 7px;
-    margin-top: 0.5rem;
-    flex-shrink: 0;
-    background: var(--color-goat-red);
-    border-radius: 50%;
+    position: absolute;
+    left: 0.75rem;
+    top: 0.9rem;
+    width: 12px;
+    height: 12px;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z' fill='%23D22D2F'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 
   .cms-content strong {

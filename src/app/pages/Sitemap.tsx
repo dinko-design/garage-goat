@@ -113,6 +113,8 @@ export function Sitemap() {
 
       {/* Hero */}
       <div className="bg-goat-navy-deep text-white py-16 lg:py-20 relative overflow-hidden noise-overlay">
+        <div className="absolute inset-0 texture-concrete-heavy opacity-[0.35] mix-blend-screen pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30 pointer-events-none" />
         <div className="container mx-auto relative z-10 text-center">
           <Breadcrumbs variant="dark" items={[{ label: 'Sitemap' }]} />
           <div className="flex items-center justify-center gap-3 mb-4">
@@ -130,7 +132,6 @@ export function Sitemap() {
             A complete directory of every page on our website. {totalPages} pages and counting.
           </p>
         </div>
-        <div className="h-1.5 bg-goat-red absolute bottom-0 left-0 right-0" />
       </div>
 
       {/* Quick Jump Nav */}
@@ -164,7 +165,9 @@ export function Sitemap() {
       </div>
 
       {/* Sections */}
-      <div className="bg-goat-cream py-16 lg:py-24 relative noise-overlay-light">
+      <div className="bg-goat-cream py-16 lg:py-24 relative overflow-hidden noise-overlay-light">
+        <div className="absolute inset-0 texture-concrete opacity-[0.5] pointer-events-none" />
+        <div className="absolute inset-0 texture-twill opacity-[0.04] pointer-events-none" />
         <div className="container mx-auto relative z-10 max-w-5xl">
 
           {sections.map((section, sIdx) => (
@@ -242,6 +245,8 @@ export function Sitemap() {
 
           {/* Summary Box */}
           <div className="mt-16 bg-goat-navy-dark rounded-lg p-8 text-white relative overflow-hidden noise-overlay">
+            <div className="absolute inset-0 texture-concrete-heavy opacity-[0.35] mix-blend-screen pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30 pointer-events-none" />
             <div className="relative z-10">
               <StarDivider className="text-goat-ice mb-4" />
               <div className="text-center">

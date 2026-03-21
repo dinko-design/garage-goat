@@ -99,6 +99,7 @@ const sections = [
   { id: 'components', label: 'Star Components' },
   { id: 'patterns', label: 'CSS Patterns' },
   { id: 'textures', label: 'Textures & Overlays' },
+  { id: 'real-textures', label: 'Real Textures' },
   { id: 'hierarchy', label: 'Color Hierarchy' },
 ];
 
@@ -115,7 +116,6 @@ export function DesignSystem() {
 
       {/* ────── Hero ────── */}
       <section className="relative bg-goat-navy-deep text-white py-20 overflow-hidden noise-overlay">
-        <div className="sunburst sunburst-bright" />
         <div className="container mx-auto text-center relative z-10">
           <StarCircle size="lg" className="mx-auto mb-4 border-goat-teal/30 bg-goat-teal/10" />
           <h1 className="text-goat-ice mb-3">
@@ -534,7 +534,7 @@ style={{ fontFamily: "var(--font-body)" }}`}</CodeBlock>
                 <span className="text-white text-sm relative z-10" style={{ fontFamily: 'var(--font-heading)' }}>.noise-overlay</span>
               </div>
               <div className="bg-white p-3">
-                <p className="text-xs text-goat-navy/50">SVG fractal noise, 3.5% opacity</p>
+                <p className="text-xs text-goat-navy/50">SVG fractal noise, 8% opacity</p>
               </div>
             </div>
 
@@ -543,7 +543,7 @@ style={{ fontFamily: "var(--font-body)" }}`}</CodeBlock>
                 <span className="text-goat-navy-dark text-sm relative z-10" style={{ fontFamily: 'var(--font-heading)' }}>.noise-overlay-strong</span>
               </div>
               <div className="bg-white p-3">
-                <p className="text-xs text-goat-navy/50">6% opacity variant</p>
+                <p className="text-xs text-goat-navy/50">14% opacity variant</p>
               </div>
             </div>
 
@@ -552,18 +552,7 @@ style={{ fontFamily: "var(--font-body)" }}`}</CodeBlock>
                 <span className="text-goat-navy-dark text-sm relative z-10" style={{ fontFamily: 'var(--font-heading)' }}>.noise-overlay-light</span>
               </div>
               <div className="bg-white p-3">
-                <p className="text-xs text-goat-navy/50">2% opacity — very subtle</p>
-              </div>
-            </div>
-
-            {/* Sunburst */}
-            <div className="rounded-xl overflow-hidden border border-goat-cream-dark shadow-sm">
-              <div className="relative bg-goat-navy-deep h-32 flex items-center justify-center overflow-hidden">
-                <div className="sunburst sunburst-bright" />
-                <span className="text-white text-sm relative z-10" style={{ fontFamily: 'var(--font-heading)' }}>.sunburst</span>
-              </div>
-              <div className="bg-white p-3">
-                <p className="text-xs text-goat-navy/50">Teal conic-gradient rays from logo</p>
+                <p className="text-xs text-goat-navy/50">5% opacity — subtle</p>
               </div>
             </div>
 
@@ -580,11 +569,10 @@ style={{ fontFamily: "var(--font-body)" }}`}</CodeBlock>
             {/* Combined */}
             <div className="rounded-xl overflow-hidden border border-goat-cream-dark shadow-sm">
               <div className="relative bg-goat-navy-dark noise-overlay h-32 flex items-center justify-center overflow-hidden diagonal-stripes">
-                <div className="sunburst" />
                 <span className="text-goat-ice text-sm relative z-10" style={{ fontFamily: 'var(--font-heading)' }}>Combined Stack</span>
               </div>
               <div className="bg-white p-3">
-                <p className="text-xs text-goat-navy/50">noise + sunburst + stripes</p>
+                <p className="text-xs text-goat-navy/50">noise + silver stripes</p>
               </div>
             </div>
           </div>
@@ -594,20 +582,141 @@ style={{ fontFamily: "var(--font-body)" }}`}</CodeBlock>
   <div className="relative z-10">Content above noise</div>
 </section>
 
-<!-- Sunburst rays (absolute positioned child) -->
-<div className="relative overflow-hidden">
-  <div className="sunburst sunburst-bright" />
-  <div className="relative z-10">Content</div>
-</div>
-
 <!-- Speed arcs (decorative corner arcs) -->
 <div className="relative speed-arcs text-goat-navy">...</div>
 
 <!-- Stack them for maximum texture -->
 <section className="relative bg-goat-navy-dark noise-overlay diagonal-stripes overflow-hidden">
-  <div className="sunburst" />
   <div className="relative z-10">...</div>
 </section>`}</CodeBlock>
+
+
+          {/* ════════════════════ REAL TEXTURE TEST ════════════════════ */}
+          <SectionTitle id="real-textures">Real Texture Test</SectionTitle>
+          <p className="text-goat-navy/60 text-center max-w-xl mx-auto mb-10">
+            Repeating image textures overlaid on brand backgrounds. Compare these against the SVG noise above.
+          </p>
+
+          {(() => {
+            const darkBgs = [
+              { bg: 'bg-goat-navy-deep', label: 'navy-deep' },
+              { bg: 'bg-goat-navy-dark', label: 'navy-dark' },
+            ];
+            const lightBgs = [
+              { bg: 'bg-goat-cream', label: 'cream', text: 'text-goat-navy-dark' },
+              { bg: 'bg-white', label: 'white', text: 'text-goat-navy-dark' },
+            ];
+
+            /* Per-texture dark blend mode experiments */
+            const otisRedding = {
+              cls: 'texture-otis-redding', label: 'otis-redding', desc: 'Fine speckle/noise — 100% opacity, luminosity blend',
+              darkModes: [
+                { blend: 'mix-blend-luminosity', label: 'luminosity', opacity: '' },
+              ],
+            };
+            const concrete = {
+              cls: 'texture-concrete', label: 'concrete', desc: 'Concrete dust/particles — no opacity, blend modes only',
+              darkModes: [
+                { blend: 'mix-blend-screen', label: 'screen', opacity: '' },
+                { blend: 'mix-blend-soft-light', label: 'soft-light', opacity: '' },
+                { blend: 'mix-blend-overlay', label: 'overlay', opacity: '' },
+                { blend: 'mix-blend-luminosity', label: 'luminosity', opacity: '' },
+              ],
+            };
+            const concreteHeavy = {
+              cls: 'texture-concrete-heavy', label: 'concrete-heavy', desc: 'Heavy concrete + smudges — screen at 35%',
+              darkModes: [
+                { blend: 'mix-blend-screen', label: 'screen', opacity: 'opacity-[0.35]' },
+              ],
+            };
+            const twill = {
+              cls: 'texture-twill', label: 'twill', desc: 'Diagonal twill/stripe — testing difference, exclusion, screen, luminosity',
+              darkModes: [
+                { blend: 'mix-blend-difference', label: 'difference', opacity: '' },
+                { blend: 'mix-blend-exclusion', label: 'exclusion', opacity: '' },
+                { blend: 'mix-blend-screen', label: 'screen', opacity: '' },
+                { blend: 'mix-blend-luminosity', label: 'luminosity', opacity: '' },
+              ],
+            };
+
+            const allTextures = [otisRedding, concrete, concreteHeavy, twill];
+
+            return (
+              <div className="space-y-12 mb-8">
+                {/* ── Light backgrounds ── */}
+                <div>
+                  <h3 className="text-goat-navy-dark mb-2">On Light Backgrounds</h3>
+                  <p className="text-xs text-goat-navy/40 mb-6">Concrete textures at 75% no blend. Twill at 15% multiply.</p>
+                  <div className="space-y-8">
+                    {allTextures.map(t => {
+                      const isTwill = t.cls === 'texture-twill';
+                      return (
+                        <div key={`light-${t.cls}`}>
+                          <div className="flex items-baseline gap-3 mb-3">
+                            <h4 className="text-goat-navy-dark">.{t.cls}</h4>
+                            <span className="text-xs text-goat-navy/40">{t.desc}</span>
+                          </div>
+                          <div className="grid grid-cols-2 gap-3">
+                            {lightBgs.map(b => (
+                              <div key={`${t.cls}-${b.label}`} className={`relative h-32 ${b.bg} rounded-lg overflow-hidden border border-goat-cream-dark`}>
+                                <div className={`absolute inset-0 ${t.cls} ${isTwill ? 'opacity-[0.15] mix-blend-multiply' : 'opacity-[0.75]'} pointer-events-none`} />
+                                <span className={`relative z-10 flex items-end h-full p-3 text-xs ${b.text}`} style={{ fontFamily: 'var(--font-heading)' }}>
+                                  {t.label} on {b.label} — {isTwill ? '15% multiply' : '75% no blend'}
+                                </span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                {/* ── Dark backgrounds — per-texture experiments ── */}
+                <div>
+                  <h3 className="text-goat-navy-dark mb-2">On Dark Backgrounds — Blend Mode Experiments</h3>
+                  <p className="text-xs text-goat-navy/40 mb-6">
+                    Each texture tested with its best-candidate blend modes. No opacity unless noted.
+                  </p>
+                  <div className="space-y-10">
+                    {allTextures.map(t => (
+                      <div key={`dark-${t.cls}`}>
+                        <div className="flex items-baseline gap-3 mb-3">
+                          <h4 className="text-goat-navy-dark">.{t.cls}</h4>
+                          <span className="text-xs text-goat-navy/40">{t.desc}</span>
+                        </div>
+                        <div className={`grid gap-3 ${t.darkModes.length === 1 ? 'grid-cols-2' : 'grid-cols-2 lg:grid-cols-4'}`}>
+                          {t.darkModes.map(mode => (
+                            <div key={`${t.cls}-dark-${mode.label}`} className="space-y-3">
+                              {darkBgs.map(b => (
+                                <div key={`${t.cls}-${b.label}-${mode.label}`} className={`relative h-32 ${b.bg} rounded-lg overflow-hidden border border-goat-navy/30`}>
+                                  <div className={`absolute inset-0 ${t.cls} ${mode.opacity} ${mode.blend} pointer-events-none`} />
+                                  <span className="relative z-10 flex items-end h-full p-3 text-xs text-white/70" style={{ fontFamily: 'var(--font-heading)' }}>
+                                    {b.label} — {mode.label}{mode.opacity ? ` ${mode.opacity.replace('opacity-[', '').replace(']', '')}` : ' 100%'}
+                                  </span>
+                                </div>
+                              ))}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            );
+          })()}
+
+          <CodeBlock>{`<!-- Real texture overlay examples -->
+
+<!-- otis-redding: 100% opacity, luminosity -->
+<div className="absolute inset-0 texture-otis-redding mix-blend-luminosity pointer-events-none" />
+
+<!-- concrete-heavy: screen at 35% -->
+<div className="absolute inset-0 texture-concrete-heavy opacity-[0.35] mix-blend-screen pointer-events-none" />
+
+<!-- twill on light: 15% multiply -->
+<div className="absolute inset-0 texture-twill opacity-[0.15] mix-blend-multiply pointer-events-none" />`}</CodeBlock>
 
 
           {/* ════════════════════ COLOR HIERARCHY ════════════════════ */}

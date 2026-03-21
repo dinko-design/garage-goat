@@ -22,6 +22,8 @@ export function About() {
 
       {/* Hero */}
       <div className="bg-goat-navy-deep text-white py-16 lg:py-24 relative overflow-hidden noise-overlay">
+        <div className="absolute inset-0 texture-concrete-heavy opacity-[0.35] mix-blend-screen pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30 pointer-events-none" />
         <ShieldStarWatermark className="absolute top-10 right-10 w-56 h-56 text-goat-teal/[0.04] hidden xl:block z-[1]" />
         <div className="container mx-auto relative z-10 text-center">
           <Breadcrumbs variant="dark" items={[{ label: 'About Us' }]} />
@@ -40,11 +42,12 @@ export function About() {
             Locally owned. Honestly run. The G.O.A.T. of garage doors since {companyInfo.foundedYear}.
           </p>
         </div>
-        <div className="h-1.5 bg-goat-red absolute bottom-0 left-0 right-0" />
       </div>
 
       {/* Our Story */}
-      <section className="py-20 bg-goat-cream relative noise-overlay-light">
+      <section className="py-20 bg-goat-cream relative overflow-hidden noise-overlay-light">
+        <div className="absolute inset-0 texture-concrete opacity-[0.5] pointer-events-none" />
+        <div className="absolute inset-0 texture-twill opacity-[0.04] pointer-events-none" />
         <div className="container mx-auto relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-16 max-w-6xl mx-auto">
             {/* Image */}
@@ -87,7 +90,9 @@ export function About() {
       </section>
 
       {/* Values */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 texture-concrete opacity-[0.5] pointer-events-none" />
+        <div className="absolute inset-0 texture-twill opacity-[0.04] pointer-events-none" />
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-3 mb-4">
@@ -126,6 +131,8 @@ export function About() {
 
       {/* Warranty Shields */}
       <section className="py-20 bg-goat-navy-deep relative overflow-hidden noise-overlay-strong diagonal-stripes-bold">
+        <div className="absolute inset-0 texture-concrete-heavy opacity-[0.35] mix-blend-screen pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30 pointer-events-none" />
         <div className="container mx-auto relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-16 max-w-6xl mx-auto">
             {/* Warranty flyer image */}
@@ -156,7 +163,9 @@ export function About() {
                 ].map((w, idx) => (
                   <div key={idx} className="text-center">
                     <div className="relative mx-auto w-24 h-28 mb-3">
-                      <div className="absolute inset-0 bg-gradient-to-b from-goat-navy-dark to-goat-navy-deep border-2 border-goat-silver/30"
+                      <div className="absolute inset-0 bg-goat-silver/30"
+                        style={{ clipPath: 'polygon(50% 0%, 100% 10%, 100% 70%, 50% 100%, 0% 70%, 0% 10%)' }} />
+                      <div className="absolute inset-[2px] bg-gradient-to-b from-goat-navy-dark to-goat-navy-deep"
                         style={{ clipPath: 'polygon(50% 0%, 100% 10%, 100% 70%, 50% 100%, 0% 70%, 0% 10%)' }}>
                         <div className="flex flex-col items-center justify-center h-full pt-2">
                           <w.icon className="w-4 h-4 text-goat-red mb-1" />
@@ -185,7 +194,9 @@ export function About() {
       </section>
 
       {/* Brand Identity */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 texture-concrete opacity-[0.5] pointer-events-none" />
+        <div className="absolute inset-0 texture-twill opacity-[0.04] pointer-events-none" />
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row items-center gap-12 max-w-6xl mx-auto">
             <div className="lg:w-1/2">
@@ -215,7 +226,9 @@ export function About() {
       </section>
 
       {/* What We Do */}
-      <section className="py-20 bg-goat-cream relative noise-overlay-light">
+      <section className="py-20 bg-goat-cream relative overflow-hidden noise-overlay-light">
+        <div className="absolute inset-0 texture-concrete opacity-[0.5] pointer-events-none" />
+        <div className="absolute inset-0 texture-twill opacity-[0.04] pointer-events-none" />
         <div className="container mx-auto relative z-10">
           <div className="text-center mb-12">
             <StarDivider className="mb-4" />
@@ -271,11 +284,13 @@ export function About() {
       </section>
 
       {/* Certifications */}
-      <section className="py-16 bg-goat-navy-dark text-white relative noise-overlay">
+      <section className="py-16 bg-goat-navy-dark text-white relative overflow-hidden noise-overlay">
+        <div className="absolute inset-0 texture-concrete-heavy opacity-[0.35] mix-blend-screen pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30 pointer-events-none" />
         <div className="container mx-auto relative z-10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 max-w-4xl mx-auto">
             <div className="flex items-center gap-4">
-              <OptimizedImage src={logoImg} alt="Garage Goat" className="h-14 w-auto opacity-80" loading="lazy" />
+              <OptimizedImage src={logoImg} alt="Garage Goat" className="h-14 w-auto" loading="lazy" />
               <div>
                 <div className="text-sm text-goat-ice/50" style={{ fontFamily: "var(--font-heading)", fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.1em' }}>Credentials</div>
                 <div className="text-goat-ice/80 text-sm">{companyInfo.licenseName} {companyInfo.licenseNumber}</div>
@@ -294,7 +309,9 @@ export function About() {
       </section>
 
       {/* What Customers Say */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 texture-concrete opacity-[0.5] pointer-events-none" />
+        <div className="absolute inset-0 texture-twill opacity-[0.04] pointer-events-none" />
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <StarDivider className="mb-4" />
@@ -338,7 +355,9 @@ export function About() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-goat-cream relative noise-overlay-light">
+      <section className="py-20 bg-goat-cream relative overflow-hidden noise-overlay-light">
+        <div className="absolute inset-0 texture-concrete opacity-[0.5] pointer-events-none" />
+        <div className="absolute inset-0 texture-twill opacity-[0.04] pointer-events-none" />
         <div className="container mx-auto text-center relative z-10">
           <h2
             className="text-3xl lg:text-4xl text-goat-navy-dark mb-4"

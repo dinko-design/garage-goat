@@ -22,7 +22,6 @@ export function Privacy() {
             Privacy <span className="text-accent-red">Policy</span>
           </h1>
         </div>
-        <div className="h-1.5 bg-goat-red absolute bottom-0 left-0 right-0" />
       </div>
 
       <div className="py-16 bg-goat-cream noise-overlay-light">

@@ -70,6 +70,8 @@ export function Gallery() {
 
       {/* Hero */}
       <div className="bg-goat-navy-deep text-white py-16 lg:py-20 relative overflow-hidden noise-overlay">
+        <div className="absolute inset-0 texture-concrete-heavy opacity-[0.35] mix-blend-screen pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30 pointer-events-none" />
         <div className="container mx-auto relative z-10 text-center">
           <Breadcrumbs variant="dark" items={[{ label: 'Gallery' }]} />
           <StarDivider size="sm" className="text-goat-ice/30 mb-4" />
@@ -80,7 +82,6 @@ export function Gallery() {
             Real projects. Real homes. See why our neighbors trust the G.O.A.T. for their garage doors.
           </p>
         </div>
-        <div className="h-1.5 bg-goat-red absolute bottom-0 left-0 right-0" />
       </div>
 
       {/* Filters */}
@@ -104,7 +105,9 @@ export function Gallery() {
       </div>
 
       {/* Gallery Grid */}
-      <div className="py-16 bg-goat-cream noise-overlay-light">
+      <div className="py-16 bg-goat-cream relative overflow-hidden noise-overlay-light">
+        <div className="absolute inset-0 texture-concrete opacity-[0.5] pointer-events-none" />
+        <div className="absolute inset-0 texture-twill opacity-[0.04] pointer-events-none" />
         <div className="container mx-auto relative z-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filtered.map((item) => (
@@ -177,7 +180,9 @@ export function Gallery() {
       </div>
 
       {/* Services We Provide */}
-      <section className="py-16 lg:py-20 bg-white">
+      <section className="py-16 lg:py-20 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 texture-concrete opacity-[0.5] pointer-events-none" />
+        <div className="absolute inset-0 texture-twill opacity-[0.04] pointer-events-none" />
         <div className="container mx-auto">
           <div className="flex items-center justify-center gap-3 mb-3">
             <div className="h-px w-12 bg-goat-red" />
@@ -219,7 +224,9 @@ export function Gallery() {
       </section>
 
       {/* Serving Your Neighborhood */}
-      <section className="py-16 lg:py-20 bg-goat-cream relative noise-overlay-light">
+      <section className="py-16 lg:py-20 bg-goat-cream relative overflow-hidden noise-overlay-light">
+        <div className="absolute inset-0 texture-concrete opacity-[0.5] pointer-events-none" />
+        <div className="absolute inset-0 texture-twill opacity-[0.04] pointer-events-none" />
         <div className="container mx-auto relative z-10 text-center">
           <div className="flex items-center justify-center gap-3 mb-3">
             <div className="h-px w-12 bg-goat-red" />

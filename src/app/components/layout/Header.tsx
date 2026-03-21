@@ -1,22 +1,25 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, NavLink, useLocation } from 'react-router';
-import { Menu, X, Phone, MapPin, Star, ChevronDown, Clock, Tag, FileText, AlertTriangle, HelpCircle, Image, DollarSign, ShieldCheck, ChevronRight } from 'lucide-react';
-import { services, serviceAreas, companyInfo } from '../../../data/cms';
+import { Menu, X, Phone, MapPin, ChevronDown, Clock, Tag, FileText, AlertTriangle, HelpCircle, DollarSign, ShieldCheck, ChevronRight, Image, Facebook, Instagram, MessageSquare } from 'lucide-react';
+import { services, serviceAreas, companyInfo, blogPosts, offers } from '../../../data/cms';
+import { BrandStar } from '../BrandStar';
+import { RatingStar } from '../RatingStar';
 import logoImg from "figma:asset/ba1e44b3fc96187901f7ffaa888d6f0ec809bc70.png";
 
+const FB_URL = 'https://www.facebook.com/profile.php?id=61555203315954';
+const IG_URL = 'https://www.instagram.com/garagegoat01';
+
 /* ────────────────────────────────────────────────
-   Mega Dropdown — two-column for Services
+   Mega Dropdown
 ──────────────────────────────────────────────── */
 function MegaDropdown({
   label,
   children,
   wide,
-  icon,
 }: {
   label: string;
   children: React.ReactNode;
   wide?: boolean;
-  icon?: React.ReactNode;
 }) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -37,7 +40,6 @@ function MegaDropdown({
         aria-expanded={open}
         style={{ fontFamily: 'var(--font-heading)', fontWeight: 600 }}
       >
-        {icon}
         {label} <ChevronDown className={`w-3.5 h-3.5 transition-transform ${open ? 'rotate-180' : ''}`} />
       </button>
       {open && (
@@ -82,12 +84,20 @@ function DropdownHeading({ children }: { children: React.ReactNode }) {
    Service icon map
 ──────────────────────────────────────────────── */
 const serviceIcons: Record<string, React.ReactNode> = {
-  repair: <span className="text-goat-red text-xs">★</span>,
-  'spring-repair': <span className="text-goat-red text-xs">★</span>,
-  'opener-repair': <span className="text-goat-red text-xs">★</span>,
-  installation: <span className="text-goat-red text-xs">★</span>,
+  repair: <BrandStar size={14} />,
+  'spring-repair': <BrandStar size={14} />,
+  'opener-repair': <BrandStar size={14} />,
+  installation: <BrandStar size={14} />,
   emergency: <AlertTriangle className="w-3.5 h-3.5 text-goat-gold-dark" />,
 };
+
+/* ────────────────────────────────────────────────
+   Shared nav link class helper
+──────────────────────────────────────────────── */
+const navLinkClasses = ({ isActive }: { isActive: boolean }) =>
+  `px-3 py-2 rounded transition-all text-sm tracking-wide uppercase ${
+    isActive ? 'bg-goat-red text-white' : 'text-goat-ice hover:text-white hover:bg-white/10'
+  }`;
 
 /* ────────────────────────────────────────────────
    Header Component
@@ -131,6 +141,9 @@ export function Header() {
     setMobileOpenSection(mobileOpenSection === section ? null : section);
   };
 
+  const latestPosts = blogPosts.slice(0, 2);
+  const mainOffer = offers[0];
+
   return (
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'shadow-lg shadow-goat-navy-deep/20' : ''} ${isHidden ? '-translate-y-full' : 'translate-y-0'}`}
@@ -140,36 +153,59 @@ export function Header() {
         <div className="absolute inset-0 opacity-10" style={{
           backgroundImage: `repeating-linear-gradient(90deg, transparent, transparent 20px, rgba(255,255,255,0.1) 20px, rgba(255,255,255,0.1) 22px)`
         }} />
-        <div className="container mx-auto flex justify-between items-center relative z-10">
-          <div className="hidden md:flex items-center gap-6 text-sm">
-            <span className="flex items-center gap-1.5">
-              <MapPin className="w-3.5 h-3.5" />
+        <div className="container mx-auto flex items-center relative z-10 gap-4">
+          {/* Left cluster — location, hours, social */}
+          <div className="flex items-center gap-4 min-w-0 flex-1">
+            {/* Full location — md+ */}
+            <span className="hidden md:flex items-center gap-1.5 text-sm whitespace-nowrap">
+              <MapPin className="w-3.5 h-3.5 flex-shrink-0" />
               Serving Cypress, Tomball, Katy & NW Houston
             </span>
-            <span className="flex items-center gap-1.5">
-              <Clock className="w-3.5 h-3.5" />
-              Open 24/7 for Emergencies
+            {/* Short location — always visible below md */}
+            <span className="flex md:hidden items-center gap-1 text-xs whitespace-nowrap">
+              <MapPin className="w-3 h-3 flex-shrink-0" />
+              Cypress, TX area
             </span>
+            <span className="hidden lg:flex items-center gap-1.5 text-sm whitespace-nowrap">
+              <Clock className="w-3.5 h-3.5 flex-shrink-0" />
+              Open 24/7
+            </span>
+            {/* Social icons — md+ */}
+            <div className="hidden md:flex items-center gap-2">
+              <a href={FB_URL} target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-white transition-colors" aria-label="Facebook">
+                <Facebook className="w-3.5 h-3.5" />
+              </a>
+              <a href={IG_URL} target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-white transition-colors" aria-label="Instagram">
+                <Instagram className="w-3.5 h-3.5" />
+              </a>
+            </div>
           </div>
-          <div className="flex items-center gap-4 ml-auto">
-            <div className="hidden sm:flex items-center gap-1 text-sm">
-              <Star className="w-3.5 h-3.5 fill-goat-gold text-goat-gold" />
+          {/* Right cluster — rating + phone */}
+          <div className="flex items-center gap-3 flex-shrink-0">
+            <div className="hidden sm:flex items-center gap-1 text-sm whitespace-nowrap">
+              <RatingStar size={14} className="text-goat-gold" />
               <span className="opacity-90">{companyInfo.googleRating}/5 — {companyInfo.totalReviews} Reviews</span>
+            </div>
+            {/* Compact rating for xs */}
+            <div className="flex sm:hidden items-center gap-1 text-xs whitespace-nowrap">
+              <RatingStar size={12} className="text-goat-gold" />
+              <span className="opacity-90">{companyInfo.googleRating}</span>
             </div>
             <a
               href={`tel:${companyInfo.phoneRaw}`}
-              className="flex items-center gap-1.5 bg-white text-goat-red px-3 py-1 rounded text-sm transition-all hover:bg-goat-cream"
+              className="flex items-center gap-1.5 bg-white text-goat-red px-3 py-1 rounded text-sm transition-all hover:bg-goat-cream whitespace-nowrap"
               style={{ fontFamily: "var(--font-heading)", fontWeight: 700 }}
             >
               <Phone className="w-3.5 h-3.5" />
-              {companyInfo.phone}
+              <span className="hidden sm:inline">{companyInfo.phone}</span>
+              <span className="sm:hidden">Call</span>
             </a>
           </div>
         </div>
       </div>
 
       {/* ── Main Nav — Navy ── */}
-      <div className={`border-b-4 border-goat-red transition-colors duration-300 ${isScrolled ? 'bg-goat-navy-dark/95 backdrop-blur-md' : 'bg-goat-navy-dark/[0.92] backdrop-blur-sm'}`}>
+      <div className={`transition-colors duration-300 ${isScrolled ? 'bg-goat-navy-dark/95 backdrop-blur-md' : 'bg-goat-navy-dark/[0.92] backdrop-blur-sm'}`}>
         <div className="container mx-auto py-2">
           <div className="flex justify-between items-center">
             {/* Logo */}
@@ -216,13 +252,27 @@ export function Header() {
                     </div>
                   </div>
 
-                  {/* Right column — Resources */}
+                  {/* Right column — Resources + Blog */}
                   <div className="flex-1">
                     <DropdownHeading>Resources</DropdownHeading>
                     <DropdownLink to="/faq" icon={<HelpCircle className="w-3.5 h-3.5 text-goat-navy/40" />}>FAQ</DropdownLink>
                     <DropdownLink to="/financing" icon={<DollarSign className="w-3.5 h-3.5 text-goat-navy/40" />}>Financing</DropdownLink>
                     <DropdownLink to="/warranty" icon={<ShieldCheck className="w-3.5 h-3.5 text-goat-navy/40" />}>Warranty Info</DropdownLink>
-                    <DropdownLink to="/blog" icon={<FileText className="w-3.5 h-3.5 text-goat-navy/40" />}>Blog</DropdownLink>
+                    <DropdownLink to="/contact" icon={<MessageSquare className="w-3.5 h-3.5 text-goat-navy/40" />}>Contact Us</DropdownLink>
+
+                    {latestPosts.length > 0 && (
+                      <>
+                        <div className="border-t border-goat-cream-dark mt-2 pt-1">
+                          <DropdownHeading>Latest Blog</DropdownHeading>
+                        </div>
+                        {latestPosts.map(post => (
+                          <DropdownLink key={post.id} to={`/blog/${post.slug}`} icon={<FileText className="w-3.5 h-3.5 text-goat-navy/40" />}>
+                            <span className="line-clamp-1">{post.title}</span>
+                          </DropdownLink>
+                        ))}
+                      </>
+                    )}
+
                     <div className="border-t border-goat-cream-dark mt-2 pt-2">
                       <DropdownLink to="/offers" icon={<Tag className="w-3.5 h-3.5 text-goat-gold-dark" />} accent>Special Offers</DropdownLink>
                     </div>
@@ -231,7 +281,7 @@ export function Header() {
               </MegaDropdown>
 
               {/* Service Areas Dropdown */}
-              <MegaDropdown label="Areas" icon={<MapPin className="w-3.5 h-3.5" />}>
+              <MegaDropdown label="Areas">
                 <DropdownHeading>We Serve</DropdownHeading>
                 {serviceAreas.map(area => (
                   <DropdownLink key={area.id} to={`/${area.slug}`} icon={<MapPin className="w-3.5 h-3.5 text-goat-red flex-shrink-0" />}>
@@ -241,47 +291,32 @@ export function Header() {
               </MegaDropdown>
 
               {/* Direct Links */}
-              <NavLink
-                to="/about"
-                className={({ isActive }) =>
-                  `px-3 py-2 rounded transition-all text-sm tracking-wide uppercase ${isActive ? 'bg-goat-red text-white' : 'text-goat-ice hover:text-white hover:bg-white/10'}`
-                }
-              >
-                About
-              </NavLink>
-              <NavLink
-                to="/gallery"
-                className={({ isActive }) =>
-                  `px-3 py-2 rounded transition-all text-sm tracking-wide uppercase ${isActive ? 'bg-goat-red text-white' : 'text-goat-ice hover:text-white hover:bg-white/10'}`
-                }
-              >
-                Gallery
-              </NavLink>
-              <NavLink
-                to="/reviews"
-                className={({ isActive }) =>
-                  `px-3 py-2 rounded transition-all text-sm tracking-wide uppercase ${isActive ? 'bg-goat-red text-white' : 'text-goat-ice hover:text-white hover:bg-white/10'}`
-                }
-              >
-                Reviews
-              </NavLink>
-              <NavLink
-                to="/contact"
-                className={({ isActive }) =>
-                  `px-3 py-2 rounded transition-all text-sm tracking-wide uppercase ${isActive ? 'bg-goat-red text-white' : 'text-goat-ice hover:text-white hover:bg-white/10'}`
-                }
-              >
-                Contact
-              </NavLink>
+              <NavLink to="/about" className={navLinkClasses}>About</NavLink>
+              <NavLink to="/blog" className={navLinkClasses}>Blog</NavLink>
+              <NavLink to="/gallery" className={navLinkClasses}>Gallery</NavLink>
+              <NavLink to="/reviews" className={navLinkClasses}>Reviews</NavLink>
 
-              {/* CTA */}
-              <a
-                href={`tel:${companyInfo.phoneRaw}`}
-                className="ml-3 bg-goat-teal hover:bg-goat-teal-dark text-goat-navy-deep px-5 py-2.5 rounded transition-all flex items-center gap-2 shadow-lg shadow-goat-teal/30 text-sm tracking-wide uppercase whitespace-nowrap"
+              {/* Primary CTA — Free Estimate */}
+              <Link
+                to="/contact"
+                className="ml-2 bg-goat-teal hover:bg-goat-teal-dark text-goat-navy-deep px-4 py-2.5 rounded transition-all flex items-center gap-2 shadow-lg shadow-goat-teal/30 text-sm tracking-wide uppercase whitespace-nowrap"
+                style={{ fontFamily: 'var(--font-heading)', fontWeight: 700 }}
               >
-                <Phone className="w-4 h-4" />
-                Call Now
-              </a>
+                Free Estimate
+              </Link>
+
+              {/* Secondary CTA — Offers */}
+              {mainOffer && (
+                <Link
+                  to="/offers"
+                  className="ml-1 border border-goat-gold/50 text-goat-gold hover:bg-goat-gold/10 hover:border-goat-gold px-3 py-2.5 rounded transition-all flex items-center gap-1.5 text-sm tracking-wide uppercase whitespace-nowrap"
+                  style={{ fontFamily: 'var(--font-heading)', fontWeight: 600 }}
+                  aria-label="View special offers"
+                >
+                  <Tag className="w-3.5 h-3.5" />
+                  {mainOffer.discountAmount}
+                </Link>
+              )}
             </nav>
 
             {/* ═══════ Tablet Nav (lg but not xl) ═══════ */}
@@ -304,7 +339,7 @@ export function Header() {
                 </div>
               </MegaDropdown>
 
-              <MegaDropdown label="Areas" icon={<MapPin className="w-3.5 h-3.5" />}>
+              <MegaDropdown label="Areas">
                 {serviceAreas.map(area => (
                   <DropdownLink key={area.id} to={`/${area.slug}`} icon={<MapPin className="w-3.5 h-3.5 text-goat-red flex-shrink-0" />}>
                     {area.cityName}
@@ -314,34 +349,42 @@ export function Header() {
 
               <MegaDropdown label="More">
                 <DropdownLink to="/about">About Us</DropdownLink>
+                <DropdownLink to="/blog" icon={<FileText className="w-3.5 h-3.5 text-goat-navy/40" />}>Blog</DropdownLink>
                 <DropdownLink to="/gallery" icon={<Image className="w-3.5 h-3.5 text-goat-navy/40" />}>Gallery</DropdownLink>
-                <DropdownLink to="/reviews" icon={<Star className="w-3.5 h-3.5 text-goat-navy/40" />}>Reviews</DropdownLink>
-                <DropdownLink to="/contact">Contact</DropdownLink>
+                <DropdownLink to="/reviews" icon={<RatingStar size={14} className="text-goat-navy/40" />}>Reviews</DropdownLink>
+                <DropdownLink to="/contact" icon={<MessageSquare className="w-3.5 h-3.5 text-goat-navy/40" />}>Contact</DropdownLink>
                 <div className="border-t border-goat-cream-dark mt-2 pt-2">
                   <DropdownLink to="/faq" icon={<HelpCircle className="w-3.5 h-3.5 text-goat-navy/40" />}>FAQ</DropdownLink>
-                  <DropdownLink to="/blog" icon={<FileText className="w-3.5 h-3.5 text-goat-navy/40" />}>Blog</DropdownLink>
                   <DropdownLink to="/financing" icon={<DollarSign className="w-3.5 h-3.5 text-goat-navy/40" />}>Financing</DropdownLink>
                   <DropdownLink to="/warranty" icon={<ShieldCheck className="w-3.5 h-3.5 text-goat-navy/40" />}>Warranty</DropdownLink>
                 </div>
               </MegaDropdown>
 
-              <a
-                href={`tel:${companyInfo.phoneRaw}`}
-                className="ml-3 bg-goat-teal hover:bg-goat-teal-dark text-goat-navy-deep px-5 py-2.5 rounded transition-all flex items-center gap-2 shadow-lg shadow-goat-teal/30 text-sm tracking-wide uppercase whitespace-nowrap"
+              {/* Primary CTA */}
+              <Link
+                to="/contact"
+                className="ml-2 bg-goat-teal hover:bg-goat-teal-dark text-goat-navy-deep px-4 py-2.5 rounded transition-all flex items-center gap-2 shadow-lg shadow-goat-teal/30 text-sm tracking-wide uppercase whitespace-nowrap"
+                style={{ fontFamily: 'var(--font-heading)', fontWeight: 700 }}
               >
-                <Phone className="w-4 h-4" /> Call Now
-              </a>
+                Free Estimate
+              </Link>
+
+              {/* Secondary CTA — Offers */}
+              {mainOffer && (
+                <Link
+                  to="/offers"
+                  className="ml-1 border border-goat-gold/50 text-goat-gold hover:bg-goat-gold/10 hover:border-goat-gold px-3 py-2.5 rounded transition-all flex items-center gap-1.5 text-xs tracking-wide uppercase whitespace-nowrap"
+                  style={{ fontFamily: 'var(--font-heading)', fontWeight: 600 }}
+                  aria-label="View special offers"
+                >
+                  <Tag className="w-3 h-3" />
+                  {mainOffer.discountAmount}
+                </Link>
+              )}
             </nav>
 
             {/* ═══════ Mobile Menu Button ═══════ */}
             <div className="lg:hidden flex items-center gap-3">
-              <a
-                href={`tel:${companyInfo.phoneRaw}`}
-                className="bg-goat-red text-white p-2.5 rounded"
-                aria-label="Call (281) 948-5452"
-              >
-                <Phone className="w-5 h-5" />
-              </a>
               <button onClick={toggleMenu} className="text-white p-2" aria-label={isMenuOpen ? 'Close menu' : 'Open menu'} aria-expanded={isMenuOpen}>
                 {isMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
               </button>
@@ -352,15 +395,87 @@ export function Header() {
 
       {/* ═══════ Mobile Nav ═══════ */}
       {isMenuOpen && (
-        <div className="lg:hidden bg-goat-navy-dark border-t border-goat-navy absolute w-full shadow-2xl z-50">
+        <div className="lg:hidden bg-goat-navy-dark border-t border-goat-navy absolute w-full shadow-2xl z-50 max-h-[calc(100vh-120px)] overflow-y-auto">
           <nav className="flex flex-col" style={{ fontFamily: "var(--font-heading)" }}>
 
+            {/* Service area info strip */}
+            <div className="flex items-center gap-2 px-6 py-2.5 bg-goat-navy-deep/50 text-goat-ice/60 text-xs border-b border-white/5">
+              <MapPin className="w-3 h-3 flex-shrink-0" />
+              Serving Cypress, Tomball, Katy & NW Houston
+            </div>
+
+            {/* Services — expandable */}
+            <div className="border-b border-white/5">
+              <button
+                onClick={() => toggleMobileSection('services')}
+                className="w-full text-white hover:bg-white/10 px-6 py-3.5 transition-colors uppercase tracking-wide text-sm flex items-center justify-between"
+              >
+                Services
+                <ChevronDown className={`w-4 h-4 transition-transform ${mobileOpenSection === 'services' ? 'rotate-180' : ''}`} />
+              </button>
+              {mobileOpenSection === 'services' && (
+                <div className="bg-goat-navy-deep/50 pb-2">
+                  {services.map(svc => (
+                    <Link
+                      key={svc.id}
+                      to={`/${svc.slug}`}
+                      onClick={toggleMenu}
+                      className={`px-8 py-2.5 text-sm flex items-center gap-2.5 transition-colors ${
+                        svc.id === 'emergency'
+                          ? 'text-goat-gold-dark hover:text-goat-gold'
+                          : 'text-goat-ice/80 hover:text-white'
+                      }`}
+                      style={{ fontFamily: 'var(--font-body)' }}
+                    >
+                      {serviceIcons[svc.id]}
+                      {svc.name}
+                    </Link>
+                  ))}
+                  <Link
+                    to="/services"
+                    onClick={toggleMenu}
+                    className="px-8 py-2 text-goat-red text-xs uppercase tracking-wider flex items-center gap-1"
+                    style={{ fontFamily: 'var(--font-heading)', fontWeight: 700 }}
+                  >
+                    View All Services <ChevronRight className="w-3 h-3" />
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            {/* Areas — expandable */}
+            <div className="border-b border-white/5">
+              <button
+                onClick={() => toggleMobileSection('areas')}
+                className="w-full text-white hover:bg-white/10 px-6 py-3.5 transition-colors uppercase tracking-wide text-sm flex items-center justify-between"
+              >
+                Areas We Serve
+                <ChevronDown className={`w-4 h-4 transition-transform ${mobileOpenSection === 'areas' ? 'rotate-180' : ''}`} />
+              </button>
+              {mobileOpenSection === 'areas' && (
+                <div className="bg-goat-navy-deep/50 pb-2">
+                  {serviceAreas.map(area => (
+                    <Link
+                      key={area.id}
+                      to={`/${area.slug}`}
+                      onClick={toggleMenu}
+                      className="px-8 py-2.5 text-goat-ice/80 hover:text-white text-sm flex items-center gap-2.5 transition-colors"
+                      style={{ fontFamily: 'var(--font-body)' }}
+                    >
+                      <MapPin className="w-3.5 h-3.5 text-goat-red flex-shrink-0" />
+                      {area.cityName}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
             {/* Primary Links */}
-            <Link to="/services" onClick={toggleMenu} className="text-white hover:bg-white/10 px-6 py-3.5 border-b border-white/5 transition-colors uppercase tracking-wide text-sm">
-              Services
-            </Link>
             <Link to="/about" onClick={toggleMenu} className="text-white hover:bg-white/10 px-6 py-3.5 border-b border-white/5 transition-colors uppercase tracking-wide text-sm">
               About
+            </Link>
+            <Link to="/blog" onClick={toggleMenu} className="text-white hover:bg-white/10 px-6 py-3.5 border-b border-white/5 transition-colors uppercase tracking-wide text-sm">
+              Blog
             </Link>
             <Link to="/gallery" onClick={toggleMenu} className="text-white hover:bg-white/10 px-6 py-3.5 border-b border-white/5 transition-colors uppercase tracking-wide text-sm">
               Gallery
@@ -372,35 +487,67 @@ export function Header() {
               Contact
             </Link>
 
-            {/* Secondary Links */}
+            {/* Secondary Links — 2-column grid */}
             <div className="grid grid-cols-2 border-b border-white/5">
-              <Link to="/faq" onClick={toggleMenu} className="text-goat-ice/80 hover:text-white hover:bg-white/10 px-6 py-3 transition-colors text-sm" style={{ fontFamily: "var(--font-body)" }}>
+              <Link to="/faq" onClick={toggleMenu} className="text-goat-ice/70 hover:text-white hover:bg-white/10 px-6 py-3 transition-colors text-sm" style={{ fontFamily: "var(--font-body)" }}>
                 FAQ
               </Link>
-              <Link to="/financing" onClick={toggleMenu} className="text-goat-ice/80 hover:text-white hover:bg-white/10 px-6 py-3 transition-colors text-sm" style={{ fontFamily: "var(--font-body)" }}>
+              <Link to="/financing" onClick={toggleMenu} className="text-goat-ice/70 hover:text-white hover:bg-white/10 px-6 py-3 transition-colors text-sm" style={{ fontFamily: "var(--font-body)" }}>
                 Financing
               </Link>
-              <Link to="/warranty" onClick={toggleMenu} className="text-goat-ice/80 hover:text-white hover:bg-white/10 px-6 py-3 transition-colors text-sm" style={{ fontFamily: "var(--font-body)" }}>
+              <Link to="/warranty" onClick={toggleMenu} className="text-goat-ice/70 hover:text-white hover:bg-white/10 px-6 py-3 transition-colors text-sm" style={{ fontFamily: "var(--font-body)" }}>
                 Warranty
               </Link>
-              <Link to="/blog" onClick={toggleMenu} className="text-goat-ice/80 hover:text-white hover:bg-white/10 px-6 py-3 transition-colors text-sm" style={{ fontFamily: "var(--font-body)" }}>
-                Blog
+              <Link to="/pricing" onClick={toggleMenu} className="text-goat-ice/70 hover:text-white hover:bg-white/10 px-6 py-3 transition-colors text-sm" style={{ fontFamily: "var(--font-body)" }}>
+                Pricing
               </Link>
             </div>
 
-            {/* Offers + CTA */}
-            <Link to="/offers" onClick={toggleMenu} className="text-goat-gold hover:bg-white/10 px-6 py-3 border-b border-white/5 transition-colors text-sm flex items-center gap-2" style={{ fontFamily: "var(--font-body)" }}>
-              <Tag className="w-3.5 h-3.5" /> Special Offers
-            </Link>
+            {/* Offer Card — prominent */}
+            {mainOffer && (
+              <Link
+                to="/offers"
+                onClick={toggleMenu}
+                className="mx-4 my-3 bg-goat-red/20 border border-goat-red/40 rounded-lg px-5 py-3.5 flex items-center gap-3 group hover:bg-goat-red/30 transition-colors"
+              >
+                <Tag className="w-5 h-5 text-goat-red flex-shrink-0" />
+                <div className="flex-1 min-w-0">
+                  <div className="text-white text-sm uppercase tracking-wide" style={{ fontFamily: 'var(--font-heading)', fontWeight: 700 }}>
+                    {mainOffer.discountAmount}
+                  </div>
+                  <div className="text-goat-ice/60 text-xs truncate">{mainOffer.title}</div>
+                </div>
+                <ChevronRight className="w-4 h-4 text-goat-ice/40 group-hover:text-white transition-colors flex-shrink-0" />
+              </Link>
+            )}
 
-            <div className="p-4">
+            {/* CTAs */}
+            <div className="px-4 pb-2 flex flex-col gap-2">
+              <Link
+                to="/contact"
+                onClick={toggleMenu}
+                className="flex items-center justify-center gap-2 bg-goat-teal text-goat-navy-deep py-3.5 rounded transition-all text-sm uppercase tracking-wide shadow-lg shadow-goat-teal/30"
+                style={{ fontFamily: "var(--font-heading)", fontWeight: 700 }}
+              >
+                Get Free Estimate
+              </Link>
               <a
                 href={`tel:${companyInfo.phoneRaw}`}
-                className="flex items-center justify-center gap-2 bg-goat-teal text-goat-navy-deep py-3.5 rounded transition-all text-sm uppercase tracking-wide shadow-lg shadow-goat-teal/30"
+                className="flex items-center justify-center gap-2 bg-white/10 text-white py-3 rounded transition-all text-sm uppercase tracking-wide hover:bg-white/20"
                 style={{ fontFamily: "var(--font-heading)", fontWeight: 700 }}
               >
                 <Phone className="w-4 h-4" />
                 Call {companyInfo.phone}
+              </a>
+            </div>
+
+            {/* Social icons */}
+            <div className="flex justify-center gap-4 py-3 border-t border-white/5">
+              <a href={FB_URL} target="_blank" rel="noopener noreferrer" className="text-goat-ice/40 hover:text-white transition-colors p-1.5" aria-label="Facebook">
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a href={IG_URL} target="_blank" rel="noopener noreferrer" className="text-goat-ice/40 hover:text-white transition-colors p-1.5" aria-label="Instagram">
+                <Instagram className="w-5 h-5" />
               </a>
             </div>
           </nav>

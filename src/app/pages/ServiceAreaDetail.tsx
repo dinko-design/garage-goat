@@ -6,6 +6,7 @@ import { SEO } from '../components/SEO';
 import { buildServiceAreaSchema } from '../../data/structured-data';
 import { OptimizedImage } from '../components/OptimizedImage';
 import { Breadcrumbs } from '../components/Breadcrumbs';
+import { HeroLeadForm } from '../components/HeroLeadForm';
 import { RelatedBlogs, RelatedOffers } from '../components/RelatedContent';
 
 export function ServiceAreaDetail({ slug: propSlug }: { slug?: string }) {
@@ -33,9 +34,11 @@ export function ServiceAreaDetail({ slug: propSlug }: { slug?: string }) {
 
       {/* Hero */}
       <div className="bg-goat-navy-deep text-white py-16 lg:py-24 relative overflow-hidden noise-overlay">
+        <div className="absolute inset-0 texture-concrete-heavy opacity-[0.35] mix-blend-screen pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30 pointer-events-none" />
         <div className="absolute inset-0 bg-gradient-to-br from-goat-navy-deep to-goat-navy-dark" />
         <div className="absolute top-10 right-10 text-goat-red/5 text-[200px] leading-none hidden xl:block" style={{ fontFamily: "var(--font-heading)" }}>★</div>
-        <div className="container mx-auto relative z-10 text-center">
+        <div className="container mx-auto relative z-10">
           <Breadcrumbs
             variant="dark"
             items={[
@@ -43,32 +46,43 @@ export function ServiceAreaDetail({ slug: propSlug }: { slug?: string }) {
               { label: area.cityName }
             ]}
           />
-          <div className="inline-flex items-center justify-center gap-2 bg-goat-red/20 text-goat-red-light border border-goat-red/30 px-4 py-1.5 rounded-full text-sm mb-6">
-            <MapPin className="w-4 h-4" />
-            <span style={{ fontFamily: "var(--font-heading)", fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-              Serving {area.cityName}
-            </span>
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+            {/* Left — Copy */}
+            <div className="flex-1 min-w-0 text-center lg:text-left">
+              <div className="inline-flex items-center justify-center gap-2 bg-goat-red/20 text-goat-red-light border border-goat-red/30 px-4 py-1.5 rounded-full text-sm mb-6">
+                <MapPin className="w-4 h-4" />
+                <span style={{ fontFamily: "var(--font-heading)", fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                  Serving {area.cityName}
+                </span>
+              </div>
+              <h1
+                className="text-4xl lg:text-5xl xl:text-6xl mb-6"
+                style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase', lineHeight: 1.05 }}
+              >
+                <span className="text-goat-red">{area.h1Title}</span>
+              </h1>
+              <p className="text-lg lg:text-xl text-goat-ice/80 mb-8 max-w-xl lg:mx-0 mx-auto">{area.introParagraph}</p>
+              <a
+                href={`tel:${companyInfo.phoneRaw}`}
+                className="inline-flex items-center gap-2 bg-goat-teal hover:bg-goat-teal-dark text-goat-navy-deep px-8 py-4 rounded transition-all shadow-lg shadow-goat-teal/30"
+                style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase' }}
+              >
+                <Phone className="w-5 h-5" />
+                Call for Service in {area.cityName.split(',')[0]}
+              </a>
+            </div>
+
+            {/* Right — Lead Form */}
+            <div className="w-full lg:w-[360px] flex-shrink-0">
+              <HeroLeadForm offer={relatedOffers[0]} />
+            </div>
           </div>
-          <h1
-            className="text-4xl lg:text-6xl mb-6"
-            style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase', lineHeight: 1.05 }}
-          >
-            <span className="text-goat-red">{area.h1Title}</span>
-          </h1>
-          <p className="text-xl text-goat-ice/80 mb-8 max-w-2xl mx-auto">{area.introParagraph}</p>
-          <a
-            href={`tel:${companyInfo.phoneRaw}`}
-            className="inline-flex items-center gap-2 bg-goat-teal hover:bg-goat-teal-dark text-goat-navy-deep px-8 py-4 rounded transition-all shadow-lg shadow-goat-teal/30"
-            style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase' }}
-          >
-            <Phone className="w-5 h-5" />
-            Call for Service in {area.cityName.split(',')[0]}
-          </a>
         </div>
-        <div className="h-1.5 bg-goat-red absolute bottom-0 left-0 right-0" />
       </div>
 
-      <div className="py-16 bg-goat-cream relative noise-overlay-light">
+      <div className="py-16 bg-goat-cream relative overflow-hidden noise-overlay-light">
+        <div className="absolute inset-0 texture-concrete opacity-[0.5] pointer-events-none" />
+        <div className="absolute inset-0 texture-twill opacity-[0.04] pointer-events-none" />
         <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto">
 
@@ -172,6 +186,8 @@ export function ServiceAreaDetail({ slug: propSlug }: { slug?: string }) {
 
             {/* Other service areas */}
             <div className="bg-goat-navy-dark rounded-lg p-8 text-center text-white relative overflow-hidden noise-overlay">
+              <div className="absolute inset-0 texture-concrete-heavy opacity-[0.35] mix-blend-screen pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30 pointer-events-none" />
               <div className="relative z-10">
                 <h2
                   className="text-xl mb-4"

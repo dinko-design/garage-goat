@@ -30,6 +30,8 @@ export function Home() {
       {/* HERO SECTION */}
       {/* ============================================ */}
       <section className="relative bg-goat-navy-deep text-white overflow-hidden noise-overlay">
+        <div className="absolute inset-0 texture-concrete-heavy opacity-[0.35] mix-blend-screen pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30 pointer-events-none" />
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <OptimizedImage
@@ -110,31 +112,28 @@ export function Home() {
             </div>
           </div>
         </div>
-
-        {/* Bottom Red Stripe — Americana accent */}
-        <div className="h-1.5 bg-goat-red relative z-10" />
       </section>
 
       {/* ============================================ */}
       {/* OFFER BANNER */}
       {/* ============================================ */}
       {featuredOffer && (
-        <div className="bg-goat-navy-dark text-white py-4 relative">
-          <div className="absolute inset-0 opacity-5" style={{
-            backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.03) 10px, rgba(255,255,255,0.03) 12px)`
-          }} />
+        <div className="bg-goat-navy-dark text-white py-4 relative overflow-hidden">
+          <div className="absolute inset-0 texture-concrete-heavy opacity-[0.35] mix-blend-screen pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30 pointer-events-none" />
+          <div className="absolute inset-0 texture-twill opacity-[0.06] mix-blend-screen pointer-events-none" />
           <div className="container mx-auto flex flex-col sm:flex-row items-center justify-center gap-4 text-center relative z-10">
             <div className="flex items-center gap-3">
-              <span className="bg-goat-red text-white px-3 py-1 rounded text-sm" style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase' }}>
+              <span className="border border-goat-red text-goat-red px-3 py-0.5 rounded text-xs tracking-widest" style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase' }}>
                 Special Offer
               </span>
-              <span style={{ fontFamily: "var(--font-heading)", fontWeight: 600, fontSize: '1.1rem' }}>
+              <span className="text-goat-ice" style={{ fontFamily: "var(--font-heading)", fontWeight: 600, fontSize: '1.1rem' }}>
                 {featuredOffer.headline}
               </span>
             </div>
             <Link
               to={`/${featuredOffer.slug}`}
-              className="bg-goat-red hover:bg-goat-red-light text-white px-5 py-1.5 rounded text-sm transition-colors"
+              className="bg-goat-teal hover:bg-goat-teal-dark text-goat-navy-deep px-5 py-1.5 rounded text-sm transition-colors shadow-lg shadow-goat-teal/20"
               style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase' }}
             >
               Claim Offer →
@@ -143,10 +142,15 @@ export function Home() {
         </div>
       )}
 
+      {/* Silver divider */}
+      <div className="section-divider" />
+
       {/* ============================================ */}
       {/* SERVICES GRID */}
       {/* ============================================ */}
-      <section className="py-20 bg-goat-cream relative noise-overlay-light">
+      <section className="py-20 bg-goat-cream relative overflow-hidden noise-overlay-light">
+        <div className="absolute inset-0 texture-concrete opacity-[0.5] pointer-events-none" />
+        <div className="absolute inset-0 texture-twill opacity-[0.04] pointer-events-none" />
         <div className="container mx-auto relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <StarDivider className="text-goat-navy mb-4" />
@@ -210,10 +214,15 @@ export function Home() {
         </div>
       </section>
 
+      {/* Silver divider */}
+      <div className="section-divider" />
+
       {/* ============================================ */}
       {/* WHY GARAGE GOAT — TRUST SECTION */}
       {/* ============================================ */}
-      <section className="py-20 bg-white relative">
+      <section className="py-20 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 texture-concrete opacity-[0.5] pointer-events-none" />
+        <div className="absolute inset-0 texture-twill opacity-[0.04] pointer-events-none" />
         <div className="container mx-auto relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-16">
 
@@ -298,10 +307,14 @@ export function Home() {
         </div>
       </section>
 
+      <div className="section-divider" />
+
       {/* ============================================ */}
       {/* STATS BAR */}
       {/* ============================================ */}
-      <section className="bg-goat-navy-dark py-12 relative noise-overlay">
+      <section className="bg-goat-navy-dark py-12 relative overflow-hidden noise-overlay">
+        <div className="absolute inset-0 texture-concrete-heavy opacity-[0.35] mix-blend-screen pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30 pointer-events-none" />
         <div className="container mx-auto relative z-10">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center text-white">
             {[
@@ -326,10 +339,14 @@ export function Home() {
         </div>
       </section>
 
+      <div className="section-divider" />
+
       {/* ============================================ */}
       {/* WARRANTY SHIELDS */}
       {/* ============================================ */}
       <section className="py-16 bg-goat-navy-deep relative overflow-hidden noise-overlay-strong diagonal-stripes-bold">
+        <div className="absolute inset-0 texture-concrete-heavy opacity-[0.35] mix-blend-screen pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30 pointer-events-none" />
         <div className="container mx-auto relative z-10">
           <div className="text-center mb-10">
             <h2
@@ -350,10 +367,13 @@ export function Home() {
             ].map((w, idx) => (
               <div key={idx} className="text-center group">
                 <div className="relative mx-auto w-28 h-32 mb-4">
-                  {/* Shield shape */}
-                  <div className="absolute inset-0 bg-gradient-to-b from-goat-navy-dark to-goat-navy-deep border-2 border-goat-silver/30 group-hover:border-goat-red/60 transition-colors"
+                  {/* Shield border (slightly larger, clipped) */}
+                  <div className="absolute inset-0 bg-goat-silver/30 group-hover:bg-goat-red/50 transition-colors"
+                    style={{ clipPath: 'polygon(50% 0%, 100% 10%, 100% 70%, 50% 100%, 0% 70%, 0% 10%)' }} />
+                  {/* Shield shape (inset by 2px) */}
+                  <div className="absolute inset-[2px] bg-gradient-to-b from-goat-navy-dark to-goat-navy-deep"
                     style={{ clipPath: 'polygon(50% 0%, 100% 10%, 100% 70%, 50% 100%, 0% 70%, 0% 10%)' }}>
-                    <div className="flex flex-col items-center justify-center h-full pt-2">
+                    <div className="flex flex-col items-center justify-center h-full pb-6">
                       <w.icon className="w-5 h-5 text-goat-red mb-1" />
                       <div className="text-2xl text-white" style={{ fontFamily: "var(--font-heading)", fontWeight: 700 }}>
                         {w.duration}
@@ -377,10 +397,14 @@ export function Home() {
         </div>
       </section>
 
+      <div className="section-divider" />
+
       {/* ============================================ */}
       {/* WRAPPED TRUCK SHOWCASE */}
       {/* ============================================ */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 texture-concrete opacity-[0.5] pointer-events-none" />
+        <div className="absolute inset-0 texture-twill opacity-[0.04] pointer-events-none" />
         <div className="container mx-auto relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-12 max-w-6xl mx-auto">
             <div className="lg:w-1/2">
@@ -422,10 +446,14 @@ export function Home() {
         </div>
       </section>
 
+      <div className="section-divider" />
+
       {/* ============================================ */}
       {/* SERVICE AREAS */}
       {/* ============================================ */}
-      <section className="py-20 bg-goat-cream relative noise-overlay-light">
+      <section className="py-20 bg-goat-cream relative overflow-hidden noise-overlay-light">
+        <div className="absolute inset-0 texture-concrete opacity-[0.5] pointer-events-none" />
+        <div className="absolute inset-0 texture-twill opacity-[0.04] pointer-events-none" />
         <div className="container mx-auto relative z-10">
           <StarDivider className="text-goat-navy mb-4" />
           <h2
@@ -452,10 +480,14 @@ export function Home() {
         </div>
       </section>
 
+      <div className="section-divider" />
+
       {/* ============================================ */}
       {/* REVIEWS */}
       {/* ============================================ */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 texture-concrete opacity-[0.5] pointer-events-none" />
+        <div className="absolute inset-0 texture-twill opacity-[0.04] pointer-events-none" />
         <div className="container mx-auto relative z-10">
           <div className="text-center mb-16">
             <StarDivider className="text-goat-navy mb-4" />
@@ -510,16 +542,20 @@ export function Home() {
         </div>
       </section>
 
+      <div className="section-divider" />
+
       {/* ============================================ */}
       {/* FINAL CTA — BIG & BOLD */}
       {/* ============================================ */}
       <section className="relative bg-goat-navy-deep py-24 overflow-hidden noise-overlay-strong">
+        <div className="absolute inset-0 texture-concrete-heavy opacity-[0.35] mix-blend-screen pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30 pointer-events-none" />
         <ShieldStarWatermark className="absolute top-8 left-8 w-64 h-64 text-goat-teal/[0.03] hidden lg:block z-[1]" />
         <ShieldStarWatermark className="absolute bottom-8 right-8 w-48 h-48 text-goat-red/[0.04] hidden lg:block z-[1]" />
 
         <div className="container mx-auto relative z-10 text-center text-white">
           <GarageDoorDivider className="text-goat-teal mb-6" />
-          <img src={logoImg} alt="Garage Goat" className="h-20 w-auto mx-auto mb-8 opacity-80" width={80} height={80} loading="lazy" decoding="async" />
+          <img src={logoImg} alt="Garage Goat" className="h-32 lg:h-40 w-auto mx-auto mb-8" width={160} height={160} loading="lazy" decoding="async" />
           <h2
             className="text-4xl lg:text-6xl mb-6"
             style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase', lineHeight: 1.1 }}

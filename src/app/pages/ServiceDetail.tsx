@@ -4,6 +4,7 @@ import { services, offers, companyInfo, serviceAreas, getRelatedBlogPosts, getRe
 import { CheckCircle2, Phone, Calendar, ArrowRight, Star, MapPin, ShieldCheck, Clock } from 'lucide-react';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { RelatedServices, RelatedBlogs, RelatedOffers, RelatedAreas } from '../components/RelatedContent';
+import { HeroLeadForm } from '../components/HeroLeadForm';
 import { SEO } from '../components/SEO';
 import { OptimizedImage } from '../components/OptimizedImage';
 import { buildServiceSchema, buildFAQPageSchema } from '../../data/structured-data';
@@ -37,6 +38,8 @@ export function ServiceDetail({ slug: propSlug }: { slug?: string }) {
 
       {/* Hero */}
       <div className="bg-goat-navy-deep text-white py-16 lg:py-24 relative overflow-hidden noise-overlay">
+        <div className="absolute inset-0 texture-concrete-heavy opacity-[0.35] mix-blend-screen pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30 pointer-events-none" />
         <div className="absolute inset-0 z-0">
           <OptimizedImage src={service.image} alt={service.name} className="w-full h-full object-cover opacity-15" loading="eager" sizes="100vw" width={1080} height={600} />
           <div className="absolute inset-0 bg-gradient-to-t from-goat-navy-deep via-goat-navy-deep/70 to-transparent" />
@@ -49,39 +52,51 @@ export function ServiceDetail({ slug: propSlug }: { slug?: string }) {
               { label: service.name }
             ]}
           />
-          <div className="max-w-3xl">
-            <h1
-              className="text-4xl lg:text-6xl mb-6"
-              style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase', lineHeight: 1.05 }}
-            >
-              <span className="text-goat-red">{service.h1Title}</span>
-            </h1>
-            <p className="text-xl text-goat-ice/80 mb-8 max-w-2xl leading-relaxed">{service.introParagraph}</p>
-            <div className="flex flex-wrap gap-3">
-              <a
-                href={`tel:${companyInfo.phoneRaw}`}
-                className="bg-goat-teal hover:bg-goat-teal-dark text-goat-navy-deep px-6 py-3 rounded transition-all flex items-center gap-2 shadow-lg shadow-goat-teal/30"
-                style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase' }}
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+            {/* Left — Copy */}
+            <div className="flex-1 min-w-0">
+              <h1
+                className="text-4xl lg:text-5xl xl:text-6xl mb-6"
+                style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase', lineHeight: 1.05 }}
               >
-                <Phone className="w-5 h-5" />
-                {companyInfo.phone}
-              </a>
-              <Link
-                to="/contact"
-                className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white border border-white/20 px-6 py-3 rounded transition-all flex items-center gap-2"
-                style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase' }}
-              >
-                <Calendar className="w-5 h-5" />
-                Book Online
-              </Link>
+                <span className="text-goat-red">{service.h1Title}</span>
+              </h1>
+              <p className="text-lg lg:text-xl text-goat-ice/80 mb-8 max-w-xl leading-relaxed">{service.introParagraph}</p>
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href={`tel:${companyInfo.phoneRaw}`}
+                  className="bg-goat-teal hover:bg-goat-teal-dark text-goat-navy-deep px-6 py-3 rounded transition-all flex items-center gap-2 shadow-lg shadow-goat-teal/30"
+                  style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase' }}
+                >
+                  <Phone className="w-5 h-5" />
+                  {companyInfo.phone}
+                </a>
+                <Link
+                  to="/contact"
+                  className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white border border-white/20 px-6 py-3 rounded transition-all flex items-center gap-2"
+                  style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase' }}
+                >
+                  <Calendar className="w-5 h-5" />
+                  Book Online
+                </Link>
+              </div>
+            </div>
+
+            {/* Right — Lead Form */}
+            <div className="w-full lg:w-[360px] flex-shrink-0">
+              <HeroLeadForm
+                preselectedService={service.id}
+                offer={relatedOffers[0]}
+              />
             </div>
           </div>
         </div>
-        <div className="h-1.5 bg-goat-red absolute bottom-0 left-0 right-0" />
       </div>
 
       {/* Content + Sidebar */}
-      <div className="py-16 bg-goat-cream relative noise-overlay-light">
+      <div className="py-16 bg-goat-cream relative overflow-hidden noise-overlay-light">
+        <div className="absolute inset-0 texture-concrete opacity-[0.5] pointer-events-none" />
+        <div className="absolute inset-0 texture-twill opacity-[0.04] pointer-events-none" />
         <div className="container mx-auto relative z-10">
           <div className="flex flex-col lg:flex-row gap-12">
 

@@ -33,6 +33,8 @@ export function BlogDetail() {
 
       {/* Hero */}
       <div className="bg-goat-navy-deep text-white py-12 lg:py-20 relative overflow-hidden noise-overlay">
+        <div className="absolute inset-0 texture-concrete-heavy opacity-[0.35] mix-blend-screen pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30 pointer-events-none" />
         <div className="absolute inset-0 z-0">
           <OptimizedImage src={post.featuredImage} alt={post.title} className="w-full h-full object-cover opacity-15" loading="eager" sizes="100vw" width={1080} height={600} />
           <div className="absolute inset-0 bg-gradient-to-t from-goat-navy-deep via-goat-navy-deep/80 to-transparent" />
@@ -70,11 +72,12 @@ export function BlogDetail() {
             </div>
           )}
         </div>
-        <div className="h-1.5 bg-goat-red absolute bottom-0 left-0 right-0" />
       </div>
 
       {/* Article Content */}
-      <div className="py-16 bg-goat-cream relative noise-overlay-light">
+      <div className="py-16 bg-goat-cream relative overflow-hidden noise-overlay-light">
+        <div className="absolute inset-0 texture-concrete opacity-[0.5] pointer-events-none" />
+        <div className="absolute inset-0 texture-twill opacity-[0.04] pointer-events-none" />
         <div className="container mx-auto relative z-10">
           <div className="flex flex-col lg:flex-row gap-12 max-w-6xl mx-auto">
 

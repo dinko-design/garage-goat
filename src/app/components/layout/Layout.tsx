@@ -1,7 +1,9 @@
 import React, { Suspense } from 'react';
 import { Header } from './Header';
 import { Footer } from './Footer';
+import { OfferBar } from '../OfferBar';
 import { Outlet, useLocation } from 'react-router';
+import { offers } from '../../../data/cms';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -13,7 +15,10 @@ function ScrollToTop() {
 
 export function Layout() {
   return (
-    <div className="min-h-screen flex flex-col" style={{ fontFamily: "var(--font-body)" }}>
+    <div className="min-h-screen flex flex-col bg-goat-navy-deep relative" style={{ fontFamily: "var(--font-body)" }}>
+      {/* Dark concrete texture frame — visible between sections */}
+      <div className="absolute inset-0 texture-concrete-heavy opacity-[0.35] mix-blend-screen pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30 pointer-events-none" />
       <ScrollToTop />
       {/* SVG Noise Filter Definition (invisible, referenced by CSS) */}
       <svg className="absolute w-0 h-0" aria-hidden="true">
@@ -25,12 +30,13 @@ export function Layout() {
       </svg>
 
       <Header />
-      <main className="flex-grow">
+      <main className="flex-grow relative z-[1]">
         <Suspense fallback={null}>
           <Outlet />
         </Suspense>
       </main>
       <Footer />
+      {offers[0] && <OfferBar offer={offers[0]} />}
     </div>
   );
 }

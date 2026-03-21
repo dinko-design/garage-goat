@@ -16,7 +16,9 @@ export function ServicesHub() {
       />
 
       {/* Hero */}
-      <div className="bg-goat-navy-deep text-white py-16 lg:py-24 relative noise-overlay">
+      <div className="bg-goat-navy-deep text-white py-16 lg:py-24 relative overflow-hidden noise-overlay">
+        <div className="absolute inset-0 texture-concrete-heavy opacity-[0.35] mix-blend-screen pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30 pointer-events-none" />
         <div className="container mx-auto text-center relative z-10">
           <Breadcrumbs variant="dark" items={[{ label: 'Services' }]} />
           <div className="flex items-center justify-center gap-3 mb-4">
@@ -34,11 +36,12 @@ export function ServicesHub() {
             Professional garage door solutions for every need — from emergency repairs to brand new installations.
           </p>
         </div>
-        <div className="h-1.5 bg-goat-red absolute bottom-0 left-0 right-0" />
       </div>
 
       {/* Services Grid */}
-      <div className="bg-goat-cream py-16 lg:py-24 relative noise-overlay-light">
+      <div className="bg-goat-cream py-16 lg:py-24 relative overflow-hidden noise-overlay-light">
+        <div className="absolute inset-0 texture-concrete opacity-[0.5] pointer-events-none" />
+        <div className="absolute inset-0 texture-twill opacity-[0.04] pointer-events-none" />
         <div className="container mx-auto relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service) => (
