@@ -5,7 +5,7 @@ import { Phone, Mail, MapPin, Facebook, Instagram, ShieldCheck, Award, HelpCircl
 import { BrandStar } from '../BrandStar';
 import { RatingStars } from '../RatingStar';
 import { GoogleMapEmbed } from '../GoogleMapEmbed';
-import logoImg from "figma:asset/ba1e44b3fc96187901f7ffaa888d6f0ec809bc70.png";
+const logoImg = "/images/brand/logo.png";
 
 const FB_URL = 'https://www.facebook.com/profile.php?id=61555203315954';
 const IG_URL = 'https://www.instagram.com/garagegoat01';
@@ -306,7 +306,7 @@ export function Footer() {
             className="flex items-center gap-2 group"
           >
             <div className="w-7 h-7 rounded-full overflow-hidden flex-shrink-0 shadow-sm shadow-[#7C4DFF]/30">
-              <img src="/images/dinko-design-logo.png" alt="DinkoDesign" className="w-full h-full object-cover" />
+              <img src="/images/dinko-design-logo.png" alt="DinkoDesign" className="w-full h-full object-cover" width={28} height={28} />
             </div>
             <span className="text-goat-ice/30 text-xs tracking-wide uppercase group-hover:text-white transition-colors">DinkoDesign.com</span>
           </a>

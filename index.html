@@ -43,8 +43,10 @@
       <!-- Preconnect to external resources -->
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&display=swap" />
-      <!-- Preload LCP hero image -->
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+      <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700&display=swap" /></noscript>
+      <!-- Preload LCP hero image (WebP with JPEG fallback) -->
+      <link rel="preload" as="image" href="/images/stock/exterior-craftsman-dark.webp" type="image/webp" />
       <link rel="preload" as="image" href="/images/stock/exterior-craftsman-dark.jpg" />
     </head>
 

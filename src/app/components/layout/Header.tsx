@@ -4,7 +4,7 @@ import { Menu, X, Phone, MapPin, ChevronDown, Clock, Tag, FileText, AlertTriangl
 import { services, serviceAreas, companyInfo, blogPosts, offers } from '../../../data/cms';
 import { BrandStar } from '../BrandStar';
 import { RatingStar } from '../RatingStar';
-import logoImg from "figma:asset/ba1e44b3fc96187901f7ffaa888d6f0ec809bc70.png";
+const logoImg = "/images/brand/logo.png";
 
 const FB_URL = 'https://www.facebook.com/profile.php?id=61555203315954';
 const IG_URL = 'https://www.instagram.com/garagegoat01';

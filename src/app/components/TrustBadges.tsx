@@ -16,6 +16,8 @@ const trustPlatforms = [
     reviewCount: 287,
     logoHeight: 'h-7',
     logoHeightCompact: 'h-5',
+    width: 80,
+    height: 28,
   },
   {
     name: 'Nextdoor',
@@ -24,6 +26,8 @@ const trustPlatforms = [
     reviewCount: 133,
     logoHeight: 'h-6',
     logoHeightCompact: 'h-4',
+    width: 100,
+    height: 24,
   },
   {
     name: 'Facebook',
@@ -32,13 +36,15 @@ const trustPlatforms = [
     reviewCount: 47,
     logoHeight: 'h-7',
     logoHeightCompact: 'h-5',
+    width: 100,
+    height: 28,
   },
 ];
 
 const partnerBrands = [
-  { name: 'LiftMaster', logo: '/images/trust/liftmaster-logo.jpg', logoHeight: 'h-8', logoHeightCompact: 'h-6' },
-  { name: 'Chamberlain', logo: '/images/trust/chamberlain-logo.png', logoHeight: 'h-8', logoHeightCompact: 'h-6' },
-  { name: 'myQ', logo: '/images/trust/myq-logo.svg', logoHeight: 'h-7', logoHeightCompact: 'h-5' },
+  { name: 'LiftMaster', logo: '/images/trust/liftmaster-logo.jpg', logoHeight: 'h-8', logoHeightCompact: 'h-6', width: 120, height: 32 },
+  { name: 'Chamberlain', logo: '/images/trust/chamberlain-logo.png', logoHeight: 'h-8', logoHeightCompact: 'h-6', width: 120, height: 32 },
+  { name: 'myQ', logo: '/images/trust/myq-logo.svg', logoHeight: 'h-7', logoHeightCompact: 'h-5', width: 60, height: 28 },
 ];
 
 const certifications = [
@@ -89,6 +95,8 @@ export function TrustBadges() {
                   src={platform.logo}
                   alt={platform.name}
                   className={`${platform.logoHeight} object-contain`}
+                  width={platform.width}
+                  height={platform.height}
                   loading="lazy"
                 />
                 <div className="flex items-center gap-2">
@@ -123,6 +131,8 @@ export function TrustBadges() {
                 src={brand.logo}
                 alt={brand.name}
                 className={`${brand.logoHeight} object-contain`}
+                width={brand.width}
+                height={brand.height}
                 loading="lazy"
               />
             ))}
@@ -165,6 +175,8 @@ export function TrustStrip() {
                   src={platform.logo}
                   alt={platform.name}
                   className={`${platform.logoHeightCompact} object-contain`}
+                  width={platform.width}
+                  height={platform.height}
                   loading="lazy"
                 />
                 <StarRating rating={platform.rating} size="sm" />
@@ -190,6 +202,8 @@ export function TrustStrip() {
                 src={brand.logo}
                 alt={brand.name}
                 className={`${brand.logoHeightCompact} object-contain opacity-50 grayscale`}
+                width={brand.width}
+                height={brand.height}
                 loading="lazy"
               />
             ))}
@@ -219,7 +233,7 @@ export function PlatformBadge({ platform }: { platform: string }) {
   if (!info) return null;
   return (
     <span className="inline-flex items-center gap-1.5 text-goat-navy/50 text-xs">
-      <img src={info.icon} alt={info.label} className="w-3.5 h-3.5" loading="lazy" />
+      <img src={info.icon} alt={info.label} className="w-3.5 h-3.5" width={14} height={14} loading="lazy" />
       <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 600 }}>{info.label}</span>
     </span>
   );
@@ -273,6 +287,8 @@ export function TrustSidebar() {
               src={brand.logo}
               alt={brand.name}
               className="h-6 object-contain opacity-60 grayscale"
+              width={brand.width}
+              height={brand.height}
               loading="lazy"
             />
           ))}
@@ -302,7 +318,7 @@ export function TrustMini() {
     <div className="flex flex-wrap items-center justify-center gap-4 text-xs text-goat-navy/60">
       {trustPlatforms.map((platform, idx) => (
         <span key={platform.name} className="inline-flex items-center gap-1.5">
-          <img src={platformIcons[platform.name.toLowerCase()]?.icon} alt="" className="w-3.5 h-3.5" loading="lazy" />
+          <img src={platformIcons[platform.name.toLowerCase()]?.icon} alt="" className="w-3.5 h-3.5" width={14} height={14} loading="lazy" />
           <span style={{ fontWeight: 700 }} className="text-goat-navy-dark">{platform.rating}</span>
           <Star className="w-2.5 h-2.5 text-goat-gold fill-goat-gold" />
           <span>{platform.name}</span>
@@ -324,6 +340,8 @@ export function PlatformLogosRow() {
             src={platformIcons[platform.name.toLowerCase()]?.icon}
             alt={platform.name}
             className="w-6 h-6"
+            width={24}
+            height={24}
             loading="lazy"
           />
           <div className="flex items-center gap-1.5">

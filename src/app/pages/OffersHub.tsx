@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import { offers, companyInfo, services, serviceAreas } from '../../data/cms';
 import { Tag, Phone, ArrowRight, Clock, CheckCircle2, Star, ShieldCheck, MapPin, HelpCircle, DollarSign, Wrench } from 'lucide-react';
-import logoImg from "figma:asset/ba1e44b3fc96187901f7ffaa888d6f0ec809bc70.png";
+const logoImg = "/images/brand/logo.png";
 import { SEO } from '../components/SEO';
 import { OptimizedImage } from '../components/OptimizedImage';
 import { Breadcrumbs } from '../components/Breadcrumbs';

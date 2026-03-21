@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router';
 import { services, serviceAreas, reviews, offers, companyInfo } from '../../data/cms';
 import { Star, ShieldCheck, Clock, MapPin, ArrowRight, CheckCircle2, Phone, Award, Zap, Wrench, Users, BadgeCheck } from 'lucide-react';
-import logoImg from "figma:asset/ba1e44b3fc96187901f7ffaa888d6f0ec809bc70.png";
-import cesarPortraitImg from "figma:asset/baeb695f0f939926acdc45a5edd4278263a4f7c3.png";
+const logoImg = "/images/brand/logo.png";
+const cesarPortraitImg = "/images/brand/cesar-full.jpg";
 import { StarDivider, TripleStarDivider } from '../components/StarAccent';
 import { GarageDoorDivider, ShieldStarWatermark } from '../components/StarAccent';
 import { SEO } from '../components/SEO';
@@ -236,14 +236,13 @@ export function Home() {
             <div className="lg:w-1/2 relative">
               <div className="absolute -top-4 -left-4 w-24 h-24 bg-goat-red/10 rounded-full z-0" />
               <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-goat-ice/40 rounded-full z-0" />
-              <img
+              <OptimizedImage
                 src={cesarPortraitImg}
                 alt="Cesar — Owner & Founder of Garage Goat Garage Doors"
                 className="relative z-10 rounded-lg shadow-2xl shadow-goat-navy-deep/20 w-full h-auto object-cover aspect-[4/5]"
                 width={480}
                 height={600}
-                loading="lazy"
-                decoding="async"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
               {/* Floating badge */}
               <div className="absolute -bottom-6 -left-4 lg:left-[-20px] bg-goat-navy-dark p-4 rounded-lg shadow-xl z-20 flex items-center gap-3">

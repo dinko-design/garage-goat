@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router';
 import { CheckCircle2, Star, ShieldCheck, Award, Phone, Heart, Wrench, Users, ArrowRight, MapPin } from 'lucide-react';
 import { companyInfo, services, serviceAreas, reviews } from '../../data/cms';
-import logoImg from "figma:asset/ba1e44b3fc96187901f7ffaa888d6f0ec809bc70.png";
-import cesarPortraitImg from "figma:asset/baeb695f0f939926acdc45a5edd4278263a4f7c3.png";
-import brandBoardImg from "figma:asset/bf3840f9f81536f862c29056d262368358836920.png";
-import warrantyFlyerImg from "figma:asset/92e76f21d7bc4840c5f5366a337d159fd9b96878.png";
+const logoImg = "/images/brand/logo.png";
+const cesarPortraitImg = "/images/brand/cesar-full.jpg";
+const brandBoardImg = "/images/brand/brand-board.jpg";
+const warrantyFlyerImg = "/images/brand/warranty-flyer.jpg";
 import { SEO } from '../components/SEO';
 import { OptimizedImage } from '../components/OptimizedImage';
 import { Breadcrumbs } from '../components/Breadcrumbs';
@@ -60,7 +60,9 @@ export function About() {
                 src={cesarPortraitImg}
                 alt="Cesar — Owner & Founder of Garage Goat"
                 className="relative z-10 rounded-lg shadow-2xl shadow-goat-navy-deep/20 w-full h-auto object-cover aspect-[4/5]"
-                loading="lazy"
+                width={480}
+                height={600}
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
               <div className="absolute -bottom-4 -right-4 bg-goat-red text-white p-5 rounded-lg shadow-xl z-20">
                 <div className="text-3xl" style={{ fontFamily: "var(--font-heading)", fontWeight: 700 }}>15+</div>
@@ -114,13 +116,13 @@ export function About() {
           {/* Action Photo Strip */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl mx-auto mb-10">
             <div className="rounded-lg overflow-hidden aspect-[4/3]">
-              <img src="/images/brand/cesar-workshop.jpg" alt="Cesar Salazar in the Garage Goat workshop" className="w-full h-full object-cover" loading="lazy" />
+              <OptimizedImage src="/images/brand/cesar-workshop.jpg" alt="Cesar Salazar in the Garage Goat workshop" className="w-full h-full object-cover" width={400} height={300} sizes="(max-width: 768px) 100vw, 33vw" />
             </div>
             <div className="rounded-lg overflow-hidden aspect-[4/3]">
-              <img src="/images/brand/cesar-garage.jpg" alt="Cesar Salazar, owner of Garage Goat" className="w-full h-full object-cover" loading="lazy" />
+              <OptimizedImage src="/images/brand/cesar-garage.jpg" alt="Cesar Salazar, owner of Garage Goat" className="w-full h-full object-cover" width={400} height={300} sizes="(max-width: 768px) 100vw, 33vw" />
             </div>
             <div className="rounded-lg overflow-hidden aspect-[4/3]">
-              <img src="/images/brand/cesar-full.jpg" alt="Cesar Salazar by the Garage Goat service truck" className="w-full h-full object-cover" loading="lazy" />
+              <OptimizedImage src="/images/brand/cesar-full.jpg" alt="Cesar Salazar by the Garage Goat service truck" className="w-full h-full object-cover" width={400} height={300} sizes="(max-width: 768px) 100vw, 33vw" />
             </div>
           </div>
 
@@ -157,7 +159,9 @@ export function About() {
                 src={warrantyFlyerImg}
                 alt="Garage Goat Warranty Information"
                 className="rounded-lg shadow-2xl shadow-black/40 w-full h-auto"
-                loading="lazy"
+                width={600}
+                height={776}
+                sizes="(max-width: 1024px) 100vw, 42vw"
               />
             </div>
             {/* Warranty content */}
@@ -234,7 +238,9 @@ export function About() {
                 src={brandBoardImg}
                 alt="Garage Goat Brand Identity & Design System"
                 className="rounded-lg shadow-xl shadow-goat-navy-deep/15 w-full h-auto"
-                loading="lazy"
+                width={1200}
+                height={900}
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
           </div>
