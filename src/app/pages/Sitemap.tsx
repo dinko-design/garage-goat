@@ -37,10 +37,10 @@ export function Sitemap() {
       description: 'Core pages of the Garage Goat website.',
       links: [
         { label: 'Home', to: '/', description: 'Welcome to Garage Goat Garage Doors' },
-        { label: 'About Us', to: '/about', description: 'Our story, team, and values' },
-        { label: 'Contact', to: '/contact', description: 'Request service or get a quote' },
-        { label: 'Customer Reviews', to: '/reviews', description: `${companyInfo.googleRating}/5 rating from ${companyInfo.totalReviews}+ Google reviews` },
-        { label: 'Gallery', to: '/gallery', description: 'Browse our completed projects and installations' },
+        { label: 'About Us', to: '/about/', description: 'Our story, team, and values' },
+        { label: 'Contact', to: '/contact/', description: 'Request service or get a quote' },
+        { label: 'Customer Reviews', to: '/reviews/', description: `${companyInfo.googleRating}/5 rating from ${companyInfo.totalReviews}+ Google reviews` },
+        { label: 'Gallery', to: '/gallery/', description: 'Browse our completed projects and installations' },
       ],
     },
     {
@@ -48,10 +48,10 @@ export function Sitemap() {
       icon: Wrench,
       description: 'Complete garage door services for residential and commercial customers.',
       links: [
-        { label: 'All Services', to: '/services', description: 'Browse our full service lineup', badge: 'Hub' },
+        { label: 'All Services', to: '/services/', description: 'Browse our full service lineup', badge: 'Hub' },
         ...services.map(s => ({
           label: s.name,
-          to: `/${s.slug}`,
+          to: `/${s.slug}/`,
           description: s.introParagraph.substring(0, 100) + '...',
         })),
       ],
@@ -62,7 +62,7 @@ export function Sitemap() {
       description: 'We proudly serve these communities in the greater Houston area.',
       links: serviceAreas.map(a => ({
         label: a.cityName,
-        to: `/${a.slug}`,
+        to: `/${a.slug}/`,
         description: a.introParagraph.substring(0, 100) + '...',
       })),
     },
@@ -71,10 +71,10 @@ export function Sitemap() {
       icon: Tag,
       description: 'Current promotions and money-saving deals.',
       links: [
-        { label: 'All Offers', to: '/offers', description: 'Browse all current promotions', badge: 'Hub' },
+        { label: 'All Offers', to: '/offers/', description: 'Browse all current promotions', badge: 'Hub' },
         ...offers.map(o => ({
           label: o.title,
-          to: `/${o.slug}`,
+          to: `/${o.slug}/`,
           description: o.headline,
           badge: o.discountAmount,
         })),
@@ -85,17 +85,17 @@ export function Sitemap() {
       icon: FileText,
       description: 'Helpful articles, guides, and company information.',
       links: [
-        { label: 'Blog', to: '/blog', description: 'All articles and guides', badge: 'Hub' },
+        { label: 'Blog', to: '/blog/', description: 'All articles and guides', badge: 'Hub' },
         ...blogPosts.map(b => ({
           label: b.title,
-          to: `/blog/${b.slug}`,
+          to: `/blog/${b.slug}/`,
           description: b.excerpt.substring(0, 100) + '...',
         })),
-        { label: 'FAQ', to: '/faq', description: 'Frequently asked questions about our services' },
-        { label: 'Financing', to: '/financing', description: 'Flexible payment plans and financing options' },
-        { label: 'Warranty', to: '/warranty', description: 'Our warranty coverage and terms' },
-        { label: 'Privacy Policy', to: '/privacy', description: 'How we handle your information' },
-        { label: 'Terms of Service', to: '/terms', description: 'Terms and conditions for our services' },
+        { label: 'FAQ', to: '/faq/', description: 'Frequently asked questions about our services' },
+        { label: 'Financing', to: '/financing/', description: 'Flexible payment plans and financing options' },
+        { label: 'Warranty', to: '/warranty/', description: 'Our warranty coverage and terms' },
+        { label: 'Privacy Policy', to: '/privacy/', description: 'How we handle your information' },
+        { label: 'Terms of Service', to: '/terms/', description: 'Terms and conditions for our services' },
       ],
     },
   ];
@@ -302,7 +302,7 @@ export function Sitemap() {
                 {companyInfo.phone}
               </a>
               <Link
-                to="/contact"
+                to="/contact/"
                 className="bg-goat-navy-dark hover:bg-goat-navy text-white px-8 py-3 rounded transition-colors flex items-center justify-center gap-2"
                 style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.03em' }}
               >

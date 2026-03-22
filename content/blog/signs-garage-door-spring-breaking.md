@@ -1,7 +1,7 @@
 ---
 id: spring-signs
 slug: signs-garage-door-spring-breaking
-title: "5 Warning Signs Your Garage Door Spring Is About to Break"
+title: "5 Signs Your Garage Door Spring Is Failing"
 excerpt: Listen for these noises and check for these visual cues to prevent a garage door emergency before it happens.
 featuredImage: "/images/real/torsion-spring-installed.jpg"
 date: "February 3, 2026"

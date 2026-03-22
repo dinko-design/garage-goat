@@ -59,7 +59,7 @@ export function OffersHub() {
             {offers.map((offer) => (
               <Link
                 key={offer.id}
-                to={`/${offer.slug}`}
+                to={`/${offer.slug}/`}
                 className="group bg-white rounded-lg overflow-hidden flex flex-col h-full border-2 border-dashed border-goat-cream-dark hover:border-goat-red/50 grit-card transition-all"
               >
                 {/* Red Banner */}
@@ -139,7 +139,7 @@ export function OffersHub() {
               {services.map((service) => (
                 <Link
                   key={service.id}
-                  to={`/${service.slug}`}
+                  to={`/${service.slug}/`}
                   className="group bg-white p-5 rounded-lg border border-goat-cream-dark hover:border-goat-red/30 transition-colors"
                 >
                   <div className="flex items-center gap-3 mb-2">
@@ -184,7 +184,7 @@ export function OffersHub() {
               {serviceAreas.map((area) => (
                 <Link
                   key={area.id}
-                  to={`/${area.slug}`}
+                  to={`/${area.slug}/`}
                   className="group flex items-center gap-2 bg-white hover:bg-goat-red text-goat-navy-dark hover:text-white px-5 py-2.5 rounded-full transition-all border border-goat-cream-dark hover:border-goat-red shadow-sm hover:shadow-lg hover:shadow-goat-red/20"
                 >
                   <MapPin className="w-4 h-4 text-goat-red group-hover:text-white transition-colors" />
@@ -208,14 +208,14 @@ export function OffersHub() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
-                to="/faq"
+                to="/faq/"
                 className="inline-flex items-center justify-center gap-2 bg-goat-cream hover:bg-goat-cream-dark text-goat-navy-dark px-6 py-3 rounded transition-colors border border-goat-cream-dark"
                 style={{ fontFamily: "var(--font-heading)", fontWeight: 600, textTransform: 'uppercase' }}
               >
                 <HelpCircle className="w-4 h-4 text-goat-red" /> FAQ
               </Link>
               <Link
-                to="/financing"
+                to="/financing/"
                 className="inline-flex items-center justify-center gap-2 bg-goat-cream hover:bg-goat-cream-dark text-goat-navy-dark px-6 py-3 rounded transition-colors border border-goat-cream-dark"
                 style={{ fontFamily: "var(--font-heading)", fontWeight: 600, textTransform: 'uppercase' }}
               >

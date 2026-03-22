@@ -231,7 +231,7 @@ export function Header() {
                     {services.map(svc => (
                       <Link
                         key={svc.id}
-                        to={`/${svc.slug}`}
+                        to={`/${svc.slug}/`}
                         className={`px-5 py-2.5 hover:bg-goat-ice-bright transition-colors text-sm flex items-center gap-2.5 ${
                           svc.id === 'emergency' ? 'text-goat-gold-dark hover:text-goat-red' : 'text-goat-navy hover:text-goat-red'
                         }`}
@@ -243,7 +243,7 @@ export function Header() {
                     ))}
                     <div className="px-5 pt-3">
                       <Link
-                        to="/services"
+                        to="/services/"
                         className="text-goat-red hover:text-goat-red-dark text-sm flex items-center gap-1 transition-colors"
                         style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, textTransform: 'uppercase', fontSize: '0.75rem', letterSpacing: '0.05em' }}
                       >
@@ -255,10 +255,10 @@ export function Header() {
                   {/* Right column — Resources + Blog */}
                   <div className="flex-1">
                     <DropdownHeading>Resources</DropdownHeading>
-                    <DropdownLink to="/faq" icon={<HelpCircle className="w-3.5 h-3.5 text-goat-navy/40" />}>FAQ</DropdownLink>
-                    <DropdownLink to="/financing" icon={<DollarSign className="w-3.5 h-3.5 text-goat-navy/40" />}>Financing</DropdownLink>
-                    <DropdownLink to="/warranty" icon={<ShieldCheck className="w-3.5 h-3.5 text-goat-navy/40" />}>Warranty Info</DropdownLink>
-                    <DropdownLink to="/contact" icon={<MessageSquare className="w-3.5 h-3.5 text-goat-navy/40" />}>Contact Us</DropdownLink>
+                    <DropdownLink to="/faq/" icon={<HelpCircle className="w-3.5 h-3.5 text-goat-navy/40" />}>FAQ</DropdownLink>
+                    <DropdownLink to="/financing/" icon={<DollarSign className="w-3.5 h-3.5 text-goat-navy/40" />}>Financing</DropdownLink>
+                    <DropdownLink to="/warranty/" icon={<ShieldCheck className="w-3.5 h-3.5 text-goat-navy/40" />}>Warranty Info</DropdownLink>
+                    <DropdownLink to="/contact/" icon={<MessageSquare className="w-3.5 h-3.5 text-goat-navy/40" />}>Contact Us</DropdownLink>
 
                     {latestPosts.length > 0 && (
                       <>
@@ -266,7 +266,7 @@ export function Header() {
                           <DropdownHeading>Latest Blog</DropdownHeading>
                         </div>
                         {latestPosts.map(post => (
-                          <DropdownLink key={post.id} to={`/blog/${post.slug}`} icon={<FileText className="w-3.5 h-3.5 text-goat-navy/40" />}>
+                          <DropdownLink key={post.id} to={`/blog/${post.slug}/`} icon={<FileText className="w-3.5 h-3.5 text-goat-navy/40" />}>
                             <span className="line-clamp-1">{post.title}</span>
                           </DropdownLink>
                         ))}
@@ -274,7 +274,7 @@ export function Header() {
                     )}
 
                     <div className="border-t border-goat-cream-dark mt-2 pt-2">
-                      <DropdownLink to="/offers" icon={<Tag className="w-3.5 h-3.5 text-goat-gold-dark" />} accent>Special Offers</DropdownLink>
+                      <DropdownLink to="/offers/" icon={<Tag className="w-3.5 h-3.5 text-goat-gold-dark" />} accent>Special Offers</DropdownLink>
                     </div>
                   </div>
                 </div>
@@ -284,13 +284,13 @@ export function Header() {
               <MegaDropdown label="Areas">
                 <DropdownHeading>We Serve</DropdownHeading>
                 {serviceAreas.map(area => (
-                  <DropdownLink key={area.id} to={`/${area.slug}`} icon={<MapPin className="w-3.5 h-3.5 text-goat-red flex-shrink-0" />}>
+                  <DropdownLink key={area.id} to={`/${area.slug}/`} icon={<MapPin className="w-3.5 h-3.5 text-goat-red flex-shrink-0" />}>
                     {area.cityName}
                   </DropdownLink>
                 ))}
                 <div className="px-5 pt-3">
                   <Link
-                    to="/areas"
+                    to="/areas/"
                     className="text-goat-red hover:text-goat-red-dark text-sm flex items-center gap-1 transition-colors"
                     style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, textTransform: 'uppercase', fontSize: '0.75rem', letterSpacing: '0.05em' }}
                   >
@@ -300,14 +300,14 @@ export function Header() {
               </MegaDropdown>
 
               {/* Direct Links */}
-              <NavLink to="/about" className={navLinkClasses}>About</NavLink>
-              <NavLink to="/blog" className={navLinkClasses}>Blog</NavLink>
-              <NavLink to="/gallery" className={navLinkClasses}>Gallery</NavLink>
-              <NavLink to="/reviews" className={navLinkClasses}>Reviews</NavLink>
+              <NavLink to="/about/" className={navLinkClasses}>About</NavLink>
+              <NavLink to="/blog/" className={navLinkClasses}>Blog</NavLink>
+              <NavLink to="/gallery/" className={navLinkClasses}>Gallery</NavLink>
+              <NavLink to="/reviews/" className={navLinkClasses}>Reviews</NavLink>
 
               {/* Primary CTA — Get a Quote */}
               <Link
-                to="/contact"
+                to="/contact/"
                 className="ml-2 bg-goat-teal hover:bg-goat-teal-dark text-goat-navy-deep px-4 py-2.5 rounded transition-all flex items-center gap-2 shadow-lg shadow-goat-teal/30 text-sm tracking-wide uppercase whitespace-nowrap"
                 style={{ fontFamily: 'var(--font-heading)', fontWeight: 700 }}
               >
@@ -317,7 +317,7 @@ export function Header() {
               {/* Secondary CTA — Offers */}
               {mainOffer && (
                 <Link
-                  to="/offers"
+                  to="/offers/"
                   className="ml-1 border border-goat-gold/50 text-goat-gold hover:bg-goat-gold/10 hover:border-goat-gold px-3 py-2.5 rounded transition-all flex items-center gap-1.5 text-sm tracking-wide uppercase whitespace-nowrap"
                   style={{ fontFamily: 'var(--font-heading)', fontWeight: 600 }}
                   aria-label="View special offers"
@@ -335,7 +335,7 @@ export function Header() {
                 {services.map(svc => (
                   <DropdownLink
                     key={svc.id}
-                    to={`/${svc.slug}`}
+                    to={`/${svc.slug}/`}
                     icon={serviceIcons[svc.id]}
                     accent={svc.id === 'emergency'}
                   >
@@ -343,38 +343,38 @@ export function Header() {
                   </DropdownLink>
                 ))}
                 <div className="border-t border-goat-cream-dark mt-2 pt-2">
-                  <DropdownLink to="/services" icon={<ChevronRight className="w-3.5 h-3.5 text-goat-red" />}>All Services</DropdownLink>
-                  <DropdownLink to="/offers" icon={<Tag className="w-3.5 h-3.5 text-goat-gold-dark" />} accent>Special Offers</DropdownLink>
+                  <DropdownLink to="/services/" icon={<ChevronRight className="w-3.5 h-3.5 text-goat-red" />}>All Services</DropdownLink>
+                  <DropdownLink to="/offers/" icon={<Tag className="w-3.5 h-3.5 text-goat-gold-dark" />} accent>Special Offers</DropdownLink>
                 </div>
               </MegaDropdown>
 
               <MegaDropdown label="Areas">
                 {serviceAreas.map(area => (
-                  <DropdownLink key={area.id} to={`/${area.slug}`} icon={<MapPin className="w-3.5 h-3.5 text-goat-red flex-shrink-0" />}>
+                  <DropdownLink key={area.id} to={`/${area.slug}/`} icon={<MapPin className="w-3.5 h-3.5 text-goat-red flex-shrink-0" />}>
                     {area.cityName}
                   </DropdownLink>
                 ))}
                 <div className="border-t border-goat-cream-dark mt-2 pt-2">
-                  <DropdownLink to="/areas" icon={<ChevronRight className="w-3.5 h-3.5 text-goat-red" />}>All Service Areas</DropdownLink>
+                  <DropdownLink to="/areas/" icon={<ChevronRight className="w-3.5 h-3.5 text-goat-red" />}>All Service Areas</DropdownLink>
                 </div>
               </MegaDropdown>
 
               <MegaDropdown label="More">
-                <DropdownLink to="/about">About Us</DropdownLink>
-                <DropdownLink to="/blog" icon={<FileText className="w-3.5 h-3.5 text-goat-navy/40" />}>Blog</DropdownLink>
-                <DropdownLink to="/gallery" icon={<Image className="w-3.5 h-3.5 text-goat-navy/40" />}>Gallery</DropdownLink>
-                <DropdownLink to="/reviews" icon={<RatingStar size={14} className="text-goat-navy/40" />}>Reviews</DropdownLink>
-                <DropdownLink to="/contact" icon={<MessageSquare className="w-3.5 h-3.5 text-goat-navy/40" />}>Contact</DropdownLink>
+                <DropdownLink to="/about/">About Us</DropdownLink>
+                <DropdownLink to="/blog/" icon={<FileText className="w-3.5 h-3.5 text-goat-navy/40" />}>Blog</DropdownLink>
+                <DropdownLink to="/gallery/" icon={<Image className="w-3.5 h-3.5 text-goat-navy/40" />}>Gallery</DropdownLink>
+                <DropdownLink to="/reviews/" icon={<RatingStar size={14} className="text-goat-navy/40" />}>Reviews</DropdownLink>
+                <DropdownLink to="/contact/" icon={<MessageSquare className="w-3.5 h-3.5 text-goat-navy/40" />}>Contact</DropdownLink>
                 <div className="border-t border-goat-cream-dark mt-2 pt-2">
-                  <DropdownLink to="/faq" icon={<HelpCircle className="w-3.5 h-3.5 text-goat-navy/40" />}>FAQ</DropdownLink>
-                  <DropdownLink to="/financing" icon={<DollarSign className="w-3.5 h-3.5 text-goat-navy/40" />}>Financing</DropdownLink>
-                  <DropdownLink to="/warranty" icon={<ShieldCheck className="w-3.5 h-3.5 text-goat-navy/40" />}>Warranty</DropdownLink>
+                  <DropdownLink to="/faq/" icon={<HelpCircle className="w-3.5 h-3.5 text-goat-navy/40" />}>FAQ</DropdownLink>
+                  <DropdownLink to="/financing/" icon={<DollarSign className="w-3.5 h-3.5 text-goat-navy/40" />}>Financing</DropdownLink>
+                  <DropdownLink to="/warranty/" icon={<ShieldCheck className="w-3.5 h-3.5 text-goat-navy/40" />}>Warranty</DropdownLink>
                 </div>
               </MegaDropdown>
 
               {/* Primary CTA */}
               <Link
-                to="/contact"
+                to="/contact/"
                 className="ml-2 bg-goat-teal hover:bg-goat-teal-dark text-goat-navy-deep px-4 py-2.5 rounded transition-all flex items-center gap-2 shadow-lg shadow-goat-teal/30 text-sm tracking-wide uppercase whitespace-nowrap"
                 style={{ fontFamily: 'var(--font-heading)', fontWeight: 700 }}
               >
@@ -384,7 +384,7 @@ export function Header() {
               {/* Secondary CTA — Offers */}
               {mainOffer && (
                 <Link
-                  to="/offers"
+                  to="/offers/"
                   className="ml-1 border border-goat-gold/50 text-goat-gold hover:bg-goat-gold/10 hover:border-goat-gold px-3 py-2.5 rounded transition-all flex items-center gap-1.5 text-xs tracking-wide uppercase whitespace-nowrap"
                   style={{ fontFamily: 'var(--font-heading)', fontWeight: 600 }}
                   aria-label="View special offers"
@@ -430,7 +430,7 @@ export function Header() {
                   {services.map(svc => (
                     <Link
                       key={svc.id}
-                      to={`/${svc.slug}`}
+                      to={`/${svc.slug}/`}
                       onClick={toggleMenu}
                       className={`px-8 py-2.5 text-sm flex items-center gap-2.5 transition-colors ${
                         svc.id === 'emergency'
@@ -444,7 +444,7 @@ export function Header() {
                     </Link>
                   ))}
                   <Link
-                    to="/services"
+                    to="/services/"
                     onClick={toggleMenu}
                     className="px-8 py-2 text-goat-red text-xs uppercase tracking-wider flex items-center gap-1"
                     style={{ fontFamily: 'var(--font-heading)', fontWeight: 700 }}
@@ -469,7 +469,7 @@ export function Header() {
                   {serviceAreas.map(area => (
                     <Link
                       key={area.id}
-                      to={`/${area.slug}`}
+                      to={`/${area.slug}/`}
                       onClick={toggleMenu}
                       className="px-8 py-2.5 text-goat-ice/80 hover:text-white text-sm flex items-center gap-2.5 transition-colors"
                       style={{ fontFamily: 'var(--font-body)' }}
@@ -479,7 +479,7 @@ export function Header() {
                     </Link>
                   ))}
                   <Link
-                    to="/areas"
+                    to="/areas/"
                     onClick={toggleMenu}
                     className="px-8 py-2 text-goat-red text-xs uppercase tracking-wider flex items-center gap-1"
                     style={{ fontFamily: 'var(--font-heading)', fontWeight: 700 }}
@@ -491,34 +491,34 @@ export function Header() {
             </div>
 
             {/* Primary Links */}
-            <Link to="/about" onClick={toggleMenu} className="text-white hover:bg-white/10 px-6 py-3.5 border-b border-white/5 transition-colors uppercase tracking-wide text-sm">
+            <Link to="/about/" onClick={toggleMenu} className="text-white hover:bg-white/10 px-6 py-3.5 border-b border-white/5 transition-colors uppercase tracking-wide text-sm">
               About
             </Link>
-            <Link to="/blog" onClick={toggleMenu} className="text-white hover:bg-white/10 px-6 py-3.5 border-b border-white/5 transition-colors uppercase tracking-wide text-sm">
+            <Link to="/blog/" onClick={toggleMenu} className="text-white hover:bg-white/10 px-6 py-3.5 border-b border-white/5 transition-colors uppercase tracking-wide text-sm">
               Blog
             </Link>
-            <Link to="/gallery" onClick={toggleMenu} className="text-white hover:bg-white/10 px-6 py-3.5 border-b border-white/5 transition-colors uppercase tracking-wide text-sm">
+            <Link to="/gallery/" onClick={toggleMenu} className="text-white hover:bg-white/10 px-6 py-3.5 border-b border-white/5 transition-colors uppercase tracking-wide text-sm">
               Gallery
             </Link>
-            <Link to="/reviews" onClick={toggleMenu} className="text-white hover:bg-white/10 px-6 py-3.5 border-b border-white/5 transition-colors uppercase tracking-wide text-sm">
+            <Link to="/reviews/" onClick={toggleMenu} className="text-white hover:bg-white/10 px-6 py-3.5 border-b border-white/5 transition-colors uppercase tracking-wide text-sm">
               Reviews
             </Link>
-            <Link to="/contact" onClick={toggleMenu} className="text-white hover:bg-white/10 px-6 py-3.5 border-b border-white/5 transition-colors uppercase tracking-wide text-sm">
+            <Link to="/contact/" onClick={toggleMenu} className="text-white hover:bg-white/10 px-6 py-3.5 border-b border-white/5 transition-colors uppercase tracking-wide text-sm">
               Contact
             </Link>
 
             {/* Secondary Links — 2-column grid */}
             <div className="grid grid-cols-2 border-b border-white/5">
-              <Link to="/faq" onClick={toggleMenu} className="text-goat-ice/70 hover:text-white hover:bg-white/10 px-6 py-3 transition-colors text-sm" style={{ fontFamily: "var(--font-body)" }}>
+              <Link to="/faq/" onClick={toggleMenu} className="text-goat-ice/70 hover:text-white hover:bg-white/10 px-6 py-3 transition-colors text-sm" style={{ fontFamily: "var(--font-body)" }}>
                 FAQ
               </Link>
-              <Link to="/financing" onClick={toggleMenu} className="text-goat-ice/70 hover:text-white hover:bg-white/10 px-6 py-3 transition-colors text-sm" style={{ fontFamily: "var(--font-body)" }}>
+              <Link to="/financing/" onClick={toggleMenu} className="text-goat-ice/70 hover:text-white hover:bg-white/10 px-6 py-3 transition-colors text-sm" style={{ fontFamily: "var(--font-body)" }}>
                 Financing
               </Link>
-              <Link to="/warranty" onClick={toggleMenu} className="text-goat-ice/70 hover:text-white hover:bg-white/10 px-6 py-3 transition-colors text-sm" style={{ fontFamily: "var(--font-body)" }}>
+              <Link to="/warranty/" onClick={toggleMenu} className="text-goat-ice/70 hover:text-white hover:bg-white/10 px-6 py-3 transition-colors text-sm" style={{ fontFamily: "var(--font-body)" }}>
                 Warranty
               </Link>
-              <Link to="/pricing" onClick={toggleMenu} className="text-goat-ice/70 hover:text-white hover:bg-white/10 px-6 py-3 transition-colors text-sm" style={{ fontFamily: "var(--font-body)" }}>
+              <Link to="/pricing/" onClick={toggleMenu} className="text-goat-ice/70 hover:text-white hover:bg-white/10 px-6 py-3 transition-colors text-sm" style={{ fontFamily: "var(--font-body)" }}>
                 Pricing
               </Link>
             </div>
@@ -526,7 +526,7 @@ export function Header() {
             {/* Offer Card — prominent */}
             {mainOffer && (
               <Link
-                to="/offers"
+                to="/offers/"
                 onClick={toggleMenu}
                 className="mx-4 my-3 bg-goat-red/20 border border-goat-red/40 rounded-lg px-5 py-3.5 flex items-center gap-3 group hover:bg-goat-red/30 transition-colors"
               >
@@ -544,7 +544,7 @@ export function Header() {
             {/* CTAs */}
             <div className="px-4 pb-2 flex flex-col gap-2">
               <Link
-                to="/contact"
+                to="/contact/"
                 onClick={toggleMenu}
                 className="flex items-center justify-center gap-2 bg-goat-teal text-goat-navy-deep py-3.5 rounded transition-all text-sm uppercase tracking-wide shadow-lg shadow-goat-teal/30"
                 style={{ fontFamily: "var(--font-heading)", fontWeight: 700 }}

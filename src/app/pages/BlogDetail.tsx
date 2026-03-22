@@ -13,7 +13,7 @@ export function BlogDetail() {
   const post = blogPosts.find(p => p.slug === blogSlug);
 
   if (!post) {
-    return <Navigate to="/404" replace />;
+    return <Navigate to="/404/" replace />;
   }
 
   const otherPosts = blogPosts.filter(p => p.id !== post.id);
@@ -23,7 +23,7 @@ export function BlogDetail() {
   return (
     <>
       <SEO
-        title={`${post.title} | Garage Goat Blog`}
+        title={`${post.title} | Garage Goat`}
         description={post.excerpt}
         path={`/blog/${post.slug}`}
         ogImage={post.featuredImage}
@@ -43,7 +43,7 @@ export function BlogDetail() {
           <Breadcrumbs
             variant="dark"
             items={[
-              { label: 'Blog', href: '/blog' },
+              { label: 'Blog', href: '/blog/' },
               { label: post.title }
             ]}
           />
@@ -141,7 +141,7 @@ export function BlogDetail() {
 
                 {/* Current Offer */}
                 {offers[0] && (
-                  <Link to={`/${offers[0].slug}`} className="block bg-goat-navy-deep rounded-lg p-6 text-white border-2 border-dashed border-goat-navy relative overflow-hidden noise-overlay hover:border-goat-red/50 transition-colors">
+                  <Link to={`/${offers[0].slug}/`} className="block bg-goat-navy-deep rounded-lg p-6 text-white border-2 border-dashed border-goat-navy relative overflow-hidden noise-overlay hover:border-goat-red/50 transition-colors">
                     <div className="relative z-10 text-center">
                       <div className="flex items-center justify-center gap-1 text-goat-red text-xs uppercase tracking-widest mb-2" style={{ fontFamily: "var(--font-heading)", fontWeight: 700 }}>
                         <Tag className="w-3 h-3" /> Special Offer
@@ -168,7 +168,7 @@ export function BlogDetail() {
                   </h4>
                   <div className="space-y-2">
                     {services.slice(0, 4).map(s => (
-                      <Link key={s.id} to={`/${s.slug}`} className="flex items-center gap-2 text-goat-navy/80 hover:text-goat-red text-sm transition-colors">
+                      <Link key={s.id} to={`/${s.slug}/`} className="flex items-center gap-2 text-goat-navy/80 hover:text-goat-red text-sm transition-colors">
                         <span className="text-goat-red text-xs">★</span> {s.name}
                       </Link>
                     ))}

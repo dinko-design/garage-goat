@@ -19,7 +19,7 @@ export function Privacy() {
           <Breadcrumbs variant="dark" center items={[{ label: 'Privacy Policy' }]} />
           <StarDivider size="sm" className="text-goat-ice/30 mb-4" />
           <h1 className="text-center" style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, textTransform: 'uppercase', lineHeight: 1.1 }}>
-            Privacy <span className="text-accent-red">Policy</span>
+            Privacy <span className="text-goat-red">Policy</span>
           </h1>
         </div>
       </div>
@@ -100,7 +100,7 @@ export function Privacy() {
       </div>
 
       <div className="text-center text-sm text-goat-navy/50 mt-8">
-        See also our <Link to="/terms" className="text-goat-red hover:text-goat-red-dark underline">Terms of Service</Link>
+        See also our <Link to="/terms/" className="text-goat-red hover:text-goat-red-dark underline">Terms of Service</Link>
       </div>
     </span>
   );

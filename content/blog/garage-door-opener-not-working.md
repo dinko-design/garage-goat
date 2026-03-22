@@ -1,7 +1,7 @@
 ---
 id: opener-troubleshoot
 slug: garage-door-opener-not-working
-title: Garage Door Opener Not Working? 7 Things to Check Before Calling
+title: Garage Door Opener Not Working? 7 Quick Fixes
 excerpt: "Before you call for repair, try these simple troubleshooting steps that fix most garage door opener issues."
 featuredImage: "/images/real/chamberlain-opener-lit.jpg"
 date: "February 20, 2026"

@@ -42,7 +42,7 @@ export function OfferDetail({ slug: propSlug }: { slug?: string }) {
             <Breadcrumbs
               variant="dark"
               items={[
-                { label: 'Offers', href: '/offers' },
+                { label: 'Offers', href: '/offers/' },
                 { label: offer.title }
               ]}
             />
@@ -118,7 +118,7 @@ export function OfferDetail({ slug: propSlug }: { slug?: string }) {
                         {relatedServices.map(s => (
                           <Link
                             key={s.id}
-                            to={`/${s.slug}`}
+                            to={`/${s.slug}/`}
                             className="flex items-center gap-1.5 text-sm bg-white text-goat-navy-dark hover:text-goat-red px-3 py-1.5 rounded border border-goat-cream-dark transition-colors"
                           >
                             <span className="text-goat-red text-xs">★</span> {s.name}
@@ -138,7 +138,7 @@ export function OfferDetail({ slug: propSlug }: { slug?: string }) {
                     Call {companyInfo.phone} to Claim
                   </a>
                   <Link
-                    to="/contact"
+                    to="/contact/"
                     className="block w-full bg-goat-navy-dark hover:bg-goat-navy text-white py-3 rounded transition-all flex items-center justify-center gap-2"
                     style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase' }}
                   >
@@ -175,7 +175,7 @@ export function OfferDetail({ slug: propSlug }: { slug?: string }) {
                 {offers.filter(o => o.id !== offer.id).map(otherOffer => (
                   <Link
                     key={otherOffer.id}
-                    to={`/${otherOffer.slug}`}
+                    to={`/${otherOffer.slug}/`}
                     className="bg-goat-navy hover:bg-goat-navy-light text-white px-5 py-2 rounded transition-all text-sm border border-goat-navy-light/20"
                     style={{ fontFamily: "var(--font-heading)", fontWeight: 600 }}
                   >

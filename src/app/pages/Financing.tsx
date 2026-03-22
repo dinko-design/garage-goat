@@ -48,7 +48,7 @@ export function Financing() {
           <Breadcrumbs variant="dark" center items={[{ label: 'Financing' }]} />
           <StarDivider size="sm" className="text-goat-ice/30 mb-4" />
           <h1 style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, textTransform: 'uppercase', lineHeight: 1.1 }}>
-            Flexible <span className="text-accent-red">Financing</span>
+            Flexible <span className="text-goat-red">Financing</span>
           </h1>
           <p className="text-goat-ice/70 mt-4 max-w-2xl mx-auto">
             Don't let budget hold you back from a safe, beautiful garage door. We offer easy payment plans to fit every situation.
@@ -101,7 +101,7 @@ export function Financing() {
           {/* How It Works */}
           <div className="bg-white rounded-lg p-8 border border-goat-cream-dark mb-16">
             <h2 className="text-goat-navy-dark text-center mb-8" style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, textTransform: 'uppercase' }}>
-              How It <span className="text-accent-red">Works</span>
+              How It <span className="text-goat-red">Works</span>
             </h2>
             <div className="grid sm:grid-cols-3 gap-8">
               {[
@@ -148,7 +148,7 @@ export function Financing() {
           {/* Services You Can Finance */}
           <div className="mb-16">
             <h2 className="text-goat-navy-dark text-center mb-6" style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, textTransform: 'uppercase' }}>
-              Services You Can <span className="text-accent-red">Finance</span>
+              Services You Can <span className="text-goat-red">Finance</span>
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {[
@@ -160,7 +160,7 @@ export function Financing() {
               ].map(({ service, note }) => (
                 <Link
                   key={service.id}
-                  to={`/${service.slug}`}
+                  to={`/${service.slug}/`}
                   className="bg-white rounded-lg p-4 border border-goat-cream-dark flex items-center gap-3 hover:border-goat-red/30 transition-colors group"
                 >
                   <div className="w-9 h-9 rounded-lg bg-goat-red/10 flex items-center justify-center flex-shrink-0">
@@ -181,7 +181,7 @@ export function Financing() {
           {/* Save Even More */}
           <div className="mb-16">
             <h2 className="text-goat-navy-dark text-center mb-2" style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, textTransform: 'uppercase' }}>
-              Save Even <span className="text-accent-red">More</span>
+              Save Even <span className="text-goat-red">More</span>
             </h2>
             <p className="text-goat-navy/60 text-sm text-center mb-6">
               Combine financing with our current special offers for maximum savings.
@@ -190,7 +190,7 @@ export function Financing() {
               {offers.map((offer) => (
                 <Link
                   key={offer.id}
-                  to={`/${offer.slug}`}
+                  to={`/${offer.slug}/`}
                   className="bg-white rounded-lg p-4 border border-goat-cream-dark flex items-center gap-3 hover:border-goat-red/30 transition-colors group"
                 >
                   <div className="w-9 h-9 rounded-lg bg-goat-teal/10 flex items-center justify-center flex-shrink-0">
@@ -215,9 +215,9 @@ export function Financing() {
             </h3>
             <div className="flex flex-wrap gap-3 justify-center">
               {[
-                { to: '/faq', label: 'FAQ' },
-                { to: '/warranty', label: 'Warranty Info' },
-                { to: '/contact', label: 'Contact Us' },
+                { to: '/faq/', label: 'FAQ' },
+                { to: '/warranty/', label: 'Warranty Info' },
+                { to: '/contact/', label: 'Contact Us' },
               ].map((link) => (
                 <Link
                   key={link.to}
@@ -251,7 +251,7 @@ export function Financing() {
                   <Phone className="w-4 h-4" /> {companyInfo.phone}
                 </a>
                 <Link
-                  to="/contact"
+                  to="/contact/"
                   className="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-8 py-3 rounded transition-colors flex items-center justify-center gap-2"
                   style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, textTransform: 'uppercase' }}
                 >

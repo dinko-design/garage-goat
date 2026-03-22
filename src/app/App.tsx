@@ -115,19 +115,19 @@ export default function App() {
             <Route path="garage-door-repair-hockley-tx" element={<ServiceAreaDetail slug="garage-door-repair-hockley-tx" />} />
 
             {/* ── Redirects from old garagegoat.net (Wix) URLs ── */}
-            <Route path="contact-8" element={<Navigate to="/contact" replace />} />
-            <Route path="privacy-policy" element={<Navigate to="/privacy" replace />} />
-            <Route path="copy-of-houston" element={<Navigate to="/garage-door-repair-houston-tx" replace />} />
+            <Route path="contact-8" element={<Navigate to="/contact/" replace />} />
+            <Route path="privacy-policy" element={<Navigate to="/privacy/" replace />} />
+            <Route path="copy-of-houston" element={<Navigate to="/garage-door-repair-houston-tx/" replace />} />
             <Route path="garage-door-repair-katy-tx" element={<Navigate to="/" replace />} />
-            <Route path="post/why-an-unbalanced-garage-door-could-be-costing-you-more-than-you-think" element={<Navigate to="/blog/unbalanced-garage-door-hidden-costs" replace />} />
-            <Route path="post/keep-your-garage-door-running-smoothly-with-our-75-preventative-tune-up-package" element={<Navigate to="/blog/garage-door-preventative-tune-up" replace />} />
-            <Route path="post/the-importance-of-regular-garage-door-inspections-ensuring-safety-and-functionality" element={<Navigate to="/blog/garage-door-inspection-importance" replace />} />
-            <Route path="post/how-to-extend-the-life-of-your-garage-door-after-installation" element={<Navigate to="/blog/extend-garage-door-life-after-installation" replace />} />
-            <Route path="post/from-installation-to-repairs-14-issues-garage-goat-helps-you-address" element={<Navigate to="/blog/common-garage-door-problems" replace />} />
-            <Route path="post/how-to-tell-if-your-garage-door-cable-needs-replacing" element={<Navigate to="/blog/garage-door-cable-replacement-signs" replace />} />
-            <Route path="post/the-hidden-costs-of-diy-garage-door-installation" element={<Navigate to="/blog/diy-garage-door-installation-hidden-costs" replace />} />
+            <Route path="post/why-an-unbalanced-garage-door-could-be-costing-you-more-than-you-think" element={<Navigate to="/blog/unbalanced-garage-door-hidden-costs/" replace />} />
+            <Route path="post/keep-your-garage-door-running-smoothly-with-our-75-preventative-tune-up-package" element={<Navigate to="/blog/garage-door-preventative-tune-up/" replace />} />
+            <Route path="post/the-importance-of-regular-garage-door-inspections-ensuring-safety-and-functionality" element={<Navigate to="/blog/garage-door-inspection-importance/" replace />} />
+            <Route path="post/how-to-extend-the-life-of-your-garage-door-after-installation" element={<Navigate to="/blog/extend-garage-door-life-after-installation/" replace />} />
+            <Route path="post/from-installation-to-repairs-14-issues-garage-goat-helps-you-address" element={<Navigate to="/blog/common-garage-door-problems/" replace />} />
+            <Route path="post/how-to-tell-if-your-garage-door-cable-needs-replacing" element={<Navigate to="/blog/garage-door-cable-replacement-signs/" replace />} />
+            <Route path="post/the-hidden-costs-of-diy-garage-door-installation" element={<Navigate to="/blog/diy-garage-door-installation-hidden-costs/" replace />} />
             {/* Catch-all for any other old /post/ URLs */}
-            <Route path="post/*" element={<Navigate to="/blog" replace />} />
+            <Route path="post/*" element={<Navigate to="/blog/" replace />} />
 
             {/* ── Offer Pages (dynamic — supports new offers via CMS) ── */}
             <Route path=":slug" element={<DynamicOfferOrNotFound />} />

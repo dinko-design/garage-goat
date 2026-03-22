@@ -51,7 +51,7 @@ export function Blog() {
             {blogPosts.map((post) => (
               <Link
                 key={post.id}
-                to={`/blog/${post.slug}`}
+                to={`/blog/${post.slug}/`}
                 className="group bg-white rounded-lg overflow-hidden flex flex-col h-full border border-goat-cream-dark hover:border-goat-navy/20 grit-card"
               >
                 <div className="h-56 overflow-hidden relative">
@@ -122,7 +122,7 @@ export function Blog() {
               {services.map((service) => (
                 <Link
                   key={service.id}
-                  to={`/${service.slug}`}
+                  to={`/${service.slug}/`}
                   className="group flex items-center gap-3 bg-white p-4 rounded-lg border border-goat-cream-dark hover:border-goat-red/30 transition-colors"
                 >
                   <Wrench className="w-4 h-4 text-goat-red flex-shrink-0" />

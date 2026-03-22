@@ -96,7 +96,7 @@ export function FAQ() {
           <Breadcrumbs variant="dark" center items={[{ label: 'FAQ' }]} />
           <StarDivider size="sm" className="text-goat-ice/30 mb-4" />
           <h1 style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, textTransform: 'uppercase', lineHeight: 1.1 }}>
-            Frequently Asked <span className="text-accent-red">Questions</span>
+            Frequently Asked <span className="text-goat-red">Questions</span>
           </h1>
           <p className="text-goat-ice/70 mt-4 max-w-2xl mx-auto">
             Got questions? We've got honest answers. If you don't see what you're looking for, give us a call.
@@ -140,14 +140,14 @@ export function FAQ() {
           {/* Helpful Resources */}
           <div className="mt-16 mb-16">
             <h2 className="text-goat-navy-dark mb-6" style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, textTransform: 'uppercase' }}>
-              Helpful <span className="text-accent-red">Resources</span>
+              Helpful <span className="text-goat-red">Resources</span>
             </h2>
             <div className="grid sm:grid-cols-2 gap-4">
               {[
-                { to: '/services', icon: Wrench, title: 'Our Services', desc: 'Browse all garage door services we offer' },
-                { to: '/financing', icon: DollarSign, title: 'Financing Options', desc: 'Flexible payment plans for bigger projects' },
-                { to: '/warranty', icon: Shield, title: 'Warranty Info', desc: 'Learn about our industry-leading warranty coverage' },
-                { to: '/offers', icon: Tag, title: 'Special Offers', desc: 'Current deals and coupons' },
+                { to: '/services/', icon: Wrench, title: 'Our Services', desc: 'Browse all garage door services we offer' },
+                { to: '/financing/', icon: DollarSign, title: 'Financing Options', desc: 'Flexible payment plans for bigger projects' },
+                { to: '/warranty/', icon: Shield, title: 'Warranty Info', desc: 'Learn about our industry-leading warranty coverage' },
+                { to: '/offers/', icon: Tag, title: 'Special Offers', desc: 'Current deals and coupons' },
               ].map((card) => (
                 <div key={card.to} className="bg-white rounded-lg p-5 border border-goat-cream-dark">
                   <div className="flex items-center gap-3 mb-2">
@@ -188,7 +188,7 @@ export function FAQ() {
                   <Phone className="w-4 h-4" /> Call {companyInfo.phone}
                 </a>
                 <Link
-                  to="/contact"
+                  to="/contact/"
                   className="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-6 py-3 rounded transition-colors"
                   style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, textTransform: 'uppercase' }}
                 >

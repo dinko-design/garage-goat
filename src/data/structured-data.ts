@@ -67,7 +67,7 @@ export function buildServiceSchema(service: Service) {
     '@type': 'Service',
     name: service.name,
     description: service.metaDescription,
-    url: `${BASE_URL}/${service.slug}`,
+    url: `${BASE_URL}/${service.slug}/`,
     provider: {
       '@type': 'LocalBusiness',
       '@id': `${BASE_URL}/#business`,
@@ -122,9 +122,14 @@ export function buildReviewsSchema(reviews: Review[]) {
         '@type': 'Rating',
         ratingValue: String(r.rating),
         bestRating: '5',
+        worstRating: '1',
       },
       reviewBody: r.text,
       datePublished: r.date,
+      itemReviewed: {
+        '@type': 'LocalBusiness',
+        '@id': `${BASE_URL}/#business`,
+      },
     })),
   };
 }
@@ -140,7 +145,7 @@ export function buildBlogPostingSchema(post: BlogPost) {
     datePublished: post.date,
     dateModified: post.date,
     image: post.featuredImage,
-    url: `${BASE_URL}/blog/${post.slug}`,
+    url: `${BASE_URL}/blog/${post.slug}/`,
     author: {
       '@type': 'Person',
       name: 'Cesar Salazar',
@@ -170,7 +175,7 @@ export function buildBreadcrumbSchema(
       '@type': 'ListItem',
       position: i + 1,
       name: item.name,
-      item: `${BASE_URL}${item.path}`,
+      item: `${BASE_URL}${item.path.replace(/\/?$/, '/')}`,
     })),
   };
 }
@@ -187,7 +192,7 @@ export function buildOfferSchema(offer: Offer) {
       '@type': 'LocalBusiness',
       '@id': `${BASE_URL}/#business`,
     },
-    url: `${BASE_URL}/${offer.slug}`,
+    url: `${BASE_URL}/${offer.slug}/`,
   };
 }
 
@@ -200,7 +205,7 @@ export function buildServiceAreaSchema(area: ServiceArea) {
     '@id': `${BASE_URL}/#business`,
     name: companyInfo.name,
     telephone: companyInfo.phone,
-    url: `${BASE_URL}/${area.slug}`,
+    url: `${BASE_URL}/${area.slug}/`,
     address: {
       '@type': 'PostalAddress',
       streetAddress: companyInfo.address,

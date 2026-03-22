@@ -275,7 +275,7 @@ export function About() {
                   {service.introParagraph.slice(0, 80)}...
                 </p>
                 <Link
-                  to={`/${service.slug}`}
+                  to={`/${service.slug}/`}
                   className="inline-flex items-center gap-1.5 text-goat-red hover:text-goat-red-dark text-sm transition-colors"
                   style={{ fontFamily: "var(--font-heading)", fontWeight: 600 }}
                 >
@@ -294,7 +294,7 @@ export function About() {
               {serviceAreas.map((area) => (
                 <Link
                   key={area.id}
-                  to={`/${area.slug}`}
+                  to={`/${area.slug}/`}
                   className="flex items-center gap-1 text-xs bg-white text-goat-navy px-3 py-1.5 rounded hover:text-goat-red transition-colors border border-goat-cream-dark"
                 >
                   <MapPin className="w-3 h-3" /> {area.cityName}
@@ -367,7 +367,7 @@ export function About() {
 
           <div className="text-center mt-8">
             <Link
-              to="/reviews"
+              to="/reviews/"
               className="inline-flex items-center gap-2 text-goat-red hover:text-goat-red-dark transition-colors"
               style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase' }}
             >
@@ -401,7 +401,7 @@ export function About() {
               {companyInfo.phone}
             </a>
             <Link
-              to="/contact"
+              to="/contact/"
               className="bg-goat-navy-dark hover:bg-goat-navy text-white px-8 py-4 rounded transition-all flex items-center justify-center gap-2"
               style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase' }}
             >

@@ -305,7 +305,7 @@ export function Contact() {
             </div>
             <div className="text-center mt-6">
               <Link
-                to="/faq"
+                to="/faq/"
                 className="inline-flex items-center gap-1.5 text-goat-red hover:text-goat-red-dark transition-colors text-sm"
                 style={{ fontFamily: "var(--font-heading)", fontWeight: 600 }}
               >
@@ -328,7 +328,7 @@ export function Contact() {
               {services.map((service) => (
                 <Link
                   key={service.id}
-                  to={`/${service.slug}`}
+                  to={`/${service.slug}/`}
                   className="bg-white p-4 rounded-lg border border-goat-cream-dark hover:border-goat-red/30 transition-colors group flex items-center gap-3"
                 >
                   <Wrench className="w-4 h-4 text-goat-red flex-shrink-0" />
@@ -356,7 +356,7 @@ export function Contact() {
               {serviceAreas.map((area) => (
                 <Link
                   key={area.id}
-                  to={`/${area.slug}`}
+                  to={`/${area.slug}/`}
                   className="flex items-center gap-1 text-xs bg-white text-goat-navy px-3 py-1.5 rounded hover:text-goat-red transition-colors border border-goat-cream-dark"
                 >
                   <MapPin className="w-3 h-3" /> {area.cityName}

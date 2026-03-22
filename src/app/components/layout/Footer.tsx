@@ -71,7 +71,7 @@ export function Footer() {
                 {companyInfo.phone}
               </a>
               <Link
-                to="/contact"
+                to="/contact/"
                 className="bg-goat-red-dark hover:bg-goat-red-dark/80 border-2 border-white/30 text-white px-8 py-3 rounded transition-colors"
                 style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase' }}
               >
@@ -165,14 +165,14 @@ export function Footer() {
               <ul className="space-y-2.5 text-sm">
                 {services.map(service => (
                   <li key={service.id}>
-                    <Link to={`/${service.slug}`} className="hover:text-goat-red transition-colors flex items-center gap-2">
+                    <Link to={`/${service.slug}/`} className="hover:text-goat-red transition-colors flex items-center gap-2">
                       <BrandStar size={10} />
                       {service.name}
                     </Link>
                   </li>
                 ))}
                 <li className="pt-1">
-                  <Link to="/services" className="text-goat-red hover:text-goat-red-light transition-colors text-xs" style={{ fontFamily: "var(--font-heading)", fontWeight: 600 }}>
+                  <Link to="/services/" className="text-goat-red hover:text-goat-red-light transition-colors text-xs" style={{ fontFamily: "var(--font-heading)", fontWeight: 600 }}>
                     View All →
                   </Link>
                 </li>
@@ -187,14 +187,14 @@ export function Footer() {
               <ul className="space-y-2.5 text-sm">
                 {serviceAreas.map(area => (
                   <li key={area.id}>
-                    <Link to={`/${area.slug}`} className="hover:text-goat-red transition-colors flex items-center gap-2">
+                    <Link to={`/${area.slug}/`} className="hover:text-goat-red transition-colors flex items-center gap-2">
                       <MapPin className="w-3 h-3 text-goat-red flex-shrink-0" />
                       {area.cityName}
                     </Link>
                   </li>
                 ))}
                 <li className="pt-1">
-                  <Link to="/areas" className="text-goat-red hover:text-goat-red-light transition-colors text-xs" style={{ fontFamily: "var(--font-heading)", fontWeight: 600 }}>
+                  <Link to="/areas/" className="text-goat-red hover:text-goat-red-light transition-colors text-xs" style={{ fontFamily: "var(--font-heading)", fontWeight: 600 }}>
                     View All →
                   </Link>
                 </li>
@@ -208,27 +208,27 @@ export function Footer() {
               </h3>
               <ul className="space-y-2.5 text-sm">
                 <li>
-                  <Link to="/about" className="hover:text-goat-red transition-colors flex items-center gap-2">
+                  <Link to="/about/" className="hover:text-goat-red transition-colors flex items-center gap-2">
                     <Users className="w-3 h-3 text-goat-teal flex-shrink-0" /> About Us
                   </Link>
                 </li>
                 <li>
-                  <Link to="/reviews" className="hover:text-goat-red transition-colors flex items-center gap-2">
+                  <Link to="/reviews/" className="hover:text-goat-red transition-colors flex items-center gap-2">
                     <Star className="w-3 h-3 text-goat-teal flex-shrink-0" /> Reviews
                   </Link>
                 </li>
                 <li>
-                  <Link to="/pricing" className="hover:text-goat-red transition-colors flex items-center gap-2">
+                  <Link to="/pricing/" className="hover:text-goat-red transition-colors flex items-center gap-2">
                     <DollarSign className="w-3 h-3 text-goat-teal flex-shrink-0" /> Pricing
                   </Link>
                 </li>
                 <li>
-                  <Link to="/gallery" className="hover:text-goat-red transition-colors flex items-center gap-2">
+                  <Link to="/gallery/" className="hover:text-goat-red transition-colors flex items-center gap-2">
                     <Image className="w-3 h-3 text-goat-teal flex-shrink-0" /> Gallery
                   </Link>
                 </li>
                 <li>
-                  <Link to="/contact" className="hover:text-goat-red transition-colors flex items-center gap-2">
+                  <Link to="/contact/" className="hover:text-goat-red transition-colors flex items-center gap-2">
                     <Mail className="w-3 h-3 text-goat-teal flex-shrink-0" /> Contact
                   </Link>
                 </li>
@@ -242,27 +242,27 @@ export function Footer() {
               </h3>
               <ul className="space-y-2.5 text-sm">
                 <li>
-                  <Link to="/faq" className="hover:text-goat-red transition-colors flex items-center gap-2">
+                  <Link to="/faq/" className="hover:text-goat-red transition-colors flex items-center gap-2">
                     <HelpCircle className="w-3 h-3 text-goat-teal flex-shrink-0" /> FAQ
                   </Link>
                 </li>
                 <li>
-                  <Link to="/blog" className="hover:text-goat-red transition-colors flex items-center gap-2">
+                  <Link to="/blog/" className="hover:text-goat-red transition-colors flex items-center gap-2">
                     <BookOpen className="w-3 h-3 text-goat-teal flex-shrink-0" /> Blog
                   </Link>
                 </li>
                 <li>
-                  <Link to="/offers" className="hover:text-goat-red transition-colors flex items-center gap-2 text-goat-gold-dark">
+                  <Link to="/offers/" className="hover:text-goat-red transition-colors flex items-center gap-2 text-goat-gold-dark">
                     <BrandStar size={12} /> Special Offers
                   </Link>
                 </li>
                 <li>
-                  <Link to="/financing" className="hover:text-goat-red transition-colors flex items-center gap-2">
+                  <Link to="/financing/" className="hover:text-goat-red transition-colors flex items-center gap-2">
                     <DollarSign className="w-3 h-3 text-goat-teal flex-shrink-0" /> Financing
                   </Link>
                 </li>
                 <li>
-                  <Link to="/warranty" className="hover:text-goat-red transition-colors flex items-center gap-2">
+                  <Link to="/warranty/" className="hover:text-goat-red transition-colors flex items-center gap-2">
                     <ShieldCheck className="w-3 h-3 text-goat-teal flex-shrink-0" /> Warranty
                   </Link>
                 </li>
@@ -287,9 +287,9 @@ export function Footer() {
               <span className="hidden sm:inline">{companyInfo.licenseName} {companyInfo.licenseNumber}</span>
             </div>
             <div className="flex gap-6">
-              <Link to="/privacy" className="hover:text-goat-ice transition-colors">Privacy Policy</Link>
-              <Link to="/terms" className="hover:text-goat-ice transition-colors">Terms</Link>
-              <Link to="/sitemap" className="hover:text-goat-ice transition-colors">Sitemap</Link>
+              <Link to="/privacy/" className="hover:text-goat-ice transition-colors">Privacy Policy</Link>
+              <Link to="/terms/" className="hover:text-goat-ice transition-colors">Terms</Link>
+              <Link to="/sitemap/" className="hover:text-goat-ice transition-colors">Sitemap</Link>
             </div>
           </div>
         </div>

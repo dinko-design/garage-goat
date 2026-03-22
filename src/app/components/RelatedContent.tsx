@@ -27,7 +27,7 @@ export function RelatedServices({ services, title = 'Related Services', variant 
           {services.map(s => (
             <Link
               key={s.id}
-              to={`/${s.slug}`}
+              to={`/${s.slug}/`}
               className="flex items-center gap-2 text-goat-navy/80 hover:text-goat-red text-sm transition-colors"
             >
               <Wrench className="w-3.5 h-3.5 text-goat-red flex-shrink-0" />
@@ -55,7 +55,7 @@ export function RelatedServices({ services, title = 'Related Services', variant 
         {services.map(rs => (
           <Link
             key={rs.id}
-            to={`/${rs.slug}`}
+            to={`/${rs.slug}/`}
             className="flex items-center gap-4 bg-white p-4 rounded-lg border border-goat-cream-dark hover:border-goat-red/30 transition-colors group"
           >
             <div className="w-16 h-16 rounded overflow-hidden flex-shrink-0">
@@ -102,7 +102,7 @@ export function RelatedBlogs({ posts, title = 'Related Articles', variant = 'car
           {posts.map(p => (
             <Link
               key={p.id}
-              to={`/blog/${p.slug}`}
+              to={`/blog/${p.slug}/`}
               className="flex items-center gap-2 text-goat-navy/80 hover:text-goat-red text-sm transition-colors"
             >
               <FileText className="w-3.5 h-3.5 text-goat-red flex-shrink-0" />
@@ -130,7 +130,7 @@ export function RelatedBlogs({ posts, title = 'Related Articles', variant = 'car
         {posts.map(post => (
           <Link
             key={post.id}
-            to={`/blog/${post.slug}`}
+            to={`/blog/${post.slug}/`}
             className="flex items-center gap-4 bg-white p-4 rounded-lg border border-goat-cream-dark hover:border-goat-red/30 transition-colors group"
           >
             <div className="w-20 h-16 rounded overflow-hidden flex-shrink-0">
@@ -175,7 +175,7 @@ export function RelatedOffers({ offers, title = 'Current Offers' }: RelatedOffer
         {offers.map(o => (
           <Link
             key={o.id}
-            to={`/${o.slug}`}
+            to={`/${o.slug}/`}
             className="flex items-center gap-3 bg-goat-cream hover:bg-goat-cream-dark p-3 rounded border border-goat-cream-dark transition-colors group"
           >
             <Tag className="w-4 h-4 text-goat-red flex-shrink-0" />
@@ -216,7 +216,7 @@ export function RelatedAreas({ areas, title = 'Service Areas', currentAreaId }: 
         {filteredAreas.map(area => (
           <Link
             key={area.id}
-            to={`/${area.slug}`}
+            to={`/${area.slug}/`}
             className="flex items-center gap-1 text-xs bg-white text-goat-navy px-3 py-1.5 rounded hover:text-goat-red transition-colors border border-goat-cream-dark"
           >
             <MapPin className="w-3 h-3" /> {area.cityName}

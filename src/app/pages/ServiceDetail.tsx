@@ -50,7 +50,7 @@ export function ServiceDetail({ slug: propSlug }: { slug?: string }) {
           <Breadcrumbs
             variant="dark"
             items={[
-              { label: 'Services', href: '/services' },
+              { label: 'Services', href: '/services/' },
               { label: service.name }
             ]}
           />
@@ -74,7 +74,7 @@ export function ServiceDetail({ slug: propSlug }: { slug?: string }) {
                   {companyInfo.phone}
                 </a>
                 <Link
-                  to="/contact"
+                  to="/contact/"
                   className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white border border-white/20 px-6 py-3 rounded transition-all flex items-center gap-2"
                   style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase' }}
                 >
@@ -179,7 +179,7 @@ export function ServiceDetail({ slug: propSlug }: { slug?: string }) {
                       <Phone className="w-5 h-5" /> Call Now
                     </a>
                     <Link
-                      to="/contact"
+                      to="/contact/"
                       className="block w-full bg-goat-red-dark hover:bg-goat-red-dark/80 text-white text-center py-3 rounded transition-colors flex items-center justify-center gap-2 border border-white/20"
                       style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase' }}
                     >
@@ -200,7 +200,7 @@ export function ServiceDetail({ slug: propSlug }: { slug?: string }) {
                       </div>
                       <div className="text-goat-ice/80 mb-5 text-sm">{relatedOffers[0].title}</div>
                       <Link
-                        to={`/${relatedOffers[0].slug}`}
+                        to={`/${relatedOffers[0].slug}/`}
                         className="block w-full bg-goat-navy hover:bg-goat-navy-light text-white text-center py-3 rounded transition-colors"
                         style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase' }}
                       >

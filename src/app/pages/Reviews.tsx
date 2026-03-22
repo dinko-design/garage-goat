@@ -9,11 +9,11 @@ import { TrustStrip, PlatformBadge, PlatformLogosRow } from '../components/Trust
 
 function getServiceSlugFromReview(serviceUsed: string): string | null {
   const lower = serviceUsed.toLowerCase();
-  if (lower === 'garage door repair') return '/garage-door-repair';
-  if (lower === 'spring repair' || lower === 'spring replacement') return '/garage-door-spring-repair';
-  if (lower === 'opener install' || lower === 'opener repair') return '/garage-door-opener-repair';
-  if (lower === 'new door installation' || lower === 'new door' || lower === 'new garage door') return '/new-garage-doors';
-  if (lower === 'emergency repair' || lower === 'emergency') return '/emergency-garage-door-repair';
+  if (lower === 'garage door repair') return '/garage-door-repair/';
+  if (lower === 'spring repair' || lower === 'spring replacement') return '/garage-door-spring-repair/';
+  if (lower === 'opener install' || lower === 'opener repair') return '/garage-door-opener-repair/';
+  if (lower === 'new door installation' || lower === 'new door' || lower === 'new garage door') return '/new-garage-doors/';
+  if (lower === 'emergency repair' || lower === 'emergency') return '/emergency-garage-door-repair/';
   return null;
 }
 
@@ -135,7 +135,7 @@ export function Reviews() {
               {services.map((service) => (
                 <Link
                   key={service.id}
-                  to={`/${service.slug}`}
+                  to={`/${service.slug}/`}
                   className="flex items-center gap-3 px-5 py-4 hover:bg-goat-cream/50 transition-colors group"
                 >
                   <Wrench className="w-4 h-4 text-goat-red flex-shrink-0" />
@@ -163,7 +163,7 @@ export function Reviews() {
               {serviceAreas.map((area) => (
                 <Link
                   key={area.id}
-                  to={`/${area.slug}`}
+                  to={`/${area.slug}/`}
                   className="flex items-center gap-1 text-xs bg-white text-goat-navy px-3 py-1.5 rounded hover:text-goat-red transition-colors border border-goat-cream-dark"
                 >
                   <MapPin className="w-3 h-3" /> {area.cityName}
@@ -195,7 +195,7 @@ export function Reviews() {
                     {companyInfo.phone}
                   </a>
                   <Link
-                    to="/contact"
+                    to="/contact/"
                     className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white px-8 py-3 rounded transition-all"
                     style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase' }}
                   >

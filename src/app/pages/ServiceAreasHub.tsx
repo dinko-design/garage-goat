@@ -86,7 +86,7 @@ export function ServiceAreasHub() {
                       )}
                     </div>
                     <Link
-                      to={`/${area.slug}`}
+                      to={`/${area.slug}/`}
                       className="inline-flex items-center gap-1.5 text-goat-red hover:text-goat-red-dark text-sm transition-colors"
                       style={{ fontFamily: "var(--font-heading)", fontWeight: 600, textTransform: 'uppercase' }}
                     >
@@ -139,7 +139,7 @@ export function ServiceAreasHub() {
                   {serviceAreas.map(area => (
                     <li key={area.id}>
                       <Link
-                        to={`/${area.slug}`}
+                        to={`/${area.slug}/`}
                         className="flex items-center gap-2 text-goat-navy-dark hover:text-goat-red transition-colors"
                         style={{ fontWeight: 600 }}
                       >
@@ -197,7 +197,7 @@ export function ServiceAreasHub() {
               {services.map((service) => (
                 <Link
                   key={service.id}
-                  to={`/${service.slug}`}
+                  to={`/${service.slug}/`}
                   className="group flex items-center gap-3 bg-white p-4 rounded-lg border border-goat-cream-dark hover:border-goat-red/30 transition-colors"
                 >
                   <div className="w-9 h-9 bg-goat-cream rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-goat-red/10 transition-colors">
@@ -239,7 +239,7 @@ export function ServiceAreasHub() {
                   {companyInfo.phone}
                 </a>
                 <Link
-                  to="/contact"
+                  to="/contact/"
                   className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white px-8 py-4 rounded transition-all"
                   style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase' }}
                 >

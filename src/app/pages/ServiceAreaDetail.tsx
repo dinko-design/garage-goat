@@ -43,7 +43,7 @@ export function ServiceAreaDetail({ slug: propSlug }: { slug?: string }) {
           <Breadcrumbs
             variant="dark"
             items={[
-              { label: 'Service Areas', href: '/areas' },
+              { label: 'Service Areas', href: '/areas/' },
               { label: area.cityName }
             ]}
           />
@@ -132,7 +132,7 @@ export function ServiceAreaDetail({ slug: propSlug }: { slug?: string }) {
               {services.map(service => (
                 <Link
                   key={service.id}
-                  to={`/${service.slug}`}
+                  to={`/${service.slug}/`}
                   className="flex items-center gap-4 p-4 bg-white border border-goat-cream-dark rounded-lg hover:border-goat-red/30 transition-all group grit-card"
                 >
                   <div className="w-14 h-14 rounded overflow-hidden flex-shrink-0 border-2 border-goat-cream-dark group-hover:border-goat-red/30 transition-colors">
@@ -216,7 +216,7 @@ export function ServiceAreaDetail({ slug: propSlug }: { slug?: string }) {
                   {serviceAreas.filter(a => a.id !== area.id).map(otherArea => (
                     <Link
                       key={otherArea.id}
-                      to={`/${otherArea.slug}`}
+                      to={`/${otherArea.slug}/`}
                       className="flex items-center gap-1 bg-goat-navy hover:bg-goat-red text-goat-ice hover:text-white px-4 py-2 rounded-full text-sm transition-all"
                     >
                       <MapPin className="w-3 h-3" /> {otherArea.cityName}

@@ -1,7 +1,7 @@
 ---
 id: spring-types
 slug: torsion-vs-extension-springs-garage-door
-title: "Torsion vs Extension Springs: What's on Your Garage Door?"
+title: "Torsion vs Extension Springs: A Comparison"
 excerpt: "Learn the difference between torsion and extension springs, which type your door uses, and why it matters for repairs."
 featuredImage: "/images/stock/interior-springs-tracks.jpg"
 date: "February 10, 2026"

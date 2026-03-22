@@ -50,7 +50,7 @@ export function ServicesHub() {
             {services.map((service) => (
               <Link
                 key={service.id}
-                to={`/${service.slug}`}
+                to={`/${service.slug}/`}
                 className="group bg-white rounded-lg overflow-hidden flex flex-col h-full border border-goat-cream-dark hover:border-goat-navy/20 grit-card"
               >
                 <div className="h-56 overflow-hidden relative">
@@ -92,7 +92,7 @@ export function ServicesHub() {
                 {serviceAreas.map(area => (
                   <Link
                     key={area.id}
-                    to={`/${area.slug}`}
+                    to={`/${area.slug}/`}
                     className="flex items-center gap-1 text-sm bg-goat-cream text-goat-navy-dark hover:text-goat-red px-3 py-1.5 rounded border border-goat-cream-dark transition-colors"
                   >
                     <MapPin className="w-3 h-3 text-goat-red" /> {area.cityName}
@@ -115,7 +115,7 @@ export function ServicesHub() {
                 {blogPosts.slice(0, 4).map(post => (
                   <Link
                     key={post.id}
-                    to={`/blog/${post.slug}`}
+                    to={`/blog/${post.slug}/`}
                     className="flex items-center gap-3 p-3 rounded hover:bg-goat-cream transition-colors group"
                   >
                     <FileText className="w-5 h-5 text-goat-red flex-shrink-0" />

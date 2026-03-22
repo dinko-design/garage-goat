@@ -1,7 +1,7 @@
 ---
 id: preventative-tuneup
 slug: garage-door-preventative-tune-up
-title: Keep Your Garage Door Running Smoothly With Preventative Maintenance
+title: Garage Door Preventative Tune-Up Guide
 excerpt: "A professional tune-up extends your garage door's life, prevents costly breakdowns, and keeps your family safe. Here's what it includes and why it matters."
 featuredImage: "/images/real/cesar-working-drill.jpg"
 date: "January 15, 2026"

@@ -25,6 +25,7 @@ function getRouteMetadata(path) {
   if (['/gallery', '/financing', '/warranty'].includes(path)) return { changefreq: 'monthly', priority: '0.6' };
   if (['/privacy', '/terms', '/sitemap'].includes(path)) return { changefreq: 'yearly', priority: '0.3' };
   if (path === '/pricing') return { changefreq: 'monthly', priority: '0.8' };
+  if (path === '/areas') return { changefreq: 'weekly', priority: '0.7' };
 
   // Service pages (garage-door-* without -tx suffix, plus new-garage-doors, emergency-*)
   if (path.match(/^\/(garage-door-(?!repair-\w+-tx)|new-garage-doors|emergency-)/)) {
@@ -53,7 +54,7 @@ const xml = `<?xml version="1.0" encoding="UTF-8"?>
 ${routes
   .map(
     r => `  <url>
-    <loc>${BASE_URL}${r.path}</loc>
+    <loc>${BASE_URL}${r.path === '/' ? '/' : r.path.replace(/\/?$/, '/')}</loc>
     <lastmod>${today}</lastmod>
     <changefreq>${r.changefreq}</changefreq>
     <priority>${r.priority}</priority>

@@ -20,7 +20,7 @@ export function OfferBar({ offer }: { offer: Offer }) {
 
   // Don't show on offers pages
   if (dismissed) return null;
-  if (location.pathname === '/offers' || location.pathname === `/${offer.slug}`) return null;
+  if (location.pathname === '/offers/' || location.pathname === '/offers' || location.pathname === `/${offer.slug}/` || location.pathname === `/${offer.slug}`) return null;
 
   const handleDismiss = () => {
     setDismissed(true);
@@ -36,7 +36,7 @@ export function OfferBar({ offer }: { offer: Offer }) {
       <div className="container mx-auto px-4 py-2.5 flex items-center justify-between gap-3">
         {/* Offer content */}
         <Link
-          to={`/${offer.slug}`}
+          to={`/${offer.slug}/`}
           className="flex items-center gap-3 flex-1 min-w-0 group"
         >
           <Tag className="w-4 h-4 text-white/80 flex-shrink-0" />

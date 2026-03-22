@@ -21,7 +21,7 @@ export function Terms() {
           <Breadcrumbs variant="dark" center items={[{ label: 'Terms of Service' }]} />
           <StarDivider size="sm" className="text-goat-ice/30 mb-4" />
           <h1 className="text-center" style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, textTransform: 'uppercase', lineHeight: 1.1 }}>
-            Terms of <span className="text-accent-red">Service</span>
+            Terms of <span className="text-goat-red">Service</span>
           </h1>
         </div>
       </div>
@@ -65,7 +65,7 @@ export function Terms() {
               Warranty
             </h2>
             <p className="text-goat-navy/70 text-sm leading-relaxed mb-8">
-              Our warranty covers labor ({companyInfo.warranty.labor}), parts ({companyInfo.warranty.parts}), and springs ({companyInfo.warranty.springs}). Full warranty terms are available on our <a href="/warranty" className="text-goat-red hover:underline">Warranty page</a>. The warranty is void if modifications are made by anyone other than {companyInfo.shortName}.
+              Our warranty covers labor ({companyInfo.warranty.labor}), parts ({companyInfo.warranty.parts}), and springs ({companyInfo.warranty.springs}). Full warranty terms are available on our <a href="/warranty/" className="text-goat-red hover:underline">Warranty page</a>. The warranty is void if modifications are made by anyone other than {companyInfo.shortName}.
             </p>
 
             <h2 className="text-goat-navy-dark" style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, textTransform: 'uppercase' }}>
@@ -100,7 +100,7 @@ export function Terms() {
       </div>
 
       <div className="text-center text-sm text-goat-navy/50 mt-8">
-        See also our <Link to="/privacy" className="text-goat-red hover:text-goat-red-dark underline">Privacy Policy</Link>
+        See also our <Link to="/privacy/" className="text-goat-red hover:text-goat-red-dark underline">Privacy Policy</Link>
       </div>
     </span>
   );

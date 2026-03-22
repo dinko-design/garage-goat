@@ -95,7 +95,7 @@ export function Pricing() {
               lineHeight: 1.1,
             }}
           >
-            Garage Door Repair <span className="text-accent-red">Pricing</span>
+            Garage Door Repair <span className="text-goat-red">Pricing</span>
           </h1>
           <p className="text-goat-ice/70 mt-4 max-w-2xl mx-auto">
             Transparent pricing with no hidden fees. Same price 24/7 — no after-hours surcharges.
@@ -120,7 +120,7 @@ export function Pricing() {
                 textTransform: 'uppercase',
               }}
             >
-              Our <span className="text-accent-red">Pricing</span>
+              Our <span className="text-goat-red">Pricing</span>
             </h2>
             <p className="text-goat-navy/60 text-sm text-center mb-8">
               Honest price ranges for the most common garage door services in the Cypress area.
@@ -192,7 +192,7 @@ export function Pricing() {
                 textTransform: 'uppercase',
               }}
             >
-              What Affects Your <span className="text-accent-red">Price?</span>
+              What Affects Your <span className="text-goat-red">Price?</span>
             </h2>
             <p className="text-goat-navy/60 text-sm text-center mb-8">
               Several factors determine your final cost. Here is what to expect.
@@ -233,7 +233,7 @@ export function Pricing() {
                 textTransform: 'uppercase',
               }}
             >
-              Why Our Pricing Is <span className="text-accent-red">Different</span>
+              Why Our Pricing Is <span className="text-goat-red">Different</span>
             </h2>
             <p className="text-goat-navy/60 text-sm text-center mb-8">
               We built our business on trust and transparency. Here is how we earn yours.
@@ -292,7 +292,7 @@ export function Pricing() {
                   <Phone className="w-4 h-4" /> {companyInfo.phone}
                 </a>
                 <Link
-                  to="/contact"
+                  to="/contact/"
                   className="bg-white/10 hover:bg-white/20 text-white border border-white/30 px-8 py-3 rounded transition-colors flex items-center justify-center gap-2"
                   style={{
                     fontFamily: 'var(--font-heading)',
@@ -316,7 +316,7 @@ export function Pricing() {
                 textTransform: 'uppercase',
               }}
             >
-              Our <span className="text-accent-red">Services</span>
+              Our <span className="text-goat-red">Services</span>
             </h2>
             <p className="text-goat-navy/60 text-sm text-center mb-6">
               Learn more about the services behind the prices.
@@ -326,7 +326,7 @@ export function Pricing() {
               {serviceLinks.map(({ service, note }) => (
                 <Link
                   key={service.id}
-                  to={`/${service.slug}`}
+                  to={`/${service.slug}/`}
                   className="bg-white rounded-lg p-4 border border-goat-cream-dark flex items-center gap-3 hover:border-goat-red/30 transition-colors group"
                 >
                   <div className="w-9 h-9 rounded-lg bg-goat-red/10 flex items-center justify-center flex-shrink-0">
@@ -361,10 +361,10 @@ export function Pricing() {
             </h3>
             <div className="flex flex-wrap gap-3 justify-center">
               {[
-                { to: '/financing', label: 'Financing Options' },
-                { to: '/warranty', label: 'Warranty Info' },
-                { to: '/faq', label: 'FAQ' },
-                { to: '/contact', label: 'Contact Us' },
+                { to: '/financing/', label: 'Financing Options' },
+                { to: '/warranty/', label: 'Warranty Info' },
+                { to: '/faq/', label: 'FAQ' },
+                { to: '/contact/', label: 'Contact Us' },
               ].map((link) => (
                 <Link
                   key={link.to}

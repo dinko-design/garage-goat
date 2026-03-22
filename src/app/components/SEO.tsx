@@ -18,7 +18,9 @@ export function SEO({
   ogType = 'website',
   jsonLd,
 }: SEOProps) {
-  const canonicalUrl = `${BASE_URL}${path}`;
+  // Ensure canonical URL always has trailing slash (matches Netlify's pretty-URL behavior)
+  const normalizedPath = path === '/' ? path : path.replace(/\/?$/, '/');
+  const canonicalUrl = `${BASE_URL}${normalizedPath}`;
 
   return (
     <>

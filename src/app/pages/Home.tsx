@@ -86,7 +86,7 @@ export function Home() {
                 Call for Same-Day Repair
               </a>
               <Link
-                to="/contact"
+                to="/contact/"
                 className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white border border-white/20 px-8 py-4 rounded transition-all flex items-center justify-center gap-2"
                 style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase', fontSize: '1.1rem', letterSpacing: '0.03em' }}
               >
@@ -133,7 +133,7 @@ export function Home() {
               </span>
             </div>
             <Link
-              to={`/${featuredOffer.slug}`}
+              to={`/${featuredOffer.slug}/`}
               className="bg-goat-teal hover:bg-goat-teal-dark text-goat-navy-deep px-5 py-1.5 rounded text-sm transition-colors shadow-lg shadow-goat-teal/20"
               style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase' }}
             >
@@ -175,7 +175,7 @@ export function Home() {
             {services.slice(0, 6).map((service) => (
               <Link
                 key={service.id}
-                to={`/${service.slug}`}
+                to={`/${service.slug}/`}
                 className="group bg-white rounded-lg overflow-hidden flex flex-col h-full border border-goat-cream-dark hover:border-goat-navy/20 grit-card"
               >
                 <div className="h-48 overflow-hidden relative">
@@ -210,7 +210,7 @@ export function Home() {
 
           <div className="text-center mt-12">
             <Link
-              to="/services"
+              to="/services/"
               className="inline-flex items-center gap-2 text-goat-navy-dark hover:text-goat-red border-b-2 border-goat-navy-dark hover:border-goat-red pb-1 transition-colors"
               style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.03em' }}
             >
@@ -292,7 +292,7 @@ export function Home() {
               </div>
 
               <Link
-                to="/about"
+                to="/about/"
                 className="bg-goat-navy-dark hover:bg-goat-navy text-white px-8 py-3 rounded transition-colors inline-flex items-center gap-2 shadow-lg shadow-goat-navy-deep/20"
                 style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.03em' }}
               >
@@ -474,7 +474,7 @@ export function Home() {
             {serviceAreas.map(area => (
               <Link
                 key={area.id}
-                to={`/${area.slug}`}
+                to={`/${area.slug}/`}
                 className="group flex items-center gap-2 bg-white hover:bg-goat-red text-goat-navy-dark hover:text-white px-6 py-3 rounded-full transition-all border border-goat-cream-dark hover:border-goat-red shadow-sm hover:shadow-lg hover:shadow-goat-red/20"
               >
                 <MapPin className="w-4 h-4 text-goat-red group-hover:text-white transition-colors" />
@@ -538,7 +538,7 @@ export function Home() {
 
           <div className="text-center mt-12">
             <Link
-              to="/reviews"
+              to="/reviews/"
               className="bg-goat-cream hover:bg-goat-cream-dark border-2 border-goat-cream-dark hover:border-goat-navy/20 text-goat-navy-dark px-8 py-3 rounded transition-all inline-flex items-center gap-2"
               style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.03em' }}
             >
@@ -582,7 +582,7 @@ export function Home() {
               {companyInfo.phone}
             </a>
             <Link
-              to="/contact"
+              to="/contact/"
               className="bg-white/10 hover:bg-white/20 border-2 border-white/20 text-white px-10 py-5 rounded transition-all flex items-center justify-center gap-2"
               style={{ fontFamily: "var(--font-heading)", fontWeight: 700, textTransform: 'uppercase', fontSize: '1.2rem', letterSpacing: '0.03em' }}
             >

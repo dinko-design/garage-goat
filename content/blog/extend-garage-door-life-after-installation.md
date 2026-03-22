@@ -1,7 +1,7 @@
 ---
 id: extend-door-life
 slug: extend-garage-door-life-after-installation
-title: How to Extend the Life of Your Garage Door After Installation
+title: How to Extend Your Garage Door's Lifespan
 excerpt: "A new garage door can last 20–30 years with proper care. Here are the maintenance habits that protect your investment and avoid premature replacement."
 featuredImage: "/images/stock/exterior-white-stone.jpg"
 date: "January 5, 2026"

@@ -91,7 +91,7 @@ export function Gallery() {
           <Breadcrumbs variant="dark" center items={[{ label: 'Gallery' }]} />
           <StarDivider size="sm" className="text-goat-ice/30 mb-4" />
           <h1 style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, textTransform: 'uppercase', lineHeight: 1.1 }}>
-            Our <span className="text-accent-red">Work</span>
+            Our <span className="text-goat-red">Work</span>
           </h1>
           <p className="text-goat-ice/70 mt-4 max-w-2xl mx-auto">
             Real projects. Real homes. See why our neighbors trust the G.O.A.T. for their garage doors.
@@ -184,7 +184,7 @@ export function Gallery() {
                   <Phone className="w-4 h-4" /> Call for a Quote
                 </a>
                 <Link
-                  to="/contact"
+                  to="/contact/"
                   className="bg-goat-red-dark hover:bg-goat-red-dark/80 border-2 border-white/30 text-white px-6 py-3 rounded transition-colors"
                   style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, textTransform: 'uppercase' }}
                 >
@@ -219,7 +219,7 @@ export function Gallery() {
             {services.map((service) => (
               <Link
                 key={service.id}
-                to={`/${service.slug}`}
+                to={`/${service.slug}/`}
                 className="group flex items-center gap-4 bg-white p-5 rounded-lg border border-goat-cream-dark hover:border-goat-red/30 transition-colors"
               >
                 <div className="w-10 h-10 bg-goat-cream rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-goat-red/10 transition-colors">
@@ -263,7 +263,7 @@ export function Gallery() {
             {serviceAreas.map((area) => (
               <Link
                 key={area.id}
-                to={`/${area.slug}`}
+                to={`/${area.slug}/`}
                 className="group flex items-center gap-2 bg-white hover:bg-goat-red text-goat-navy-dark hover:text-white px-6 py-3 rounded-full transition-all border border-goat-cream-dark hover:border-goat-red shadow-sm hover:shadow-lg hover:shadow-goat-red/20"
               >
                 <MapPin className="w-4 h-4 text-goat-red group-hover:text-white transition-colors" />

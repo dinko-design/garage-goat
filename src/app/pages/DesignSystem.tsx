@@ -119,7 +119,7 @@ export function DesignSystem() {
         <div className="container mx-auto text-center relative z-10">
           <StarCircle size="lg" className="mx-auto mb-4 border-goat-teal/30 bg-goat-teal/10" />
           <h1 className="text-goat-ice mb-3">
-            Design <span className="text-accent-red">System</span>
+            Design <span className="text-goat-red">System</span>
           </h1>
           <p className="text-goat-ice/70 max-w-2xl mx-auto">
             The visual language of Garage Goat — Americana grit meets clean professionalism.
@@ -236,9 +236,9 @@ export function DesignSystem() {
             <h4 className="text-goat-navy-dark mb-4">Text Accent Utilities</h4>
             <div className="space-y-4">
               <div>
-                <span className="text-xs text-goat-navy/40 uppercase tracking-widest" style={{ fontFamily: 'var(--font-heading)' }}>.text-accent-red</span>
+                <span className="text-xs text-goat-navy/40 uppercase tracking-widest" style={{ fontFamily: 'var(--font-heading)' }}>.text-goat-red</span>
                 <h2 className="text-goat-navy-dark">
-                  Fast <span className="text-accent-red">Garage Door</span> Repair
+                  Fast <span className="text-goat-red">Garage Door</span> Repair
                 </h2>
               </div>
               <div>
@@ -251,7 +251,7 @@ export function DesignSystem() {
           </div>
 
           <CodeBlock>{`<!-- Heading with red accent -->
-<h1>Fast <span className="text-accent-red">Garage Door</span> Repair</h1>
+<h1>Fast <span className="text-goat-red">Garage Door</span> Repair</h1>
 
 <!-- Underline accent -->
 <h3><span className="accent-underline">Trusted</span> Since Day One</h3>

@@ -1,7 +1,7 @@
 ---
 id: unbalanced-door
 slug: unbalanced-garage-door-hidden-costs
-title: Why an Unbalanced Garage Door Is Costing You More Than You Think
+title: Hidden Costs of an Unbalanced Garage Door
 excerpt: "An unbalanced garage door silently damages your opener, wears out springs faster, and drives up energy bills. Here's how to test yours and what to do about it."
 featuredImage: "/images/stock/interior-springs-tracks.jpg"
 date: "January 20, 2026"

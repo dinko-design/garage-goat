@@ -24,7 +24,7 @@ export function Warranty() {
           <Breadcrumbs variant="dark" center items={[{ label: 'Warranty' }]} />
           <StarDivider size="sm" className="text-goat-ice/30 mb-4" />
           <h1 style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, textTransform: 'uppercase', lineHeight: 1.1 }}>
-            Our <span className="text-accent-red">Warranty</span>
+            Our <span className="text-goat-red">Warranty</span>
           </h1>
           <p className="text-goat-ice/70 mt-4 max-w-2xl mx-auto">
             We stand behind every repair and installation. When we say we do it right, we mean it.
@@ -95,7 +95,7 @@ export function Warranty() {
           {/* What's Covered */}
           <div className="bg-white rounded-lg p-8 border border-goat-cream-dark mb-10">
             <h2 className="text-goat-navy-dark mb-6" style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, textTransform: 'uppercase' }}>
-              What's <span className="text-accent-red">Covered</span>
+              What's <span className="text-goat-red">Covered</span>
             </h2>
             <div className="grid sm:grid-cols-2 gap-3">
               {[
@@ -169,13 +169,13 @@ export function Warranty() {
           {/* Services Covered by Our Warranty */}
           <div className="mb-10">
             <h2 className="text-goat-navy-dark mb-6" style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, textTransform: 'uppercase' }}>
-              Services Covered by Our <span className="text-accent-red">Warranty</span>
+              Services Covered by Our <span className="text-goat-red">Warranty</span>
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {services.map((service) => (
                 <Link
                   key={service.id}
-                  to={`/${service.slug}`}
+                  to={`/${service.slug}/`}
                   className="bg-white rounded-lg p-4 border border-goat-cream-dark flex items-center gap-3 hover:border-goat-red/30 transition-colors group"
                 >
                   <div className="w-9 h-9 rounded-lg bg-goat-red/10 flex items-center justify-center flex-shrink-0">
@@ -197,9 +197,9 @@ export function Warranty() {
             </h2>
             <div className="flex flex-wrap gap-3">
               {[
-                { to: '/faq', label: 'Frequently Asked Questions' },
-                { to: '/financing', label: 'Financing Options' },
-                { to: '/contact', label: 'Contact Us' },
+                { to: '/faq/', label: 'Frequently Asked Questions' },
+                { to: '/financing/', label: 'Financing Options' },
+                { to: '/contact/', label: 'Contact Us' },
               ].map((link) => (
                 <Link
                   key={link.to}
